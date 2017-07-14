@@ -47,6 +47,8 @@ prstab,
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 \usepackage{color}
+\usepackage{siunitx}
+\usepackage{url}
 
 %\usepackage[showframe,%Uncomment any one of the following lines to test 
 %%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
@@ -55,6 +57,13 @@ prstab,
 %%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
+
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58} 
+
+\newcommand{\q}[2]{\ensuremath{#1\ \mathrm{#2}}} % quantity with units
 
 \begin{document}
 
@@ -115,7 +124,7 @@ Considering past, current and future high energy and intensity colliders, each n
 \end{table*}
 Recent measurements at the LHC furthermore show that the tails of the transverse beam distribution are overpopulated compared to a Gaussian distribution resulting in a considerable amount of energy being stored in the beam tails alone. In case of the LHC explicitly around 5\% of the beam population is stored in the tails above 3.5~$\sigma$ compared to 0.22\% in case of a Gaussian distribution leading to 19~MJ of stored energy in the tails in case of nominal LHC parameters and 34~MJ in case of HL-LHC~\cite{helreview_valentino}.
 
-All of the above reasons lead to the conclusion that a mechanism is needed to deplete the beam tails in a controlled manner (see for example \cite{helreview} in case of HL-LHC). The most obvious idea is to decrease the collimator gaps or scrape the tails with a collimator type device \textcolor{red}{Why is that not possible?}. This is however not possible due to impedance issues. Other mechanisms must therefore be found to actively deplete the tails. Most promising are methods, which considerably increase the diffusion speed in the region of the tail particles while leaving the beam core unperturbed. The diffusing tail particles are then intercepted by the collimation system and removed (see FIG.~\ref{fig:active_halo_control} for illustration).
+All of the above reasons lead to the conclusion that a mechanism is needed to deplete the beam tails in a controlled manner (see for example \cite{helreview} in case of HL-LHC). The most obvious idea is to decrease the collimator gaps or scrape the tails with a collimator type device \textcolor{red}{Why is that not possible?}. This is however not possible due to impedance issues. Other mechanisms must therefore be found to actively deplete the tails. Most promising are methods, which considerably increase the diffusion speed in the region of the tail particles while leaving the beam core unperturbed. The diffusing tail particles are then intercepted by the collimation system and removed (see Fig.~\ref{fig:active_halo_control} for illustration).
 \begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
@@ -129,25 +138,182 @@ All of the above reasons lead to the conclusion that a mechanism is needed to de
 \end{figure}
 In view of the need for LHC and HL-LHC in particular and in general for future high power accelerators, different methods have been studied in the last recent years \cite{helreview_bruce}, of which the HEL is considered the superior device at least in case of the HL-LHC \cite{helreview} and is also considered for other future high energy colliders like HE-LHC and FCC-hh \cite{,}.
 
-The concept of active halo control however breaks down if also the beam core is affected, which would ultimately lead to a degradation of the performance. In this paper, we will concentrate on this aspect for the HEL foreseen to be installed in the HL-LHC. We will summarize possible sources of perturbations of the beam core concentrating in particular on the case of pulsed operation and with the focus on the beam experiments at the LHC performed in the context of these studies. 
+The concept of active halo control however breaks down if also the beam core is affected, which would ultimately lead to a degradation of the performance. In this paper, we will concentrate on this aspect for the HEL foreseen to be installed in the HL-LHC. We will summarize possible sources of perturbations of the beam core concentrating in particular on the case of pulsed operation and with the focus on the beam experiments at the LHC performed in the context of these studies. As there is currently no hollow electron lens installed in the LHC, the kick on the beam core is emulated by a dipole kick applied with the transverse damper (see Section~\ref{sec:adt}). Explicitly, all orders higher than the first order are neglected. 
 
 This paper is structured as follows: Section~\ref{sec:hel} gives an introduction to the concept of HELs and summarizes the design parameters of the HL-LHC HEL. Section~\ref{sec:core} is dedicated to describing the sources of a residual field from the HEL in the core region. Section~\ref{sec:exp} presents the results of the LHC experiment to study the effects on the beam core in case of a pulsed operation of the HEL, explicitly a resonant excitation. This includes the detailed analysis of the observed losses, emittance and transverse beam distribution changes. To the knowledge of the authors, the observed distribution changes presented in this paper have never been measured before in the context of a resonant excitation. A resonant excitation has been previously studied at the Tevatron in the context of the HEL experiments \cite{hel_tevatron_stancari} and the abort gap cleaning used in operation \cite{hel_tevatron_abortgap_zhang}. Both studies however only concentrated on the losses and emittance changes without measuring the detailed changes of the distribution. In addition the presented experiment also provides scaling of the losses and emittance growth with the excitation amplitude allowing for a comparison with simulations and ultimately an extrapolation to HL-LHC.
 
 \section{\label{sec:hel}Hollow electron lens for HL-LHC}
+Electron lenses in general consist of a DC or pulsed low energy electron beam, which is generated with an electron gun, then guided and confined by strong solenoids and finally collected with a collector. Exemplary for the conceptual design of all electron lenses, the HL-LHC HEL is shown in Fig.~\ref{fig:hel_layout}.
 \begin{figure}[h]
 	\includegraphics[width=1.0\linewidth]{hel_layout}% Here is how to import EPS art
 	\caption{\label{fig:hel_layout} Layout of HL-LHC HEL \textbf{Ask Diego how to acknowledge correctly}.}
 \end{figure}
+The circulating beam, in case of the LHC the proton beam, is then affected by the electromagnetic field of the electron beam. For the application of active halo control, the electron beam needs to generate an electromagnetic field at the location of the halo particles while leaving the core untouched. This can be achieved by using a uniform hollow distribution in radius $r=\sqrt{x^2+y^2}$ with inner radius $R_1$ and outer radius $R_2$. In this case, the circulating proton beam experiences a radial kick $\theta(r)$
+\begin{equation}\label{eq:field_1}
+\theta(r)=\frac{f(r)}{(r/R_2)}\cdot \theta_{\rm max}
+\end{equation}
+where $f(r)$ is a shape function with
+\begin{equation}\label{eq:field_2}
+f(r) =
+\begin{cases} 0 &,\quad r< R_1\\
+\frac{r^2-R_1^2}{R_2^2-R_1^2} &,\quad R_1 \leq r < R_2\\
+1 &,\quad R_2 \leq r
+\end{cases}
+\end{equation}
+and $\theta_{\rm max}=\theta(R_2)$ is the maximum kick angle with
+\begin{equation}
+\theta_{\rm max} = \theta(R_2) = \frac{2LI_T(1\pm\beta_e\beta_p)}{4\pi\epsilon_0  \cdot \left(\frac{q}{p_0}\right)_p \cdot \beta_e\beta_p c^2}\cdot\frac{1}{R_2}
+\end{equation}
+where $L$ is the length of the e-lens, $I_T$ the total electron beam current, $\beta_{e}$ and $\beta_{p}$ the relativistic $\beta$ of electron and proton beam, $\frac{q}{p_0}=\left(B\rho\right)_p$ the magnetic rigidity for the reference particle, $c$ the speed of light and $\epsilon_0$ the vacuum permittivity.
+\begin{figure}[b]
+	\includegraphics[width=0.8\linewidth]{hel_field}% Here is how to import EPS art
+	\caption{\label{fig:hel_field} Illustration of the hollow electron beam distribution (blue), the kick experienced by the proton beam (red) and the collimators (gray).}
+\end{figure}
+\begin{table}[t]
+	\caption{\label{tab:hel_param}%
+		HL-LHC hollow electron lens parameters as in \cite{hel_cdr}.
+	}
+	\begin{ruledtabular}
+		\begin{tabular}{lcc}
+			Geometry & Value& Unit\\
+			\colrule
+		Length $L$    &  3 & m\\
+		Desired range of scraping positions\footnote{$\sigma$ denotes here the Beam sigma and not the collimation $\sigma$ which assumes a normalized emittance of 3.5~$\mu$m.} & 4-8 &$\sigma_p$\\
+		\colrule
+		Magnetic fields & & \\
+		\colrule
+		Gun solenoid, $B_g$ & 0.2-0.4 & T\\
+		Main solenoid, $B_m$ & 2-6 & T\\
+		Collector solenoid, $B_c$ & 0.2-0.4 & T\\
+		Compression factor ($k=\sqrt{B_m/B_g}$) & 2.2-5.5 & -\\
+		\colrule
+		Electron gun & & \\
+		\colrule
+		Peak yield $I_e$ at 10~keV & 5.0 & A\\
+		Gun perveance $P$ & 5 & $\mu$perv\\
+		Inner/outer cathode radius, $R_1/R_2$ & 6.75/12.7 & mm\\
+		\colrule
+		High voltage modulator & & \\
+		\colrule
+		Cathode-anode voltage & 10.0 & kV\\
+		Rise time (10\%-90\%) & 200 & ns \\
+		Repetition rate & 35 & kHz
+		\end{tabular}
+	\end{ruledtabular}
+\end{table}
 
-\section{\label{sec:core}Sources of residual field in the proton beam core region}
+The distribution together with the resulting kick are illustrated in Fig.~\ref{fig:hel_field}. The $\pm$-sign represents the two cases of the electron beam traveling in the direction of the proton beam ($v_e v_p>0$) leading to ``$-$" or in the opposite direction ($v_e v_p<0$) leading to ``$+$". For hollow electron beam collimation, electron and proton beam travel in opposite directions. Assuming HL-LHC and HEL design parameters (Table~\ref{tab:hel_param}--\ref{tab:hllhc_param}) the maximum kick of the HEL is:
+\begin{eqnarray}
+\theta_{\rm max,B1} = 392~\rm{nrad},\\
+\theta_{\rm max,B2} = 341~\rm{nrad}.
+\end{eqnarray}
+for an inner radius $R_1=4\sigma_p$, peak current $I_e=$\SI{5.0}{A}. Similar values are obtained for Beam~2.
 
+As depicted in Fig.~\ref{fig:hel_field} and in evidence from Eq.~\ref{eq:field_1}--\ref{eq:field_2}, the field at the beam core vanishes in the ideal case. Effects on the beam core thus only arise in case of imperfections, where possible sources are the bends of the HEL, as the electron beam crosses directly the proton beam, and distortions in the electron beam profile (see Section~\ref{sec:core}). Both sources result in non-linear kicks (see for example \cite{hel_bends_stancari,hel_model_polynomial_morozov} (\textcolor{red}{is there a better reference for the profile imperfections, updated note from Giulio???})).
+
+In DC operation of the HEL, the non-linear kicks from the HEL stay in the shadow of the non-linearities otherwise present in the machine, which are at injection energy mainly magnet errors and at collision energy the non-linear head-on and long-range beam-beam kicks. Tolerances on imperfections are therefore not particular stringent and not a concern. The picture however changes significantly in case of pulsed operation of the HEL, meaning that the electron gun voltage is modulated using a white or colored noise spectrum. If the electromagnetic field of the HEL does not vanish at the proton beam core, this noise is transferred not only to the halo particles, as intended, but also the beam core, with naturally much smaller amplitude. Tolerances in this case rapidly become much more stringent than in DC operation and studies of the effect of the HEL on the beam core are therefore focusing on this mode of operation.
+\begin{table}[t]
+	\caption{\label{tab:hllhc_param}%
+		HL-LHC design parameters at top energy \cite{} (\textcolor{red}{values from parameter and layout committee website - replace by reference} and parameters relevant in connection with the HEL. Optics parameters at HEL are based on a position of the HEL of $-40$~m for Beam~1 (B1) and $+40$~m for Beam~2 (B2) from IP4 using HL-LHC optics V1.3 \cite{hllhcv13} with $\beta^{*}=0.15$~m.
+	}
+	\begin{ruledtabular}
+		\begin{tabular}{lccc}
+			Beam parameters & Value(B1) & Value(B2) & Unit\\
+			\colrule
+			Beam energy  $E_{p}$  &  \multicolumn{2}{c}{7} & TeV\\
+			Number of bunches $n_b$ & \multicolumn{2}{c}{2748} & - \\
+			Number of particles per bunch $N_b$ & \multicolumn{2}{c}{$2.2\times 10^{11}$} & -\\
+			Normalized emittance $\epsilon_{N,x/y}$ & \multicolumn{2}{c}{2.5} & $\mu$m\\
+			Bunch spacing & \multicolumn{2}{c}{25} & ns\\
+			\colrule
+			\multicolumn{4}{l}{Optics paramters at HEL (Beam~1) \footnote{As the twiss parameters at IP4 do not change during the entire squeeze, and IP4 and the HEL are only separated by a drift space, the twiss parameters stay constant also at the HEL during the entire squeeze.}} \\
+			\colrule
+			$\beta_{x}$ at HEL  & 197.5 & 280.6 & m\\
+			$\beta_{y}$ at HEL & 211.9 & 262.6 m\\
+			Dispersion $D_{x}$ at HEL & 0.0& 0.0 & m\\
+			Dispersion $D_{y}$ at HEL & 0.0& 0.0 & m\\
+			Proton beam size $\sigma_{p,x}$ at HEL & 0.26 & 0.31& mm \\			
+			Proton beam size $\sigma_{p,y}$ at HEL & 0.27 & 0.30 &mm \\
+			\multicolumn{4}{l}{scraping position}\\ \hspace{1cm}$\sigma_{p}=\max(\sigma_{p,x},\sigma_{p,y})$ & 0.27& 0.31 & mm\\
+		\end{tabular}
+	\end{ruledtabular}
+\end{table}
+
+Pulsing the HEL is currently considered as optional mode of operation to further increase the halo diffusion rates if needed. Pulsing increases the halo diffusion rate as in addition to the non-linear kick, noise is exerted on the halo particles of the proton beam. Two different pulsing patterns are being considered at the moment:
+\begin{itemize}
+	\item \textbf{random excitation:} The electron gun voltage is modulated between:
+	\begin{eqnarray}
+		U_{\mathrm{e-gun}}&=&a\cdot U_{\mathrm{max}}\\
+		& &+(1-a)\cdot \mathrm{ran}(0,1)\cdot U_{\mathrm{max}}
+	\end{eqnarray}
+	with $U_{\mathrm{max}}$ the equivalent voltage in DC operation, $a$ the modulation strength with $a\in[0,1]$, and $\mathrm{ran}(0,1)$ a uniformly distributed random number between~[0,1].
+	\item \textbf{resonant excitation:} The HEL is switched on only every $k^{\mathrm{th}}$ turn. The excitation can be represented by:
+	\begin{eqnarray}\label{intro:eqn:1}
+	f(t)&=&\sum_{p=-\infty}^{+\infty}\delta(t-n\cdot(kT)),
+	\end{eqnarray}
+	where $p$ is the turn number and $T$ the revolution time. The Fourier series is then given by:
+	\begin{eqnarray}\label{intro:eqn:2}
+	f(t)=\Sh_{kT}(t)
+	&=&\frac{1}{kT}\sum_{n=-\infty}^{+\infty}e^{2\pi i f_nt} \\
+	& & \quad \text{with} \ f_n=\frac{n}{k}f_{\rm rev}.
+	\end{eqnarray}
+	where $\Sh_{kT}$ is the Dirac comb. As can be seen from th Fourier spectrum, a $k^{\mathrm{th}}$~turn pulsing in general drives $k^{\mathrm{th}}$ order resonances (see \cite{md_sim_hel_res_ex_fitterer} for examples) and was used in regular operation for abort cleaning in the Tevatron \cite{hel_tevatron_abortgap_zhang}.
+\end{itemize}
+In the LHC experiment and the preparatory simulations presented in this paper, only the effect of a resonant excitation was studied as analytical as well as experimental results already exist for a random excitation equivalent to the case of exerting white noise on the beam \cite{noise_2007_ohmi,noise_alexahin_lhc,noise_lebedev_ssc,noise_2014_ohmi,md1433_noise_top_energy,md400_noise_injection}. Furthermore, the non-linear kick is approximated only to first order, i.e. by a dipole kick. The expected amplitude of the dipole kick is derived in Section~\ref{sec:core}. In future simulation studies, the dipole kick will have to be substituted with the expected full non-linear kick. For the HEL bends, a non-linear symplectic map has already been derived \cite{hel_bends_stancari}, however the kick is estimated to be small compared to the one expected from profile imperfections (see Section~\ref{fig:hel_field}). A model for the non-linear kick from profile imperfections is currently under study based on the approach taken in~\cite{hel_model_polynomial_morozov}.
+
+\section{\label{sec:core}Sources of residual field in the proton beam core region and first order estimates}
+With the current e-lens layout (see Fig.~\ref{fig:hel_layout}), parasitic kicks on the proton beam core can arise in the central region (main solenoid) due to profile imperfections in the electron beam and at the entrance and exit of the HEL, where electron and proton beam directly overlap.
+
+As there is currently no HEL installed in the LHC, the kick on the proton beam core in pulsed operation can experimentally only be approximated to first order by applying a dipole kick with the corresponding excitation pattern using the LHC transverse damper (see Section~\ref{sec:adt}). As derived in Sec.~\ref{core:sec:1}--\ref{core:sec:2} based on the measurements of the newest electron gun prototype \cite{} and in more detail in \cite{md_sim_hel_res_ex_fitterer} for the first electron gun prototype \cite{}, the expected kick to first order is for the HEL bends~(Eqn.~\ref{eqn:kick_bends}):
+\begin{equation}
+	\Delta x'_{\rm{bends}},\Delta y'_{\rm{bends}}\leq \SI{0.5}{nrad},
+\end{equation}
+and for the central region due to profile imperfections~(Eqn.~\ref{}):
+\begin{equation}
+	\Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} \leq \SI{15.0}{nrad}
+\end{equation}
+where the current HEL design parameters (see Table~\ref{tab:hllhc_param}--\ref{tab:hel_param}) were assumed yielding the maximum kick, explicitly $B_{m}=\SI{5}{T}$, $I_e=\q{5.0}{A}$, $E_{e} = \SI{10.0}{keV}$, $L=\SI{3}{m}$ and $E_{p} = \SI{7.0}{TeV}$. The contribution from the central region is clearly dominating.
+
+\subsection{Uncompensated kicks from HEL bends}
+\label{core:sec:1}
+The symplectic map for the HL-LHC HEL bends is derived in detail in \cite{hel_bends_stancari}. In this case the e-lens bends are modeled as a cylindrical pipe with a static charge distribution of 1~A and 5~keV electrons bend in the horizontal plane. In case of a S-shaped HEL, the transverse dipole kicks at entrance and exit compensate each other to first order, in case of an U-shaped HEL, they would add up. Out of this reason a S-shape has been chosen for the HL-LHC HEL (see Fig.~\ref{fig:hel_layout}). Uncompensated kicks therefore only arise due to imperfections. As a first estimate, we assume 10\% fluctuations between the entrance and exit, which can originate from for example profile imperfections and current fluctuations. Furthermore, we assume, that the kicks from entrance and exit due to these imperfections add up. Using the electric field calculations in \cite{hel_bends_stancari}, the maximum values for the integrated electric field are around
+\begin{equation}
+\int_{z_1}^{z_2} E_{x,y} dz= 10 \ \mathrm{kV}
+\end{equation}
+assuming an \SI{1}{A}, \SI{5}{keV} electron beam. For \SI{7}{TeV} protons and neglecting magnetic effects, this yields a kick of:
+\begin{equation}
+\Delta x'=\Delta y'= \SI{1.4}{nrad},
+\end{equation}
+Scaling to the HEL design parameters of a \SI{5}{A} and \SI{10}{keV} electron beam (Table~\ref{tab:hel_param}), one obtains:
+\begin{equation}
+\int_{z_1}^{z_2} E_{x} dz= 36 \ \mathrm{kV} \Rightarrow \Delta x'= \q{5.1}{nrad}
+\end{equation}
+Assuming now 10\% fluctuation between entrance and exit kick, the expected kick from the HEL bends is
+\begin{equation}\label{eqn:kick_bends}
+\Delta x', \Delta y'= \q{0.5}{nrad}.
+\end{equation}
+
+\subsection{Kicks in the central region (main solenoid)}
+\label{core:sec:2}
+For a perfectly uniform, annular and radially symmetric profile, the field in the region of the proton beam core vanishes (see Eqn.~\ref{eq:field_2}). In case of electron beam profile imperfections the radial symmetry is broken, leading to a residual field at the beam core. Fig.~\ref{core:fig:1} shows an example of the electric field calculated from a measured asymmetric profile.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{e-beam_profile.png}
+	\caption{Calculated hollow electron beam field from measured profile of 9~kV, 2.49~A e-gun and different main solenoidal fields $Bm$. The field has been calculated using the code WARP \cite{warp}. \textcolor{red}{change $Bm$ to $B_m$ +substitute with new picture.}}
+	\label{core:fig:1}
+\end{figure}
+A first estimate of the residual kick for the HEL design parameters (Table~\ref{tab:hel_param}--\ref{tab:hllhc_param}) with a main solenoid field of $B_{m}=\SI{5}{T}$, $I_e=\SI{5.0}{A}$, $E_{e} = \SI{10.0}{keV}$, $L=\SI{3}{m}$ and $E_{p} = \SI{7.0}{TeV}$ can be obtained by scaling the electric field at the center as obtained in Fig.~\ref{core:fig:1} with the main solenoid field $B_{m}$ and the electron beam current $I_e$ and energy $E_{e}$, yielding:
+\begin{equation}
+\Delta x', \Delta y'=\q{15}{nrad}
+\end{equation}
+\textcolor{red}{New gun measurements, can we maybe have a WARP simulation for the new design parameters instead of scaling?}
+
+\section{\label{sec:adt}Excitation with transverse damper}
 
 \section{\label{sec:exp}LHC experiment}
 
 \begin{acknowledgments}
-We wish to acknowledge the support of the author community in using
-REV\TeX{}, offering suggestions and encouragement, testing new versions,
-\dots.
+We wish to acknowledge Roderik Bruce and Gianluca Valentino for there very helpful suggestions in preparing the experiment at the LHC and we would like to thank all participants of the experiment for helping acquire the data presented in this paper. We would like to acknowledge Dmitry Shatilov for his help with the Lifetrac code, and St\'{e}phane Fartoukh, Riccardo De Maria and Rogelio Tomás for their help with generating the appropiate optics model. We are grateful also for the support from the beam instrumentation team, in particular Enrico Bravin and Georges Trad, with the BSRT and are thankful for the collaboration with St\'{e}phania Papadopoulou and Fanouria Antonio for the analysis of the BSRT profiles.
 \end{acknowledgments}
 
 \appendix
