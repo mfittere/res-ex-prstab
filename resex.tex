@@ -268,7 +268,7 @@ As there is currently no HEL installed in the LHC, the kick on the proton beam c
 \begin{equation}
 	\Delta x'_{\rm{bends}},\Delta y'_{\rm{bends}}\leq \SI{0.5}{nrad},
 \end{equation}
-and for the central region due to profile imperfections~(Eqn.~\ref{}):
+and for the central region due to profile imperfections~(Eqn.~\ref{eqn:kick_central}):
 \begin{equation}
 	\Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} \leq \SI{15.0}{nrad}
 \end{equation}
@@ -303,14 +303,20 @@ For a perfectly uniform, annular and radially symmetric profile, the field in th
 	\label{core:fig:1}
 \end{figure}
 A first estimate of the residual kick for the HEL design parameters (Table~\ref{tab:hel_param}--\ref{tab:hllhc_param}) with a main solenoid field of $B_{m}=\SI{5}{T}$, $I_e=\SI{5.0}{A}$, $E_{e} = \SI{10.0}{keV}$, $L=\SI{3}{m}$ and $E_{p} = \SI{7.0}{TeV}$ can be obtained by scaling the electric field at the center as obtained in Fig.~\ref{core:fig:1} with the main solenoid field $B_{m}$ and the electron beam current $I_e$ and energy $E_{e}$, yielding:
-\begin{equation}
+\begin{equation}\label{eqn:kick_central}
 \Delta x', \Delta y'=\q{15}{nrad}
 \end{equation}
 \textcolor{red}{New gun measurements, can we maybe have a WARP simulation for the new design parameters instead of scaling?}
 
 \section{\label{sec:adt}Excitation with transverse damper}
 
-\section{\label{sec:exp}LHC experiment}
+\section{\label{sec:exp_sum}Overview of LHC experiment}
+
+\section{\label{sec:sim}Summary of simulation results}
+
+\section{\label{sec:exp}Summary of experimental results}
+
+\section{\label{sec:exp_sim}Comparison of simulation and experimental results}
 
 \begin{acknowledgments}
 We wish to acknowledge Roderik Bruce and Gianluca Valentino for there very helpful suggestions in preparing the experiment at the LHC and we would like to thank all participants of the experiment for helping acquire the data presented in this paper. We would like to acknowledge Dmitry Shatilov for his help with the Lifetrac code, and St\'{e}phane Fartoukh, Riccardo De Maria and Rogelio Tomás for their help with generating the appropiate optics model. We are grateful also for the support from the beam instrumentation team, in particular Enrico Bravin and Georges Trad, with the BSRT and are thankful for the collaboration with St\'{e}phania Papadopoulou and Fanouria Antonio for the analysis of the BSRT profiles.
