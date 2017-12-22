@@ -269,8 +269,6 @@ The main benefit of pulsing the HEL is to increase the halo removal rate in case
 	where $\Sh_{kT}$ is the Dirac comb. As can be seen from the Fourier series, $k^{\mathrm{th}}$~turn pulsing in general drives $k^{\mathrm{th}}$ order resonances \cite{md_sim_hel_res_ex_fitterer}. Historically, the $k^{\mathrm{th}}$~turn pulsing was used in regular operation in the Tevatron for abort cleaning \cite{hel_tevatron_abortgap_zhang}.
 \end{itemize}
 In general, the random excitation mode is the most effective and operationally easiest pulsing mode, but also the most stringent in terms of tolerances on the residual field at the beam core as it induces white noise and thus excites all beam frequencies. As the resonant excitation acts on specific resonances, the pulsing pattern has to be chosen according to the machine and beam parameters. On the one hand, this makes the operation more difficult as one has to find the most efficient $k^{\mathrm{th}}$~turn pulsing for each operation mode, on the other hand, it also relaxes the tolerances on the residual field at the beam core as, depending on the machine and beam configuration, it might be possible to find a resonant excitation pattern, which mainly affects the halo and not the core.
-%In the LHC experiment and the preparatory simulations presented in this paper, only the effect of a resonant excitation was studied as analytical as well as experimental results already exist for a random excitation equivalent to the case of exerting white noise on the beam \cite{noise_2007_ohmi,noise_alexahin_lhc,noise_lebedev_ssc,noise_2014_ohmi,md1433_noise_top_energy,md400_noise_injection}. Furthermore, the 
-%As no HEL is currently installed in the LHC, the non-linear kick of the HEL is approximated only to first order, i.e. by a dipole kick, during the experiments. The expected amplitude of the dipole kick is derived in Section~\ref{sec:core}. In future simulation studies, the dipole kick will have to be substituted with the expected full non-linear kick. For the HEL bends, a non-linear symplectic map has already been derived \cite{hel_bends_stancari}, however the kick is estimated to be small compared to the one expected from profile imperfections (see Section~\ref{fig:hel_field}). A model for the non-linear kick from profile imperfections is currently under study based on the approach taken in~\cite{hel_model_polynomial_morozov}.
 
 \section{Sources of residual field in the proton beam core region and first order estimates\label{sec:core}}
 With the current HEL layout (see Fig.~\ref{fig:hel_layout}), parasitic kicks on the proton beam core can arise in the central region (main solenoid) due to profile imperfections in the electron beam and at the entrance and exit of the HEL, where electron and proton beam overlap. Currently, no HEL is installed in the LHC, and the kick on the proton beam core must therefore be approximated to first order by a dipole kick for the experiments at the LHC. Explicitly, the dipole kick with the corresponding excitation pattern is applied with the LHC transverse damper (see Section~\ref{sec:adt}).
@@ -384,7 +382,7 @@ For both simulation types, the tracking code Lifetrac \cite{lifetrac} was used a
 			\colrule
 			beam &\multicolumn{2}{c}{Beam~1} \\
 			beam energy &\multicolumn{2}{c}{450 GeV} \\
-			emittance & $2.5~\mu$m or $3.5~\mu$m& $2.5~\mu$m\\
+			emittance & $3.5~\mu$m& $2.5~\mu$m\\
 			$4\sigma$ bunch length & \multicolumn{2}{c}{1.3~ns}\\
 			$1\sigma$ bunch length & \multicolumn{2}{c}{9.7~cm}\\
 			particle & 6D Gaussian & equally spaced grid\\
@@ -394,7 +392,7 @@ For both simulation types, the tracking code Lifetrac \cite{lifetrac} was used a
 			optics & \multicolumn{2}{c}{2016 or 2017 injection optics,}\\
 			& \multicolumn{2}{c}{$\beta^*=11$~m}\\
 			machine  & standard errors & no errors \\
-			imperfections &with $a_1=b_1=a_2=0$\footnote{Orbit errors are disabled due to different implementation of the $a_1,b_1,a_2$ errors in Lifetrac and MAD-X. $b_2$ errors are adjusted to yield an average (over 60 seeds) peak $\beta$-beat of 15\% as expected from optics measurements in the LHC.} &  \\
+			imperfections &with $a_1=b_1=a_2=0$\footnote{Orbit errors are disabled due to different implementation of the $a_1,b_1$ errors in Lifetrac and MAD-X. $b_2$ errors are adjusted to yield an average (over 60 seeds) peak $\beta$-beat of 15\% as expected from optics measurements in the LHC.} &  \\
 			octupoles  & \multicolumn{2}{c}{$I_{\mathrm{MOF}}=+19.6~\mathrm{A}$, $I_{\mathrm{MOD}}=-19.6~\mathrm{A}$}\\
 			tune $(Q_x,Q_y)$ & \multicolumn{2}{c}{(64.28,59.31) for 2016,}\\
 			& \multicolumn{2}{c}{(62.27,60.295) for 2017}\\
@@ -415,23 +413,8 @@ In case of a resonant excitation, the beam distribution adjusts to a new equilib
 
 In case of an excitation with random uniform noise, the shape of the distribution does stay Gaussian. The interaction with the natural noise source then only manifests itself in an underestimation of loss rates and emittance growth (see Sec.~\ref{sec:simexran}). This effect was also studied in more detail in \cite{md1433_noise_top_energy,md_noise_bbLHC} for colliding beams at the LHC.
 
-\subsubsection{Predicting the most efficient pulsing pattern with simulations\label{sec:pattern}}
-In order to predict the most efficient pulsing pattern, the loss rate and emittance growth from the Distribution Tracking are compared for the different pulsing patterns. The results for the 2016 optics and tune are shown in Fig.~\ref{fig:patternemit}.
-
-\begin{figure}[h]
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016injerrb2u_pattern_3_5um_emit1.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016injerrb2u_pattern_3_5um_emit2.png}
-	\end{minipage}	
-	\caption{\label{fig:patternemit} Horizontal (left) and vertical (right) emittance obtained from simulation results (Distribution Tracking) for different pulsing patterns based on the 2016 injection optics with standard errors. The excitation was applied in both planes with an amplitude of 96~nrad.}
-\end{figure}
-Only for the $10^{\mathrm{th}}$~turn pulsing and random excitation a considerable emittance growth is visible. For the $10^{\mathrm{th}}$~turn pulsing the vertical emittance also appears to start at an increased initial value and then stays almost constant. This behavior is due to the adjustment of the beam distribution during the first $10^4$ turns to a new equilibrium distribution. Further details on this adjustment will be given in Sec.~\ref{sec:simex10}. As the beam distribution is only dumped every $10^4$ turns, this initial fast adjustment manifests itself only in an increased initial emittance value in Fig.~\ref{fig:patternemit}.
-
-\begin{figure}[h]
+\subsubsection{Prediction of the most efficient pulsing pattern\label{sec:pattern}}
+\begin{figure}[b]
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{2016injerrb2u_pattern_3_5um_intensity.png}
@@ -440,12 +423,18 @@ Only for the $10^{\mathrm{th}}$~turn pulsing and random excitation a considerabl
 		\centering
 		\includegraphics[width=1.0\linewidth]{2016injerrb2u_pattern_3_5um_sigm.png}
 	\end{minipage}	
-	\caption{\label{fig:patternlosssig} Relative intensity (left) and bunch length (right) obtained from simulation results (Distribution Tracking) for different pulsing patterns based on the 2016 injection optics with standard errors. The excitation was applied in both planes with an amplitude of 96~nrad.}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016injerrb2u_pattern_3_5um_emit1.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016injerrb2u_pattern_3_5um_emit2.png}
+	\end{minipage}	
+	\caption{\label{fig:patternsim} Relative intensity (top left), bunch length (top right) and horizontal (bottom left) and vertical (bottom right) emittance obtained from simulation results (Distribution Tracking) for different pulsing patterns based on the 2016 injection optics with $(Q_x,Q_y)=(64.28,59.31)$ with standard errors. The excitation was applied in both planes with an amplitude of 96~nrad.}
 \end{figure}
-The largest losses are observed for $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing and random excitation. As the bunch length decreases accordingly, the losses are mostly associated to off-momentum particles.
+In order to predict the most efficient pulsing pattern, the loss rate and emittance growth from the Distribution Tracking are compared for the different pulsing patterns. The results for the 2016 optics and tune are shown in Fig.~\ref{fig:patternsim}. The largest losses are observed for $3^{\mathrm{rd}}$, $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing and the random excitation. As the bunch length decreases accordingly, the losses are mostly associated to off-momentum particles. Only for the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing as well as random excitation a considerable emittance growth is visible, where the random excitation has by far the strongest effect compared to any $k^{\mathrm{th}}$~turn pulsing pattern. 
 
-The sensitivity to the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing is also observed in absence of machine errors in which case the only source of non-linearities are the strong sextupoles and octupoles \cite{md_sim_hel_res_ex_fitterer}. The FMA analysis shown in Fig.~\ref{fig:patternfma} reveals that 
-the $7Q_x$ resonance is excited in case of the $7^{\mathrm{th}}$~turn pulsing and the $10Q_x$ and $10Q_y$ resonance in case of the $10^{\mathrm{th}}$~turn pulsing.
 \begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
@@ -467,11 +456,102 @@ the $7Q_x$ resonance is excited in case of the $7^{\mathrm{th}}$~turn pulsing an
 		$7^{\mathrm{th}}$ V
 		\includegraphics[width=1.0\linewidth]{2016injnocolc15o+19_6noerrut7skv_dp0_ord7.png}
 	\end{minipage}
-	\caption{\label{fig:patternfma} FMA analysis for $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing based on the 2016 injection optics with no machine errors. The excitation is 120~nrad in the corresponding plane. The absence of a strong excitation of any resonance in case of $7^{\mathrm{th}}$~turn pulsing only in V and the strong excitation in case of pulsing only in H further confirms that indeed the $7Q_x$ resonance is driven. For $10^{\mathrm{th}}$~turn pulsing there is in contrast no significant difference between pulsing only in H, only in V or in H and V.}
+	\caption{\label{fig:patternfma} FMA analysis for $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing based on the 2016 injection optics with no machine errors and a tune of (64.28,59.31). The excitation is 120~nrad in the corresponding plane. The absence of a strong excitation of any resonance in case of $7^{\mathrm{th}}$~turn pulsing only in V and the strong excitation in case of pulsing only in H further confirms that indeed the $7Q_x$ resonance is driven. For $10^{\mathrm{th}}$~turn pulsing there is in contrast no significant difference between pulsing only in H, only in V or in H+V.}
+\end{figure}
+The sensitivity to the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing is also observed in absence of machine errors in which case the only source of non-linearities are the strong sextupoles and octupoles \cite{md_sim_hel_res_ex_fitterer}. The FMA analysis shown in Fig.~\ref{fig:patternfma} reveals that 
+the $7Q_x$ resonance is excited in case of the $7^{\mathrm{th}}$~turn pulsing and the $10Q_x$ and $10Q_y$ resonance in case of the $10^{\mathrm{th}}$~turn pulsing. As octupoles can only drive even resonances, the source of the $7Q_x$ resonances are the sextupoles while the octupoles only generate the tune footprint. The other pulsing patterns do not exhibit any increase in losses or emittance growth without magnetic errors and their effect thus is based on the magnetic field errors assigned, explicitly also the seed chosen for the simulations.
+
+\begin{figure}[t]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		$7^{\mathrm{th}}$ H+V
+		\includegraphics[width=1.0\linewidth]{2016injerra2b2u_7thhv_3_5um_hist_x.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		$10^{\mathrm{th}}$ H+V
+		\includegraphics[width=1.0\linewidth]{2016injerra2b2u_10thhv_3_5um_hist_y.png}
+	\end{minipage}	
+	\caption{\label{fig:patternhist} Horizontal beam distribution for $7^{\mathrm{th}}$~turn (left) and vertical beam distribution for $10^{\mathrm{th}}$~turn pulsing (right) from simulation results (Distribution Tracking) based on the 2016 injection optics with $(Q_x,Q_y)=(64.28,59.31)$ with standard errors. The excitation was applied in both planes with an amplitude of 96~nrad.}
+\end{figure}
+For the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing the emittance also appears to start at an increased initial value and then stays almost constant. This behavior is due to the adjustment of the beam distribution during the first $10^4$ turns to a new equilibrium distribution, and as the beam distribution is only dumped every $10^4$ turns, this initial fast adjustment manifests itself in an increased initial emittance value in Fig.~\ref{fig:patternsim}. Besides an increased emittance, the new distribution also becomes non-Gaussian as can be seen from the histograms shown in Fig.~\ref{fig:patternhist} for the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing. This initial fast change of the beam distribution was also to the knowledge of the authors for the first time experimentally observed (Sec.~\ref{sec:simex10} and Sec.~\ref{sec:simex7}), however on a time scale of minutes instead of seconds. 
+
+\subsubsection{10th turn pulsing\label{sec:simex10}}
+The $10^{\mathrm{th}}$~turn pulsing was tested in 2016 with an excitation in the vertical plane only. Experimentally, the following observations were made (Fig.~\ref{fig:10thexp}):
+\begin{itemize}
+	\item increase of the loss rate with the excitation amplitude,
+	\item increase of the emittance growth with the excitation amplitude in the vertical plane but not in the horizontal plane.
+\end{itemize}
+\begin{figure}[t]
+	\begin{minipage}[t]{1.0\linewidth}
+		\centering
+		\includegraphics[width=0.49\linewidth]{bunch_intensity_v10th_no_damper_avg_annotate.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{emith_avg_rel_v10th_no_damper_annotate.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{emitv_avg_rel_v10th_no_damper_annotate.png}
+	\end{minipage}	
+	\caption{\label{fig:10thexp} Relative intensity (top) and emittance (bottom) obtained during the 2016 experiments. For each maximum amplitude $A_{\mathrm{max}}=48$~nrad and 96~nrad, the excitation amplitude was linearly increased for each group of 4~bunches (see Sec.~\ref{sec:adt}). The different colored solid lines labeled with $n\Delta A$ indicate the average over the 4~bunches with the same excitation amplitude together with the $1\sigma$ standard deviation as their envelope.}
+\end{figure}
+Comparing these experimental results with the simulations shown in Fig.~\ref{fig:10thsim} with only $10^{\mathrm{th}}$~turn pulsing (solid line), the simulations predict qualitatively correctly an excitation amplitude dependent loss rate, but fail to predict the excitation amplitude dependent, continuous emittance growth seen experimentally. Instead, the simulations yield a constant emittance after an initial increase during the first $10^4$~turns or first second. So obviously there is an essential ingredient missing. As it turns out, the constant emittance can be changed to an excitation amplitude dependent emittance growth by adding a random dipole noise component with uniform distribution (dotted line in Fig.~\ref{fig:10thsim}). As a first estimate the value obtained in \cite{md1433_noise_top_energy,md_noise_bbLHC} for 6.5~TeV was used and scaled by the magnetic rigidity to the injection energy of 450~GeV, as no noise estimate is available at injection, yielding a maximum kick amplitude at the transverse damper of approximately
+\begin{equation}
+\theta_{\mathrm{random,ADT,max}}(\mathrm{450~GeV}) = 6~\mathrm{nrad},
+\end{equation}
+Adding this random noise component, the simulations then yield correctly an excitation amplitude dependent emittance growth in the vertical plane only after a first fast adjustment of the beam distribution visible as an increased initial value. In addition, also the loss rates increase. As the loss rates are in general underestimated in simulations compared to the experimental results, the discrepancy between simulations and experiment is therefore further reduced.
+\begin{figure}[h]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016injerrb2uran1_2e-3_10thV_3_5um_intensity.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016injerrb2uran1_2e-3_10thV_3_5um_emit2_rel.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016injerrb2uran1_2e-3_10thV_3_5um_emit1.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016injerrb2uran1_2e-3_10thV_3_5um_emit2.png}
+	\end{minipage}	
+	\caption{\label{fig:10thsim} Relative intensity (top left) and vert. emittance (top right), and hor. (bottom left) and vert. (bottom right) emittance obtained from simulations (Distribution Tracking) based on the 2016 injection optics with standard errors and $(Q_x,Q_y)=(64.28,59.31)$. The solid line indicates an excitation with only $10^{\mathrm{th}}$~turn pulsing in V and the dotted line with $10^{\mathrm{th}}$~turn pulsing in V plus a random dipole noise component in H+V of 6~nrad.}
+\end{figure}
+
+\subsubsection{8th turn pulsing\label{sec:simex8}}
+\subsubsection{random excitation\label{sec:simexran}}
+
+\subsubsection{7th turn pulsing\label{sec:simex7}}
+The $7^{\mathrm{th}}$~turn pulsing pattern is the only pulsing pattern which has been tested during both experiments in 2016 and 2017 and was intended to serve as a proof for the reproducibility of the results. However, in 2017 the machine tune was changed from (64.28,59.31) to (62.27,60.295) in standard operation. The attempt to change back to the fractional tune of (.28,.31) as chosen in 2016 however lead to large losses during the experiments in 2017 and could thus not be changed. ???This change in tune also entailed a change in the driving resonances (Fig.~\ref{fig:7th2017fma}). As will be detailed in this section, the qualitative evolution of losses and emittance growth are still similar despite the different tunes, but the quantitative results differ.???
+\begin{figure}[h]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		no excitation
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerru_dp0_ord14_annotate.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		$7^{\mathrm{th}}$ H+V
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut7skhv_dp0_ord7.png}
+	\end{minipage}	
+	\caption{\label{fig:7th2017fma} FMA analysis for $7^{\mathrm{th}}$~turn pulsing based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $7Q_x$ and $7Q_y$ resonance are both excited and in addition the 14th order $7Q_x+7Q_y$.}
 \end{figure}
 
 \begin{itemize}
-	\item repeat simulations for each kth turn pattern with only b2 errors
+	\item Don't understand why there is emittance growth in H for 2016. There is no emittance growth in the experiment.
+	\item repeat simulations for 2017 for all three planes and with random noise => check if there is only emittance growth in V.
+	\item experimentally: 2016 + 2017 losses in all cases, only emittance growth in V in 2017
+\end{itemize}
+\subsubsection{Effect of the transverse damper\label{sec:damp}}
+Compare random and nth turn -> no damping for nth, only for random.
+
+In general:
+\begin{itemize}
+	\item repeat simulations for each kth turn pattern with only b2 errors (\textcolor{green}{done})
 	\item show results when adding random noise -> amplitude dependent emittance growth + losses
 	\item FMA plot of 7th (2017) -> explain why in H and in V both losses, FMA plot of 10th (2016), FMA plot of 8th and random
 	\item beam distribution change for 10th
@@ -483,11 +563,6 @@ the $7Q_x$ resonance is excited in case of the $7^{\mathrm{th}}$~turn pulsing an
 	\item random: constant filamentation -> emittance growth + later strong losses when beam hits aperature
 	
 \end{itemize}
-
-\subsubsection{7th turn pulsing\label{sec:simex7}}
-\subsubsection{10th turn pulsing\label{sec:simex10}}
-\subsubsection{8th turn pulsing\label{sec:simex8}}
-\subsubsection{random excitation\label{sec:simexran}}
 
 \section{Summary\label{sec:sum}}
 
