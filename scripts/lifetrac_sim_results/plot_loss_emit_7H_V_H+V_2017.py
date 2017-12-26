@@ -16,7 +16,7 @@ basedir = "/home/mfittere/work/MDs/mdelens/simulations/lifetrac"
 # plot directory for paper
 plt_dir = "plots"
 
-# 2016 optics
+# 2017 optics
 # only with random noise
 opt0 = "2017injnocolc15o+19_6erra2b2uran/1/eps3.5/1_2e-3/p1e4t1e4s100weight"
 # random noise + 7th pulsing
