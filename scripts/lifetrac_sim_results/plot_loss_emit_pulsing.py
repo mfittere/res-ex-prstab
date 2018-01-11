@@ -18,12 +18,12 @@ plt_dir = "plots"
 
 # 2016 optics
 # no pulsing
-opt0 = "2016injnocolc15o+19_6errb2u/1/eps3.5/p1e4t1e4s100weight"
+opt0 = "2016injnocolc15o+19_6erra2b2u/1/eps3.5/p1e4t1e4s100weight"
 # with pulsing
-optsk = "2016injnocolc15o+19_6errb2ut%ssk/1/eps3.5/hv9_6e-8/p1e4t1e4s100weight"
+optsk = "2016injnocolc15o+19_6erra2b2ut%ssk/1/eps3.5/hv9_6e-8/p1e4t1e4s100weight"
 # random
-optran8 = "2016injnocolc15o+19_6errb2uran/1/eps3.5/hv9_6e-8/p1e4t1e4s100weight"
-optran9 = "2016injnocolc15o+19_6errb2uran/1/eps3.5/hv9_6e-9/p1e4t1e4s100weight"
+optran8 = "2016injnocolc15o+19_6erra2b2uran/1/eps3.5/hv9_6e-8/p1e4t1e4s100weight"
+optran9 = "2016injnocolc15o+19_6erra2b2uran/1/eps3.5/hv9_6e-9/p1e4t1e4s100weight"
 
 # no excitation
 t0 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,opt0),plt_dir=plt_dir)
@@ -41,7 +41,7 @@ for sk,csk in zip(['2','3','4','5','6','7','8','9','10'],['b','r','g','m','orang
   else:
     pltlbl = '%sth'%sk
   plt.plot(t.data['time'],t.data['intensity'],linestyle='-',color=csk,label=pltlbl)
-plt.grid(b=True)
+#plt.grid(b=True)
 plt.xlabel('time [s]')
 plt.ylabel('relative intensity')
 ax1=plt.gca()
@@ -55,7 +55,7 @@ leg = ax1.legend(title='pulsing pattern',ncol=2,fontsize=12,loc='lower left')
 plt.setp(leg.get_title(),fontsize=12)
 leg = ax2.legend(title='pulsing pattern',ncol=1,fontsize=12,loc='lower right')
 plt.setp(leg.get_title(),fontsize=12)
-plt.savefig(os.path.join(plt_dir,'2016injerrb2u_pattern_3_5um_intensity.png'),bbox_inches='tight')
+plt.savefig(os.path.join(plt_dir,'2016injerra2b2u_pattern_3_5um_intensity.png'),bbox_inches='tight')
 
 # bunch length
 plt.figure("bunch length 2016, 3.5 um emittance")
@@ -69,7 +69,7 @@ for sk,csk in zip(['2','3','4','5','6','7','8','9','10'],['b','r','g','m','orang
   else:
     pltlbl = '%sth'%sk
   plt.plot(t.data['time'],t.data['sigm'],linestyle='-',color=csk,label=pltlbl)
-plt.grid(b=True)
+#plt.grid(b=True)
 plt.xlabel('time [s]')
 plt.ylabel('bunch length [cm]')
 ax1 = plt.gca()
@@ -83,7 +83,7 @@ leg = ax1.legend(title='pulsing pattern',ncol=2,loc='lower left')
 plt.setp(leg.get_title(),fontsize=12)
 leg = ax2.legend(title='pulsing pattern',ncol=1,fontsize=12,loc='lower right')
 plt.setp(leg.get_title(),fontsize=12)
-plt.savefig(os.path.join(plt_dir,'2016injerrb2u_pattern_3_5um_sigm.png'),bbox_inches='tight')
+plt.savefig(os.path.join(plt_dir,'2016injerra2b2u_pattern_3_5um_sigm.png'),bbox_inches='tight')
 
 # emittance
 for phv,p12 in zip(['hor.','vert.'],'12'):
@@ -100,7 +100,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
     plt.plot(t.data['time'],t.data['emit%s'%p12],linestyle='-',color=csk,label=pltlbl)
   plt.xlabel('time [s]')
   plt.ylabel('%s normalized emittance [$\mu$m]'%phv)
-  plt.grid(b=True)
+#  plt.grid(b=True)
   ax1 = plt.gca()
   # second axis for random
   t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optran8),plt_dir=plt_dir)
@@ -111,7 +111,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
   leg = ax1.legend(title='pulsing pattern',ncol=2,loc='upper left')
   plt.setp(leg.get_title(),fontsize=12)
   leg = ax2.legend(title='pulsing pattern',ncol=1,fontsize=12,loc='upper right')
-  plt.savefig(os.path.join(plt_dir,'2016injerrb2u_pattern_3_5um_emit%s.png'%p12),bbox_inches='tight')
+  plt.savefig(os.path.join(plt_dir,'2016injerra2b2u_pattern_3_5um_emit%s.png'%p12),bbox_inches='tight')
 
 
 plt.draw()

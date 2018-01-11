@@ -49,7 +49,7 @@ for amp,lamp in zip(['2_4','4_8'],['--',':']):
   t_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk_16%(amp)),plt_dir=plt_dir)
   pltlbl = 'H '+amp.replace('_','')+' nrad'
   plt.plot(t_16.data['time'],t_16.data['intensity'],linestyle=lamp,color='orange',label=pltlbl)
-plt.grid(b=True)
+#plt.grid(b=True)
 plt.xlabel('time [s]')
 plt.ylabel('relative intensity')
 handles,labels = plt.gca().get_legend_handles_labels()
@@ -74,7 +74,7 @@ for amp,lamp in zip(['2_4','4_8'],['--',':']):
   t_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk_16%(amp)),plt_dir=plt_dir)
   pltlbl = 'H '+amp.replace('_','')+' nrad'
   plt.plot(t_16.data['time'],t_16.data['sigm'],linestyle=lamp,color='orange',label=pltlbl)
-plt.grid(b=True)
+#plt.grid(b=True)
 plt.xlabel('time [s]')
 plt.ylabel('bunch length [cm]')
 handles,labels = plt.gca().get_legend_handles_labels()
@@ -100,7 +100,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
     t_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk_16%(amp)),plt_dir=plt_dir)
     pltlbl = 'H '+amp.replace('_','')+' nrad'
     plt.plot(t_16.data['time'],t_16.data['emit%s'%p12],linestyle=lamp,color='orange',label=pltlbl)
-  plt.grid(b=True)
+#  plt.grid(b=True)
   plt.xlabel('time [s]')
   plt.ylabel('%s normalized emittance [$\mu$m]'%phv)
   handles,labels = plt.gca().get_legend_handles_labels()
@@ -126,7 +126,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
     t_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk_16%(amp)),plt_dir=plt_dir)
     pltlbl = 'H '+amp.replace('_','')+' nrad'
     plt.plot(t_16.data['time'],t_16.data['emit%s'%p12]/t_16.data['emit%s'%p12][0],linestyle=lamp,color='orange',label=pltlbl)
-  plt.grid(b=True)
+#  plt.grid(b=True)
   plt.xlabel('time [s]')
   plt.ylabel('rel. %s normalized emittance [$\mu$m]'%phv)
   handles,labels = plt.gca().get_legend_handles_labels()
