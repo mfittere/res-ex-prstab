@@ -32,6 +32,8 @@ optsk = "2017injnocolc15o+19_6erra2b2ut7skran/1/eps3.5/%s%se-8ran1_2e-3/p1e4t1e4
 t0 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,opt0),plt_dir=plt_dir)
 t0_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,opt0_16),plt_dir=plt_dir)
 
+grid_flag = True
+
 plt.close('all')
 # losses
 plt.figure("losses, 3.5 um emittance")
@@ -49,7 +51,7 @@ for amp,lamp in zip(['2_4','4_8'],['--',':']):
   t_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk_16%(amp)),plt_dir=plt_dir)
   pltlbl = 'H '+amp.replace('_','')+' nrad'
   plt.plot(t_16.data['time'],t_16.data['intensity'],linestyle=lamp,color='orange',label=pltlbl)
-#plt.grid(b=True)
+plt.grid(b=grid_flag)
 plt.xlabel('time [s]')
 plt.ylabel('relative intensity')
 handles,labels = plt.gca().get_legend_handles_labels()
@@ -74,7 +76,7 @@ for amp,lamp in zip(['2_4','4_8'],['--',':']):
   t_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk_16%(amp)),plt_dir=plt_dir)
   pltlbl = 'H '+amp.replace('_','')+' nrad'
   plt.plot(t_16.data['time'],t_16.data['sigm'],linestyle=lamp,color='orange',label=pltlbl)
-#plt.grid(b=True)
+plt.grid(b=grid_flag)
 plt.xlabel('time [s]')
 plt.ylabel('bunch length [cm]')
 handles,labels = plt.gca().get_legend_handles_labels()
@@ -100,7 +102,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
     t_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk_16%(amp)),plt_dir=plt_dir)
     pltlbl = 'H '+amp.replace('_','')+' nrad'
     plt.plot(t_16.data['time'],t_16.data['emit%s'%p12],linestyle=lamp,color='orange',label=pltlbl)
-#  plt.grid(b=True)
+  plt.grid(b=grid_flag)
   plt.xlabel('time [s]')
   plt.ylabel('%s normalized emittance [$\mu$m]'%phv)
   handles,labels = plt.gca().get_legend_handles_labels()
@@ -126,7 +128,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
     t_16 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk_16%(amp)),plt_dir=plt_dir)
     pltlbl = 'H '+amp.replace('_','')+' nrad'
     plt.plot(t_16.data['time'],t_16.data['emit%s'%p12]/t_16.data['emit%s'%p12][0],linestyle=lamp,color='orange',label=pltlbl)
-#  plt.grid(b=True)
+  plt.grid(b=grid_flag)
   plt.xlabel('time [s]')
   plt.ylabel('rel. %s normalized emittance [$\mu$m]'%phv)
   handles,labels = plt.gca().get_legend_handles_labels()

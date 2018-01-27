@@ -25,6 +25,8 @@ optsk = "2017injnocolc15o+19_6erra2b2ut8skran/1/eps3.5/%s%se-8ran1_2e-3/p1e4t1e4
 # no excitation
 t0 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,opt0),plt_dir=plt_dir)
 
+grid_flag = False
+
 plt.close('all')
 # losses
 plt.figure("losses 2017, 3.5 um emittance")
@@ -33,12 +35,12 @@ plt.plot(t0.data['time'],t0.data['intensity'],'k-',label='0 nrad')
 for plane,cplane in zip(['h','v','h+v'],['b','r','g']):
   for amp,lamp in zip(['9_6','19_2'],['--',':']):
     t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk%(plane.replace('+',''),amp)),plt_dir=plt_dir)
-    print os.path.join(basedir,optsk%(plane.replace('+',''),amp))
     pltlbl = plane.upper()+' '+amp.replace('_','')+' nrad'
     plt.plot(t.data['time'],t.data['intensity'],linestyle=lamp,color=cplane,label=pltlbl)
-plt.grid(b=True)
+plt.grid(b=grid_flag)
 plt.xlabel('time [s]')
 plt.ylabel('relative intensity')
+plt.ylim(0.99975,0.999825)
 leg = plt.legend(title='excitation\n8th turn',ncol=1,fontsize=12)
 plt.setp(leg.get_title(),fontsize=12)
 plt.savefig(os.path.join(plt_dir,'2017injerra2b2uran1_2e-3_8th_3_5um_intensity.png'),bbox_inches='tight')
@@ -51,9 +53,10 @@ for plane,cplane in zip(['h','v','h+v'],['b','r','g']):
     t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk%(plane.replace('+',''),amp)),plt_dir=plt_dir)
     pltlbl = plane.upper()+' '+amp.replace('_','')+' nrad'
     plt.plot(t.data['time'],t.data['sigm'],linestyle=lamp,color=cplane,label=pltlbl)
-plt.grid(b=True)
+plt.grid(b=grid_flag)
 plt.xlabel('time [s]')
 plt.ylabel('bunch length [cm]')
+plt.ylim(9.1905,9.1925)
 leg = plt.legend(title='excitation\n8th turn',ncol=1,fontsize=12)
 plt.setp(leg.get_title(),fontsize=12)
 plt.savefig(os.path.join(plt_dir,'2017injerra2b2uran1_2e-3_8th_3_5um_sigm.png'),bbox_inches='tight')
@@ -67,7 +70,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
       t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk%(plane.replace('+',''),amp)),plt_dir=plt_dir)
       pltlbl = plane.upper()+' '+amp.replace('_','')+' nrad'
       plt.plot(t.data['time'],t.data['emit%s'%p12],linestyle=lamp,color=cplane,label=pltlbl)
-  plt.grid(b=True)
+  plt.grid(b=grid_flag)
   plt.xlabel('time [s]')
   plt.ylabel('%s normalized emittance [$\mu$m]'%phv)
   leg = plt.legend(title='excitation\n8th turn',ncol=1,fontsize=12)
@@ -83,7 +86,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
       t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optsk%(plane.replace('+',''),amp)),plt_dir=plt_dir)
       pltlbl = plane.upper()+' '+amp.replace('_','')+' nrad'
       plt.plot(t.data['time'],t.data['emit%s'%p12]/t.data['emit%s'%p12][0],linestyle=lamp,color=cplane,label=pltlbl)
-  plt.grid(b=True)
+  plt.grid(b=grid_flag)
   plt.xlabel('time [s]')
   plt.ylabel('rel. %s normalized emittance [$\mu$m]'%phv)
   leg = plt.legend(title='excitation\n8th turn',ncol=1,fontsize=12)
