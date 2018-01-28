@@ -82,7 +82,6 @@ prstab,
 % This line break forced with \textbackslash\textbackslash
 }%
 
-\author{Giulia Papotti}
 \author{Stefano Redaelli}
 \author{Daniel Valuch}
 \affiliation{CERN, Geneva, Switzerland}%
@@ -528,11 +527,11 @@ The $10^{\mathrm{th}}$~turn pulsing pattern was tested in 2016 with an excitatio
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		reference bunch,\\ no excitation
-		\includegraphics[width=1.0\linewidth]{profile_v10th_slot_50.png}
+		\includegraphics[width=1.0\linewidth]{profile_v_10thv_slot_50.png}
 	\end{minipage}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
-		excited bunch,\\ $10^{\mathrm{th}}$~turn V		\includegraphics[width=1.0\linewidth]{profile_v10th_slot_1300.png}
+		excited bunch,\\ $10^{\mathrm{th}}$~turn V		\includegraphics[width=1.0\linewidth]{profile_v_10thv_slot_1300.png}
 	\end{minipage}
 	\caption{\label{fig:10thexpprof} Vertical beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2016 experiments. The profiles are taken at the end of the $10^{\mathrm{th}}$~turn pulsing in V. The black line in the plot of the residual is the current profile minus the profile before applying the excitation and is a measure for the overall change of the distribution. The red line is the current profile minus its Gaussian fit, which gives and indication for the deviation of the distribution from a Gaussian distribution. For details on the analysis see \cite{bsrtprofinj}. The distribution of the reference bunch (left), here slot 50, stays unchanged, while the bunch experiencing the maximum excitation (right), here slot 1300, clearly shows a change to a non-Gaussian distribution.}
 \end{figure}
@@ -602,7 +601,7 @@ The $7^{\mathrm{th}}$~turn pulsing pattern has been tested during both experimen
 		$7^{\mathrm{th}}$ H+V
 		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut7skhv_dp0_ord7.png}
 	\end{minipage}	
-	\caption{\label{fig:7th2017fma} FMA analysis for $7^{\mathrm{th}}$~turn pulsing based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $7Q_x$ and $7Q_y$ resonance are both excited and in addition the 14th order $7Q_x+7Q_y$.}
+	\caption{\label{fig:7th2017fma} FMA analysis in frequency space for $7^{\mathrm{th}}$~turn pulsing based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $7Q_x$ and $7Q_y$ resonance are both excited and in addition the 14th order $7Q_x+7Q_y$.}
 \end{figure}
 Consequently, the effects on the beam also differ as can be illustrated by a comparison of the Distribution Tracking for both experiments~(Fig.~\ref{fig:7thsim}).
 \begin{figure}[h]
@@ -660,11 +659,11 @@ Similar changes of the emittance are also experimentally observed as shown in Fi
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		reference bunch,\\ no excitation
-		\includegraphics[width=1.0\linewidth]{profile_hv7th_slot_2862.png}
+		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2862.png}
 	\end{minipage}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
-		excited bunch,\\ $7^{\mathrm{th}}$~turn h+V		\includegraphics[width=1.0\linewidth]{profile_hv7th_slot_2696.png}
+		excited bunch,\\ $7^{\mathrm{th}}$~turn H+V		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2696.png}
 	\end{minipage}
 	\caption{\label{fig:7thexpprof} Vertical beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the $7^{\mathrm{th}}$~turn pulsing in H+V. The distribution changes in the reference bunch (left), here slot 2862, are much less than for the bunch experiencing the maximum excitation (right), here slot 2696.}
 \end{figure}
@@ -677,9 +676,95 @@ The loss rates measured during the experiment however differ from the simulation
 \end{figure}
 
 \subsubsection{$8^{\mathrm{th}}$ turn pulsing\label{sec:simex8}}
-Pulsing patterns which have little effect on the beam core are particularly interesting for the hollow electron lens operation. With this motivation in mind the $8^{\mathrm{th}}$ turn pulsing pattern was studied, for which a small effect is expected in comparison to the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$ turn pulsing. In the Distribution Tracking, the excitation amplitudes had to be increased to 96~nrad to have a visible effect
-\subsubsection{random excitation\label{sec:simexran}}
+\begin{figure}[b]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017injerra2b2uran1_2e-3_8th_3_5um_intensity.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017injerra2b2uran1_2e-3_8th_3_5um_sigm.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017injerra2b2uran1_2e-3_8th_3_5um_emit1.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017injerra2b2uran1_2e-3_8th_3_5um_emit2.png}
+	\end{minipage}	
+	\caption{\label{fig:8thsim} Relative intensity (top left), bunch length (top right), and horizontal (bottom left) and vertical (bottom right) emittance obtained from simulations (Distribution Tracking) based on the 2017 injection optics with standard errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates an excitation with only a random dipole noise component in H+V of 6~nrad, and the dotted and dashed line the results for $8^{\mathrm{th}}$~turn pulsing plus a random dipole noise component in H+V of 6~nrad.}
+\end{figure}
+Pulsing patterns which have little effect on the beam core are particularly interesting for the hollow electron lens operation if they on the other hand have a large effect on the tails under consideration of the non-linear field generated by the electron lens itself. With this motivation in mind the $8^{\mathrm{th}}$ turn pulsing pattern was studied, for which a small effect is expected in comparison to the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$ turn pulsing as can be demonstrated in the Distribution Tracking, for which the excitation amplitudes had to be increased to 96~nrad to have a visible effect (Fig.~\ref{fig:8thsim}). The loss rates and also changes in bunch length are very small and any differences are here just due to statistical fluctuations. In the horizontal and vertical plane a small emittance growth due to the excitation is visible, but without any clear dependency on the amplitude nor plane of the $8^{\mathrm{th}}$ turn pulsing. Adducting the FMA analysis in amplitude space depicted in Fig.~\ref{fig:8th2017fmaamp}, the $8^{\mathrm{th}}$ turn pulsing drives the $16Q_y$ and \mbox{$8Q_x-4Q_y$} resonances and several even higher orders. These are in general very high order resonances whose effect is thus in general expected to be small.
+\begin{figure}[t]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		no excitation
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerru_dp0_amp.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		$8^{\mathrm{th}}$ H+V
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut8skhv_dp0_amp_annotate.png}
+	\end{minipage}	
+	\caption{\label{fig:8th2017fmaamp} FMA analysis in amplitude space for $8^{\mathrm{th}}$~turn pulsing based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $16Q_y$ and \mbox{$8Q_x-4Q_y$} are both excited.}
+\end{figure}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{2017_scale_amp_8hv_lbllong.png}
+	\caption{\label{fig:8thexploss} Comparison of scaling of loss rates with excitation amplitude for $8^{\mathrm{th}}$~turn pulsing in H+V measured during the 2017 experiment. The excitation amplitude error is 15\% indicated by the horizontal error bars.}
+\end{figure}
+The only small effect on the beam expected from simulations could then be also confirmed experimentally during the 2017 experiments. For this purpose the excitation amplitude was increased to 96~nrad, which is the maximum kick strength reachable with the transverse damper at injection without risking saturation. As depicted in Fig.~\ref{fig:8thexploss}, the loss rate increased slightly with the excitation amplitude for an excitation in H+V. For an excitation only in V or only in H, no statistically relevant increase was observed. In addition, the beam distribution also changed in the horizontal plane for an excitation only in H as visible in the BSRT profiles Fig.~\ref{fig:8thexpprof} indicating an increase at around $2.0~\sigma$ simultaneously with a depletion of the beam core. For an excitation in H+V the emittances of the references bunches were much smaller, around $1.8~\mu$m normalized emittance on average, than the one of the excited bunches ranging from $2.3~\mu$m to $3.0~\mu$m \cite{resexmd2017}. The references bunches thus experienced a stronger emittance growth due to intra-beam scattering than the excited bunches due to the excitation on top of their smaller emittance growth due to intra-beam scattering. 
+\begin{figure}[h]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		reference bunch,\\ no excitation
+		\includegraphics[width=1.0\linewidth]{profile_h_8thh_slot_804.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		excited bunch,\\ $8^{\mathrm{th}}$~turn H	\includegraphics[width=1.0\linewidth]{profile_h_8thh_slot_632.png}
+	\end{minipage}
+	\caption{\label{fig:8thexpprof} Horizontal beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the $8^{\mathrm{th}}$~turn pulsing in H. The distribution changes in the reference bunch (left), here slot 804, are much less than for the bunch experiencing the maximum excitation (right), here slot 632.}
+\end{figure}
+ 
+\subsubsection{random excitation\label{sec:simexran}}
+In view of the electron lens, the random excitation presents the pulsing pattern leading to the fastest halo depletion rates. On the other hand it also represents the most dangerous pattern for the beam core. The aim of this experiment was to test the effect on the beam core in comparison to the resonant excitation represented in the 2017 experiment by the $7^{\mathrm{th}}$~turn pulsing as for $8^{\mathrm{th}}$~turn pulsing basically no effect was observed. The random excitation is so powerful in cleaning the halo as it excites all frequencies equally. This can be seen formidably with the FMA analysis in amplitude space depicted in Fig.~\ref{fig:ran2017fmaamp}. The diffusion in tune is increased equally independent of the amplitude.
+\begin{figure}[t]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		no excitation
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerru_dp0_amp.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		uniform random H+V
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerruranadthv_1nrad_dp0_amp.png}
+	\end{minipage}	
+	\caption{\label{fig:ran2017fmaamp} FMA analysis in amplitude space for a uniform random excitation with 1~nrad amplitude in H+V based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The diffusion in tune is increased equally independent of the amplitude.}
+\end{figure}
+
+The results from the Distribution Tracking are shown in Fig.~\ref{fig:ransim}
+\begin{figure}[h]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_intensity.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_rel_emit2.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit1.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit2.png}
+	\end{minipage}
+	\caption{\label{fig:ransim} Relative intensity (top left) and relative vert. emittance (top right), and hor. (bottom left) and vert. (bottom right) emittance obtained from simulations (Distribution Tracking) based on the 2016 injection optics with standard errors and $(Q_x,Q_y)=(64.28,59.31)$ and 2017 injection optics with standard errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates an excitation with only a random dipole noise component in H+V of 6~nrad, and the dotted and dashed line the results for $7^{\mathrm{th}}$~turn pulsing plus a random dipole noise component in H+V of 6~nrad.}
+\end{figure}
 
 \subsubsection{Effect of the transverse damper\label{sec:damp}}
 Compare random and nth turn -> no damping for nth, only for random.
@@ -689,7 +774,7 @@ We now want to close the loop to the effects on the beam core for hollow electro
 
 
 \begin{acknowledgments}
-We wish to acknowledge Roderik Bruce and Gianluca Valentino for there very helpful suggestions in preparing the experiment at the LHC and we would like to thank all participants of the experiment for helping acquire the data presented in this paper. We would like to acknowledge Dmitry Shatilov for his help with the Lifetrac code, and St\'{e}phane Fartoukh, Riccardo De Maria and Rogelio Tomás for their help with generating the appropiate optics model. We are grateful also for the support from the beam instrumentation team, in particular Enrico Bravin and Georges Trad, with the BSRT and are thankful for the collaboration with St\'{e}phania Papadopoulou and Fanouria Antonio for the analysis of the BSRT profiles.
+We wish to acknowledge Giulia Papotti with her help with the preparations for the 2016 experiments and her general support from the operations side, Roderik Bruce and Gianluca Valentino for there very helpful suggestions in preparing the experiment at the LHC and we would like to thank all participants of the experiment for helping acquire the data presented in this paper. We would like to acknowledge Dmitry Shatilov for his help with the Lifetrac code, and St\'{e}phane Fartoukh, Riccardo De Maria and Rogelio Tomás for their help with generating the appropiate optics model. We are grateful also for the support from the beam instrumentation team, in particular Enrico Bravin and Georges Trad, with the BSRT and are thankful for the collaboration with St\'{e}phania Papadopoulou and Fanouria Antonio for the analysis of the BSRT profiles.
 \end{acknowledgments}
 
 \clearpage
