@@ -136,10 +136,10 @@ Most promising are methods, which considerably increase the diffusion speed in t
 		\centering
 		\includegraphics[width=1.0\linewidth]{active_halo_control.png}
 	\end{minipage}	
-	\caption{\label{fig:active_halo_control} Sketch of passive halo control as with the collimation system (top) and active halo control using in addition for example a hollow electron lens (HEL) to control the diffusion speed in the region tail region without affected the beam core (bottom). \textcolor{red}{Any acknowledgement needed for the plots?}.}
+	\caption{\label{fig:active_halo_control} Sketch of passive halo control as with the collimation system (top) and active halo control using in addition for example a hollow electron lens (HEL) to control the diffusion speed in the region tail region without affected the beam core (bottom).}
 \end{figure}
 
-In view of the need of an active halo control system for LHC and HL-LHC in particular and in general for future high power accelerators, different methods have been studied in the last recent years \cite{helreview_bruce}, of which the HEL is considered the superior device at least in case of the HL-LHC \cite{helreview} and is also considered for other future high energy colliders like HE-LHC and FCC-hh \cite{helhcparam2011,fccparam2016}.
+In view of the need of an active halo control system for LHC and HL-LHC in particular and in general for future high power accelerators, different methods have been studied in the last recent years \cite{helreview_bruce}, of which the HEL is considered the superior device at least in case of the HL-LHC \cite{helreview} and is also considered for other future high energy colliders like HE-LHC and FCC-hh \cite{helhcparam2011,fcc_coll_ipac2017}.
 
 The beneficial effect of an active halo control system is however abrogated if also the beam core is affected as this would ultimately lead to a degradation of the performance due to losses of particles in the core region and emittance growth. In this paper, we will concentrate on this aspect in view of future HEL to be installed in the HL-LHC. We will summarize possible sources of perturbations of the beam core concentrating in particular on the case of pulsed operation and with the focus on the beam experiments at the LHC performed in this context.
 
@@ -207,7 +207,7 @@ where $L$ is the length of the e-lens, $I_T$ the total electron beam current, $\
 \end{table}
 
 The distribution together with the resulting kick are illustrated in Fig.~\ref{fig:hel_field}. The $\pm$-sign represents the two cases of the electron beam traveling in the direction of the proton beam ($v_e v_p>0$) leading to ``$-$" or in the opposite direction ($v_e v_p<0$) leading to ``$+$". For hollow electron beam collimation, electron and proton beam travel in opposite directions. Assuming HL-LHC and HEL design parameters (Table~\ref{tab:hel_param}--\ref{tab:hllhc_param}) the maximum kick of the HEL is:
-\begin{equation}
+\begin{equation}\label{eqn:helkick}
 \theta_{\rm max,B1} = 392~\rm{nrad}
 \end{equation}
 %\begin{eqnarray}
@@ -217,9 +217,11 @@ The distribution together with the resulting kick are illustrated in Fig.~\ref{f
 for an inner radius $R_1=4\sigma_p$, outer radius $R_2=7.5\sigma_p$ and a peak current of $I_e=$\SI{5.0}{A}. Similar values are obtained for Beam~2.
 
 \subsection{Operation modes and effects on the beam core\label{sec:hel:core}}
-As depicted in Fig.~\ref{fig:hel_field} and in evidence from Eq.~\ref{eq:field_1}--\ref{eq:field_2}, the field at the beam core vanishes in the ideal case. Effects on the beam core thus only arise in case of imperfections, where possible sources are the bends of the HEL, as the electron beam crosses directly the proton beam, and distortions in the electron beam profile (see Section~\ref{sec:core}). Both sources result in non-linear kicks (see for example \cite{hel_bends_stancari,hel_model_polynomial_morozov} (\textcolor{red}{is there a better reference for the profile imperfections, updated note from Giulio???})).
+As depicted in Fig.~\ref{fig:hel_field} and in evidence from Eq.~\ref{eq:field_1}--\ref{eq:field_2}, the field at the beam core vanishes in the ideal case. Effects on the beam core thus only arise in case of imperfections, where possible sources are the bends of the HEL, as the electron beam crosses directly the proton beam, and distortions in the electron beam profile (see Section~\ref{sec:core}). Both sources result in non-linear kicks \cite{hel_bends_stancari,hel_model_polynomial_morozov}.
 
-In DC operation of the HEL, the non-linear kicks from the HEL stay in the shadow of the non-linearities otherwise present in the machine. Tolerances on imperfections are therefore not particular stringent and not a concern. The picture however changes significantly in case of pulsed operation of the HEL, in which case the electron gun voltage is modulated using a white or colored noise spectrum. If the electromagnetic field of the HEL does not vanish at the proton beam core, noise is transferred not only to the halo particles, as intended, but also to the beam core with naturally much smaller amplitude. Tolerances in this case rapidly become much more stringent than in DC operation and studies of the effect of the HEL on the beam core are therefore focusing on this mode of operation.
+In DC operation of the HEL, these non-linear kicks stay in the shadow of the non-linearities otherwise present in the machine. Tolerances on imperfections are therefore not particularly stringent and of no concern.
+
+The picture changes significantly in case of pulsed operation of the HEL, in which case the electron gun voltage is modulated using a white or colored noise spectrum. If the electromagnetic field of the HEL does not vanish at the proton beam core, noise is transferred not only to the halo particles, as intended, but also to the beam core with naturally much smaller amplitude. Tolerances in this case rapidly become much more stringent than in the case of DC operation and studies of the effect of the HEL on the beam core are therefore focusing on this mode of operation which is also the main topic of this paper.
 \begin{table}[t]
 	\caption{\label{tab:hllhc_param}%
 		HL-LHC design parameters at top energy \cite{hlcdr} and parameters relevant in connection with the HEL. Optics parameters at HEL are based on a position of the HEL of $-40$~m for Beam~1 (B1) and $+40$~m for Beam~2 (B2) from IP4 using HL-LHC optics V1.3 with $\beta^{*}=0.15$~m \cite{hlv13}.
@@ -247,7 +249,7 @@ In DC operation of the HEL, the non-linear kicks from the HEL stay in the shadow
 	\end{ruledtabular}
 \end{table}
 
-The main benefit of pulsing the HEL is to increase the halo removal rate in case a fast depletion of the halo is desired. The halo diffusion rate is increased in this case as in addition to the non-linear kick, noise is exerted on the halo particles of the proton beam. For the HL-LHC two different pulsing patterns are currently being considered:
+Despite the fact that pulsed operation is much more dangerous than DC operation for the proton beam core, pulsed operation is still strongly under consideration. The main benefit of pulsing the HEL is to increase the halo removal rate if a fast depletion of the halo is desired. The halo diffusion rate is increased in this case as in addition to the non-linear kick, noise is exerted on the halo particles of the proton beam. For the HL-LHC two different pulsing patterns are considered:
 \begin{itemize}
 	\item \textbf{random excitation:} The electron gun voltage is modulated between:
 	\begin{eqnarray}
@@ -270,19 +272,18 @@ The main benefit of pulsing the HEL is to increase the halo removal rate in case
 In general, the random excitation mode is the most effective and operationally easiest pulsing mode, but also the most stringent in terms of tolerances on the residual field at the beam core as it induces white noise and thus excites all beam frequencies. As the resonant excitation acts on specific resonances, the pulsing pattern has to be chosen according to the machine and beam parameters. On the one hand, this makes the operation more difficult as one has to find the most efficient $k^{\mathrm{th}}$~turn pulsing for each operation mode, on the other hand, it also relaxes the tolerances on the residual field at the beam core as, depending on the machine and beam configuration, it might be possible to find a resonant excitation pattern, which mainly affects the halo and not the core.
 
 \section{Sources of residual field in the proton beam core region and first order estimates\label{sec:core}}
-With the current HEL layout (see Fig.~\ref{fig:hel_layout}), parasitic kicks on the proton beam core can arise in the central region (main solenoid) due to profile imperfections in the electron beam and at the entrance and exit of the HEL, where electron and proton beam overlap. Currently, no HEL is installed in the LHC, and the kick on the proton beam core must therefore be approximated to first order by a dipole kick for the experiments at the LHC. Explicitly, the dipole kick with the corresponding excitation pattern is applied with the LHC transverse damper (see Section~\ref{sec:adt}).
+With the current HEL layout (see Fig.~\ref{fig:hel_layout}), parasitic kicks on the proton beam core can arise in the central region (main solenoid) due to profile imperfections in the electron beam and at the entrance and exit of the HEL, where electron and proton beam overlap. Currently, no HEL is installed in the LHC, and the kick on the proton beam core must therefore be approximated to first order by a dipole kick for the experiments at the LHC. During the experiments presented in this paper, the dipole kick with the corresponding excitation pattern was applied with the LHC transverse damper (see Section~\ref{sec:adt}).
 
-The expected kick to first order from the HEL bends~(Eqn.~\ref{eqn:kick_bends}) is
+Leaping ahead of the more detailed derivations in Sec.~\ref{core:sec:1} and Sec.~\ref{core:sec:2}, the expected kick to first order from the HEL bends is estimated to be~(Eqn.~\ref{eqn:kick_bends}):
 \begin{equation}
 	\Delta x'_{\rm{bends}},\Delta y'_{\rm{bends}}\leq \SI{0.5}{nrad},
 \end{equation}
 and for the central region due to profile imperfections~(Eqn.~\ref{eqn:kick_central}):
 \begin{equation}
-	\Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} \leq \SI{15.0}{nrad}
+	\Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} \leq \SI{19.6}{nrad}
 \end{equation}
-where the current HEL design parameters (see Table~\ref{tab:hllhc_param}--\ref{tab:hel_param}) are used.
-% yielding the maximum kick, explicitly $B_{m}=\SI{5}{T}$, $I_e=\q{5.0}{A}$, $E_{e} = \SI{10.0}{keV}$, $L=\SI{3}{m}$ and $E_{p} = \SI{7.0}{TeV}$.
-The contribution from the central region is clearly dominating. A more detailed derivation of both values is given in Sec.~\ref{core:sec:1}--\ref{core:sec:2}.
+where the current HEL design parameters (see Table~\ref{tab:hllhc_param}--\ref{tab:hel_param}) are used. The contribution from the central region is clearly dominating.
+
 \subsection{Uncompensated kicks from HEL bends}
 \label{core:sec:1}
 As reference for the estimate of the dipole component originating from the HEL bends, the symplectic map derived in \cite{hel_bends_stancari} is used. In this case the HEL bends are modeled as a cylindrical pipe with a static charge distribution of 1~A and 5~keV electrons bend in the horizontal plane. In case of an U-shaped HEL, the transverse dipole kicks at entrance and exit add up, while for a S-shaped HEL the kicks compensated each other. For this reason a S-shape has been chosen for the HL-LHC HEL (see Fig.~\ref{fig:hel_layout}). In this case, uncompensated kicks therefore only arise from imperfections, which can originate from profile imperfections and current fluctuations. As a first rough estimate, we assume in this paper 10\% fluctuations between the entrance and exit and that the kicks from entrance and exit due to these imperfections add up. Using the electric field calculations in \cite{hel_bends_stancari}, the maximum values for the integrated electric field are then around
@@ -309,18 +310,37 @@ Assuming now 10\% fluctuation between entrance and exit kick, the expected kick 
 
 \subsection{Kicks in the central region (main solenoid)}
 \label{core:sec:2}
-For a perfectly uniform, annular and radially symmetric profile, the field in the region of the proton beam core vanishes (see Eqn.~\ref{eq:field_2}). In case of electron beam profile imperfections in particular the radial symmetry is broken, leading to a residual field at the beam core (see Fig.~\ref{core:fig:1}).
+For a perfectly uniform, annular and radially symmetric profile, the field in the region of the proton beam core vanishes (see Eqn.~\ref{eq:field_2} and Fig.~\ref{fig:hel_field}). Fields at the location of the proton beam core, thus only arise in case of profile imperfections of the electron beam, in particular if the radial symmetry is broken.
+
+Last year, new measurements could be performed at the Fermilab electron lens test stand \cite{hel_test_stand_fnal} of the newest hollow electron gun CHG1b. A typical measurement of the electron beam current density obtained during these measurements is shown in Fig.~\ref{core:fig:0}.
+\begin{figure}[t]
+		\centering
+		\includegraphics[width=0.8\linewidth]{e-field-measured.png}
+	\caption{Current density from measurements of the CHG1b hollow electron gun at the Fermilab electron lens test stand in 2017 \cite{hel_res_field_stancari_2017}.}
+	\label{core:fig:0}
+\end{figure}
+As at the test stand the solenoidal fields required for the HL-LHC electron lens can not be reached, an estimate of the electron beam profile for HL-LHC can only be obtained in terms of simulations. For this purpose, the measured distribution is compressed to the inner e-beam radius of $0.97$~mm and than an input distribution with $40\ 000$ particles generated. The electric field can in general be scaled with the electron beam current and energy, but can not easily be scaled with the inner and outer radius of the electron beam distribution. Therefore it is essential to track a distribution with the correct dimensions. The potential and fields can then be calculated with the particle in cell simulation code WARP \cite{warp} yielding the relative electric field strengths shown in Fig.~\ref{core:fig:1}. Further details on the measurements and WARP simulations can be found in~\cite{hel_res_field_stancari_2017}.
 \begin{figure}[h]
-	\centering
-	\includegraphics[width=1.0\linewidth]{e-beam_profile.png}
-	\caption{Calculated hollow electron beam field from measured profile of 9~kV, 2.49~A e-gun and different main solenoidal fields $Bm$. The field has been calculated using the code WARP \cite{warp}. \textcolor{red}{change $Bm$ to $B_m$ +substitute with new picture.}}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Emap.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Eslice.png}
+	\end{minipage}
+	\caption{Calculated relative electric field for the new CHG1b hollow electron gun in the x-y plane and as projection on the x- and y-axis respectively based on measurements at the Fermilab test stand combined with WARP simulations for the calculation of the electric potentials and fields.}
 	\label{core:fig:1}
 \end{figure}
-A first estimate of the residual kick for the HEL design parameters (Table~\ref{tab:hel_param}--\ref{tab:hllhc_param}) with a main solenoid field of $B_{m}=\SI{5}{T}$ can be obtained by scaling the electric field at the center from the measurements and simulations shown in Fig.~\ref{core:fig:1}, yielding:
-\begin{equation}\label{eqn:kick_central}
-\Delta x', \Delta y'=\q{15}{nrad}
+
+As a first estimate for the fields at the proton beam core, one can use the relative electric field strength along the x- and y-axis, yielding roughly (Fig.~\ref{core:fig:1}, right):
+\begin{equation}
+	E_{\mathrm{rel}}\approx 5\%
 \end{equation}
-\textcolor{red}{New gun measurements, can we maybe have a WARP simulation for the new design parameters instead of scaling?}
+For a maximum kick of $392$~nrad (Eqn.~\ref{eqn:helkick}), we then obtain as estimated dipole kick amplitude at the proton beam core:
+\begin{equation}
+\Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} \leq \SI{19.6}{nrad}
+\end{equation}
 
 \section{LHC experiments\label{sec:exp}}
 \subsection{Overview of LHC experiments\label{sec:exp_sum}}
@@ -498,7 +518,7 @@ The most efficient pulsing pattern can be predicted by the comparison of the los
 	\caption{\label{fig:patternhist} Horizontal beam distribution for $7^{\mathrm{th}}$~turn pulsing (top left), vertical beam distribution for $10^{\mathrm{th}}$~turn pulsing (top right) and horizontal (bottom left) and vertical (bottom right) beam distribution for random excitation from Distribution Tracking simulations based on the 2016 injection optics with $(Q_x,Q_y)=(64.28,59.31)$ and standard errors. The excitation is applied in both planes with an amplitude of 96~nrad. The residual is defined as the final distribution (here $10^4$~turns) minus the initial distribution (here $10^2$~turns), and the ratio as the final distribution divided by the initial distribution. The red line in the plot of the residual is the difference between the Gaussian fit of the distribution and the distribution itself.}
 \end{figure}
 
-As already addressed earlier, the emittance in case of the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing starts at an increased initial value and then stays almost constant during the entire simulation time. This behavior is typical for any $n^{\mathrm{th}}$ turn pulsing and can be ascribed to the adjustment of the beam distribution during the first $10^4$ turns to a new equilibrium distribution. As the beam distribution is only dumped every $10^4$ turns, this initial fast adjustment manifests itself in an increased initial emittance value in Fig.~\ref{fig:patternsim}, and also any other simulations over $10^6$ turns presented in this paper. Besides an increased emittance, the new distribution also becomes non-Gaussian. This can be seen by means of the residual in respect to the Gaussian distribution illustrated for example for the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing in Fig.~\ref{fig:patternhist}. For the purpose of comparison, also the distribution in both planes for a random excitation is shown. This initial fast change of the beam distribution is not only an artifact of the simulation, but has been, to the knowledge of the authors, also for the first time experimentally observed as will be presented later in this paper. The timescale of this fast adjustment is in experiments however much slower than predicted in simulations - on the timescale of minutes compared to seconds. 
+As already addressed earlier, the emittance in case of the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing starts at an increased initial value and then stays almost constant during the entire simulation time. This behavior is typical for any $k^{\mathrm{th}}$ turn pulsing and can be ascribed to the adjustment of the beam distribution during the first $10^4$ turns to a new equilibrium distribution. As the beam distribution is only dumped every $10^4$ turns, this initial fast adjustment manifests itself in an increased initial emittance value in Fig.~\ref{fig:patternsim}, and also any other simulations over $10^6$ turns presented in this paper. Besides an increased emittance, the new distribution also becomes non-Gaussian. This can be seen by means of the residual in respect to the Gaussian distribution illustrated for example for the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing in Fig.~\ref{fig:patternhist}. For the purpose of comparison, also the distribution in both planes for a random excitation is shown. This initial fast change of the beam distribution is not only an artifact of the simulation, but has been, to the knowledge of the authors, also for the first time experimentally observed as will be presented later in this paper. The timescale of this fast adjustment is in experiments however much slower than predicted in simulations - on the timescale of minutes compared to seconds. 
 
 \subsubsection{$10^{\mathrm{th}}$ turn pulsing\label{sec:simex10}}
 The $10^{\mathrm{th}}$~turn pulsing pattern was tested in 2016 with an excitation in the vertical plane only. In summary, the following experimental results were obtained:
@@ -807,7 +827,7 @@ The experimental results also confirm the small loss predicted in simulations. T
 \end{figure}
 
 \subsubsection{Effect of the transverse damper\label{sec:damp}}
-For all $n^{\mathrm{th}}$~turn pulsing patterns, the transverse damper does not change any of the observables studied during the experiments, explicitly losses, emittance and beam distribution suggesting that indeed it is not capable of damping any resonant excitation. On the other hand, the transverse damper considerably decreases loss rates, emittance growth and distribution changes for the random excitation. As an example, the vertical emittance growth is compared for the $7^{\mathrm{th}}$~turn pulsing in V and a random excitation in V in Fig.~\ref{fig:damp} and the loss rates in Fig.~\ref{fig:ranexploss} illustrating impressively the above behavior. 
+For all $k^{\mathrm{th}}$~turn pulsing patterns, the transverse damper does not change any of the observables studied during the experiments, explicitly losses, emittance and beam distribution suggesting that indeed it is not capable of damping any resonant excitation. On the other hand, the transverse damper considerably decreases loss rates, emittance growth and distribution changes for the random excitation. As an example, the vertical emittance growth is compared for the $7^{\mathrm{th}}$~turn pulsing in V and a random excitation in V in Fig.~\ref{fig:damp} and the loss rates in Fig.~\ref{fig:ranexploss} illustrating impressively the above behavior. 
 For nth turn pulsing no effect. Show example of emittance for 7th turn pulsing and random and refer to Fig.~\ref{fig:ranexploss} for the loss rate.
 \begin{figure}[h]
 	\centering
