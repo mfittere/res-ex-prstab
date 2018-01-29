@@ -25,7 +25,7 @@ optsk = "2017injnocolc15o+19_6erra2b2uranadt/1/eps3.5/%s%se-8/p1e4t1e4s100weight
 # no excitation
 t0 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,opt0),plt_dir=plt_dir)
 
-grid_flag = True
+grid_flag = False
 
 plt.close('all')
 # losses
