@@ -743,34 +743,118 @@ In view of the electron lens, the random excitation presents the pulsing pattern
 		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerruranadthv_1nrad_dp0_amp.png}
 	\end{minipage}	
 	\caption{\label{fig:ran2017fmaamp} FMA analysis in amplitude space for a uniform random excitation with 1~nrad amplitude in H+V based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The diffusion in tune is increased equally independent of the amplitude.}
-\end{figure}
-
-The results from the Distribution Tracking are shown in Fig.~\ref{fig:ransim}
-\begin{figure}[h]
+%\end{figure}
+%\begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
-		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_intensity.png}
+		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_intensity.png}
 	\end{minipage}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
-		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_rel_emit2.png}
+		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_sigm.png}
 	\end{minipage}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
-		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit1.png}
+		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_emit1.png}
 	\end{minipage}	
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
-		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit2.png}
+		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_emit2.png}
 	\end{minipage}
-	\caption{\label{fig:ransim} Relative intensity (top left) and relative vert. emittance (top right), and hor. (bottom left) and vert. (bottom right) emittance obtained from simulations (Distribution Tracking) based on the 2016 injection optics with standard errors and $(Q_x,Q_y)=(64.28,59.31)$ and 2017 injection optics with standard errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates an excitation with only a random dipole noise component in H+V of 6~nrad, and the dotted and dashed line the results for $7^{\mathrm{th}}$~turn pulsing plus a random dipole noise component in H+V of 6~nrad.}
+	\caption{\label{fig:ransim} Relative intensity (top left), bunch length (top right), and horizontal (bottom left) and vertical (bottom right) emittance obtained from simulations (Distribution Tracking) based on the 2017 injection optics with standard errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates the case with no excitation, and the dotted and dashed line the results for a uniform random excitation of 12~nrad and 24~nrad respectively.}
+\end{figure}
+
+The results from the Distribution Tracking are shown in Fig.~\ref{fig:ransim}. In contrast to the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing, the effect of a random excitation is very symmetric:
+\begin{itemize}
+	\item Emittance growth is only caused in the plane of excitation.
+	\item The emittance growth is comparable between an excitation in H and V in the corresponding plane as well as the scaling with the excitation amplitude. Only a small increase or decrease is observed if the excitation is applied in both planes. The difference can be attributed to coupling.
+	\item The random excitation leads to an increased constant emittance growth rate which is reached without undergoing an initial adjustment phase.
+	\item Negligible losses are observed independent of the plane of excitation.
+\end{itemize}
+
+Qualitatively, this behavior could be also confirmed experimentally during the 2017 experiments and as example the emittances are depicted in Fig.~\ref{fig:ranexp} for pulsing in V and in H+V, showing no emittance growth in the horizontal for an excitation only in V and emittance growth in both planes for an excitation in H+V. All emittance growth rates are in a comparable range. Note that despite the large emittance growth, the growth rate stays constant and there is no fast adjustment phase succeeded by a new equilibrium state as was the case for the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing.
+\begin{figure}[h]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		random excitation V
+		\includegraphics[width=1.0\linewidth]{2017_bunch_intensity_vran_no_damper_avg.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		random excitation H+V
+		\includegraphics[width=1.0\linewidth]{2017_bunch_intensity_hvran_no_damper_avg.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017_emith_avg_rel_vran_no_damper.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017_emith_avg_rel_hvran_no_damper.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017_emitv_avg_rel_vran_no_damper.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017_emitv_avg_rel_hvran_no_damper.png}
+	\end{minipage}	
+	\caption{\label{fig:ranexp} Relative intensity (top) and relative horizontal (center) and vertical (bottom) emittance for a random excitation only in V (left) and in H+V (right). Emittance growth is only caused in the plane of excitation.}
+\end{figure}
+These large changes of the emittance can of course also be seen directly in the BSRT profiles shown in Fig.~\ref{fig:10thexp} for a random excitation only in V.
+\begin{figure}[h]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		reference bunch,\\ no excitation
+		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2862.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		excited bunch,\\ random excitation V		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2696.png}
+	\end{minipage}
+	\caption{\label{fig:ranexpprof}\textcolor{red}{update plot} Vertical beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the random excitation in V. The distribution changes in the reference bunch (left), here slot 2862, are much less than for the bunch experiencing the maximum excitation (right), here slot 2696.}
+\end{figure}
+
+The experimental results also confirm the small loss predicted in simulations. The losses then suddenly increase for 12~nrad, which is most likely the point when, due to the large emittance increase, the physical aperture starts eating into the more central region of the distribution causing higher losses. Furthermore, the loss rates also add up, meaning that double the loss rate is observed for an excitation in H+V compared to only in H or only V. This is illustrated in  Fig.~\ref{fig:ranexploss}, which also shows the loss rates for the $7^{\mathrm{th}}$~turn pulsing in comparison. Furthermore the loss rate is considerably reduced if the transverse damper is active, which is not the case for the $7^{\mathrm{th}}$~turn pulsing. We will address this subject separately in the next Section, Sec.~\ref{sec:damp}.
+\begin{figure}[h]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+	\includegraphics[width=1.0\linewidth]{2017_scale_amp_ranv_lbllong.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017_scale_amp_ranhv_lbllong.png}
+	\end{minipage}	
+	\caption{\label{fig:ranexploss}  Comparison of scaling of loss rates with excitation amplitude for a random excitation and $7^{\mathrm{th}}$~turn pulsing in V (left) and H+V (right) measured during the 2017 experiment. The excitation amplitude error is 15\% indicated by the horizontal error bars.}
 \end{figure}
 
 \subsubsection{Effect of the transverse damper\label{sec:damp}}
-Compare random and nth turn -> no damping for nth, only for random.
+For nth turn pulsing no effect. Show example of emittance for 7th turn pulsing and random and refer to Fig.~\ref{fig:ranexploss} for the loss rate.
+\begin{figure}[h]
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		random excitation H+V
+		\includegraphics[width=1.0\linewidth]{2017_bunch_intensity_hvran_no_damper_avg.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		$7^{\mathrm{th}}$~turn H+V
+		\includegraphics[width=1.0\linewidth]{2017_bunch_intensity_hv7th_no_damper_avg.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017_bunch_intensity_hvran_with_damper_avg.png}
+	\end{minipage}	
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{2017_bunch_intensity_hv7th_with_damper_avg.png}
+	\end{minipage}	
+	\caption{\label{fig:damp} Relative intensity for bunches with transverse damper not active (top) and transverse damper active (bottom) for $7^{\mathrm{th}}$~turn pulsing in V (left) and for a random excitation only in V (right).}
+\end{figure}
 
 \section{Summary\label{sec:sum}}
-We now want to close the loop to the effects on the beam core for hollow electron lenses in HL-LHC. For DC operation, no influence on the beam core are are to be expected. To study the effect of pulsed operation beam experiments were conducted in 20216 and 2017 at injection. The experimental results showed that for the kick amplitudes expected for the e-lens, considerable effects are to be expected. The random pulsing mode is the most sensitive pulsing pattern and as it excites all beam frequencies results in emittance growth in the plane of excitation and losses once the beam size increased enough to hit the physical aperture. The resonant excitation or nth turn pulsing on the other hand features a rich non-linear dynamics as it excites only certain resonances and diversity in beam distribution and diffusion changes. This means, that each pulsing patterns results in different loss rates and emittance growth. Typical for this kind of excitation is also the adjustment of the beam distribution to a new equilibrium state.
+We now want to close the loop to the effects on the beam core for hollow electron lenses in HL-LHC. For DC operation, no influence on the beam core are are to be expected. To study the effect of pulsed operation beam experiments were conducted in 2016 and 2017 at injection. The experimental results showed that for the kick amplitudes expected for the e-lens, considerable effects are to be expected. The random pulsing mode is the most sensitive pulsing pattern and as it excites all beam frequencies results in emittance growth in the plane of excitation and losses once the beam size increased enough to hit the physical aperture. The resonant excitation or nth turn pulsing on the other hand features a rich non-linear dynamics as it excites only certain resonances and diversity in beam distribution and diffusion changes. This means, that each pulsing patterns results in different loss rates and emittance growth. Typical for this kind of excitation is also the adjustment of the beam distribution to a new equilibrium state.
 
 
 \begin{acknowledgments}
