@@ -4,3 +4,11 @@
 .RData
 .Ruserdata
 *.Rproj
+
+# texstudio
+*.bib.bak
+*.aux
+*.bbl
+*.blg
+*.log
+*.synctex.gz
