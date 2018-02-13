@@ -391,7 +391,7 @@ For a maximum kick of $392$~nrad as derived in Eq.~\ref{eqn:helkick}, the estima
 \Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} = \SI{19.6}{nrad}
 \end{equation}
 
-\section{LHC experiments on the effect of a resonant and random excitation on the beam core\label{sec:exp}}
+\section{Experimental and simulation setup\label{sec:exp}}
 %put picture on top
 \begin{figure*}
 	\begin{minipage}[t]{1.0\linewidth}
@@ -469,12 +469,12 @@ For both simulation types, the tracking code Lifetrac \cite{lifetrac} was used. 
 	\end{ruledtabular}
 \end{table}
 
-\subsection{Simulation and experimental results\label{sec:simex}}
+\section{Experimental and simulation results\label{sec:simex}}
 In the following we will jump forth and back between both experimental and simulation results as the experimental results are best understood on the base of the simulations. In summary, the most efficient pulsing patterns could be successfully predicted in simulations, which we will demonstrate on the example of the 2016 experiments (see Sec.~\ref{sec:pattern}). Afterwards we will present the simulation and experimental results of the tested excitation patterns, explicitly the $10^{\mathrm{th}}$~turn, $7^{\mathrm{th}}$~turn and $8^{\mathrm{th}}$~turn pulsing in Secs.~\ref{sec:simex10}--\ref{sec:simex8}) as well as the random excitation in Sec.~\ref{sec:simexran}. As a last chapter (Sec.~\ref{sec:damp}), we will address the influence of the transverse damper in the presence of an external excitation source on emittance, losses and beam distribution.
 
 Quantitative predictions of loss rates and emittance growth proved in general challenging as both observables are influenced in addition by the natural noise present in the LHC, originating for example from vibrations and magnetic field ripple. The observed effect is then the result of the interaction of the external excitation with the natural noise. At injection, this natural noise component is not known and thus presents a very influential but undefined input to the simulations. Beside the natural noise, also collective effects like intra-beam scattering and electron cloud influence the time evolution of emittance and losses. Both are also not taken into account in the simulations, but the effect was minimized during the experiments by choosing an as small as possible bunch intensity of only $0.7\times10^{11}$ protons per bunch.
 
-\subsubsection{Dependence on the pulsing pattern\label{sec:pattern}}
+\subsection{Dependence on the pulsing pattern\label{sec:pattern}}
 The effect of each pulsing pattern in comparison to the other patterns can be identified by the means of the loss rate and emittance growth from the distribution tracking. As an example, the simulation results for the 2016 experiment are shown in Fig.~\ref{fig:patternsim} featuring a clear dependence of both parameters on the pattern.
 \begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
@@ -550,7 +550,7 @@ The experienced reader might have noticed that the emittance in case of the $7^{
 
 In the presence of only a resonant excitation, this distribution is stable in simulations with a constant emittance. Experimentally however, an increase of the emittance growth with the applied excitation amplitude is observed, see for example Figs.~\ref{fig:10thexp},~\ref{fig:7thexp}, not matching the prediction by simulations. By adding a random noise component representative for the natural noise present in the LHC, the constant emittance is changed to an excitation amplitude dependent emittance growth as depicted for example in Figs.~\ref{fig:10thsim},~\ref{fig:7thsim}. An excitation with random uniform noise on the other hand results in constant emittance growth without any initial adjustment phase. The interaction with the natural noise source then only results in an underestimation of loss rates and emittance growth as it is basically equivalent to the application of random noise with an increased amplitude. In addition to the experiments presented in this paper, the effect of a random excitation was also studied in a separate experiment at the LHC for the case of colliding beams \cite{md1433_noise_top_energy,md_noise_bbLHC}.
 
-\subsubsection{$10^{\mathrm{th}}$ turn pulsing\label{sec:simex10}}
+\subsection{$10^{\mathrm{th}}$ turn pulsing\label{sec:simex10}}
 The $10^{\mathrm{th}}$~turn pulsing pattern was tested in 2016 with an excitation in the vertical plane only. In summary, the following experimental results were obtained:
 \begin{enumerate}
 	\item Increase of the loss rate with the excitation amplitude (Figs.~\ref{fig:10thexp}.
@@ -619,7 +619,7 @@ As can be seen from simulations, adding a random noise component not only yields
 	\caption{\label{fig:10thexploss} Comparison of scaling of loss rates with excitation amplitude for $10^{\mathrm{th}}$~turn pulsing. The experimental results for a maximum excitation with 48~nrad are shown in black and for 96~nrad in blue. The excitation amplitude error is 50\% and the error on the loss rate is the pure statistical error. The simulation results for 2016 injection optics, standard errors, $(Q_x,Q_y)=(64.28,59.31)$, $10^{\mathrm{th}}$~turn pulsing in V plus random dipole noise in H+V of 6~nrad are shown in red.}
 \end{figure}
 
-\subsubsection{$7^{\mathrm{th}}$ turn pulsing\label{sec:simex7}}
+\subsection{$7^{\mathrm{th}}$ turn pulsing\label{sec:simex7}}
 The $7^{\mathrm{th}}$~turn pulsing pattern has been tested during both experiments in 2016 and 2017 and was intended to serve as a proof for the reproducibility of the experimental results. Unfortunate for this experiment, the machine tune was changed in standard operation from (64.28,59.31) in 2016 to (62.27,60.295) in 2017 accompanied by a slight change in optics considered irrelevant in the context of the presented measurements. The attempt to change back to the fractional tunes of (.28,.31) as chosen in 2016 lead to large losses during the 2017 experiment and therefore the 2017 working point of (62.27,60.295) had to be used instead. This change in tune entailed a change in the driving resonances, from previously the $7Q_x$ resonances in 2016 (see Fig.~\ref{fig:patternfma}) to the $7Q_x$, $7Q_y$ and $7Q_x + 7Q_y$ resonance in 2017 (see Fig.~\ref{fig:7th2017fma}).
 \begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
@@ -720,7 +720,7 @@ The loss rates measured during the experiment however differ from the simulation
 	\caption{\label{fig:7thexploss} Comparison of scaling of loss rates with excitation amplitude for $7^{\mathrm{th}}$~turn pulsing in H and data obtained during the 2016 experiment (black and blue) and 2017 experiment (red and yellow). The excitation amplitude error is 50\% in 2016 and could be reduced to 15\% in 2017.}
 \end{figure}
 
-\subsubsection{$8^{\mathrm{th}}$ turn pulsing\label{sec:simex8}}
+\subsection{$8^{\mathrm{th}}$ turn pulsing\label{sec:simex8}}
 Pulsing patterns which have little effect on the beam core are particularly interesting for the hollow electron lens operation if they in addition have a large effect on the halo, which is in general feasible considering the highly nonlinear field generated at the location of the halo particles by the HEL. With this motivation in mind the $8^{\mathrm{th}}$~turn pulsing pattern was studied, for which a small effect in comparison to the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$ turn pulsing is expected from the distribution tracking summarized in Fig.~\ref{fig:8thsim}.
 \begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
@@ -766,7 +766,7 @@ The only small effect on the beam expected from simulations could then be also c
 
 In the horizontal plane, a change in beam distribution was measured with the BSRT profiles (Appendix~\ref{app:sec:8}, Fig.~\ref{fig:8thexpprof}) for an excitation only in H, explicitly an increase of the distribution at around $2.0~\sigma$ simultaneously with a depletion of the beam core. For an excitation in H+V the emittances of the references bunches were much smaller, around $1.8~\mu$m normalized emittance on average, than the ones of the excited bunches ranging from $2.3~\mu$m to $3.0~\mu$m as described in \cite{resexmd2017}. The references bunches thus experienced a stronger emittance growth due to intra-beam scattering than the excited bunches due to the excitation on top of their smaller emittance growth due to intra-beam scattering. Therefore no excitation amplitude dependent emittance growth was observed for an excitation in H+V albeit it was recorded for an excitation only in H. In the vertical plane, the beam distribution and thus emittance stayed unchanged. For an excitation only in V, no dependence on the excitation was measured.
  
-\subsubsection{random excitation\label{sec:simexran}}
+\subsection{random excitation\label{sec:simexran}}
 The random excitation presents in general the pulsing pattern leading to the fastest halo depletion rates achievable with an HEL. On the other hand this pattern is also the most dangerous one for the proton beam core. The aim of this experiment was to test the effect on the core in comparison to the resonant excitation represented in the 2017 experiment by primarily the $7^{\mathrm{th}}$~turn pulsing as for $8^{\mathrm{th}}$~turn pulsing basically no effect was observed. The random excitation is in general so powerful as it excites all frequencies of the beam equally.
 \begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
@@ -863,7 +863,7 @@ The large changes of the emittance are of course also directly visible in the be
 \end{figure}
 The experimental results for a maximum excitation amplitude of $A_{\mathrm{max}}=1$~nrad and $A_{\mathrm{max}}=6$~nrad also confirm the in general small losses predicted in simulations. The losses then suddenly increase once the maximum excitation amplitude is increased to $A_{\mathrm{max}}=12$~nrad, which is most likely the point when, due to the large emittance increase, the physical aperture starts eating into the more central region of the distribution resulting in higher losses despite the larger emittance growth for a random excitation. In comparison to the $7^{\mathrm{th}}$~turn pulsing, the loss rate for a random excitation is smaller for a maximum excitation amplitude of $A_{\mathrm{max}}=6$~nrad, but larger for $A_{\mathrm{max}}=12$~nrad (see Fig.~\ref{fig:ranexploss}). This indicates an increase of the diffusion mostly in the beam tails for $7^{\mathrm{th}}$~turn pulsing, while for a random excitation mostly the core is affected. Furthermore, the dependence of the loss rate on the excitation plane is additive, meaning that double the loss rate is observed for an excitation in H+V compared to only in H or only V (see Appendix~\ref{app:sec:ran}, Fig.~\ref{fig:ranexplossplane}). In view of the next section, Sec.~\ref{sec:damp}, not that the loss rate is also considerably reduced for a random excitation if the transverse damper is active, while in case of the $7^{\mathrm{th}}$~turn pulsing the loss rate does not change.
 
-\subsubsection{Effect of the transverse damper\label{sec:damp}}
+\subsection{Effect of the transverse damper\label{sec:damp}}
 \begin{figure}[b]
 	\centering
 	random excitation H+V\\
