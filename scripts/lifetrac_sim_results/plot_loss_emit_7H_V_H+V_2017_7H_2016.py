@@ -130,7 +130,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
     plt.plot(t_16.data['time'],t_16.data['emit%s'%p12]/t_16.data['emit%s'%p12][0],linestyle=lamp,color='orange',label=pltlbl)
   plt.grid(b=grid_flag)
   plt.xlabel('time [s]')
-  plt.ylabel('rel. %s normalized emittance [$\mu$m]'%phv)
+  plt.ylabel('rel. %s normalized emittance'%phv)
   handles,labels = plt.gca().get_legend_handles_labels()
   leg1 = plt.legend(title='(2017)\n7th turn pulsing',ncol=1,fontsize=12,handles=handles[:-2],labels=labels[:-2],loc='upper left')
   leg2 = plt.legend(title='(2016)\n7th turn pulsing',ncol=1,fontsize=12,handles=handles[-3:],labels=labels[-3:],loc='upper center')
