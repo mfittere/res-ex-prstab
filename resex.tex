@@ -637,19 +637,31 @@ where $I$ is the intensity and $\Delta t$ the time interval during which the exc
 \clearpage
 
 \subsection{$7^{\mathrm{th}}$ turn pulsing\label{sec:simex7}}
-The $7^{\mathrm{th}}$~turn pulsing pattern has been tested during both experiments in 2016 and 2017 and was intended to serve as a proof for the reproducibility of the experimental results. Unfortunate for this experiment, the machine tune was changed in standard operation from (64.28,59.31) in 2016 to (62.27,60.295) in 2017 accompanied by a slight change in optics considered irrelevant in the context of the presented measurements. The attempt to change back to the fractional tunes of (.28,.31) as chosen in 2016 lead to large losses during the 2017 experiment and therefore the 2017 working point of (62.27,60.295) had to be used instead. This change in tune entailed a change in the driving resonances, from previously the $7Q_x$ resonances in 2016 (see Fig.~\ref{fig:patternfma}) to the $7Q_x$, $7Q_y$ and $7Q_x + 7Q_y$ resonance in 2017 (see Fig.~\ref{fig:7th2017fma}).
+The $7^{\mathrm{th}}$~turn pulsing pattern has been tested during both experiments in 2016 and 2017. In 2016 the resonant excitation was tested for the first time in the LHC and the experiments were therefore still in the exploratory state. Based on the experience gained in 2016, the experiments could then be repeated more systematically with more bunches allowing to also test in addition the dependence on the excitation plane. Also in case of the $7^{\mathrm{th}}$~turn pulsing, the experiment in 2016 as well as in 2017 can be divided in three parts: the first part without excitation, the second part with a resonant excitation with a maximum amplitude of $A_{\mathrm{max}}=6$~nrad, and a third part in which the excitation amplitude is further increased to $A_{\mathrm{max}}=12$~nrad. As the machine tune was changed in standard operation from (64.28,59.31) in 2016 to (62.27,60.295) in 2017 accompanied by a slight change in optics, considered irrelevant in the context of the presented measurements, a direct comparison of the two experiments and thus check of reproducibility is however not possible. 
+
+The described change in tune entailed a change in the driving resonances, from previously the $7Q_x$ resonances in 2016 to mainly the $7Q_x$ and $7Q_y$ resonance in 2017. This can be seen from the FMA analysis for the 2016 optics (see Fig.~\ref{fig:patternfma} bottom left and bottom right), which shows a strong increase in diffusion for $7^{\mathrm{th}}$~turn pulsing in H around the $7Q_x$ resonances and only small changes for pulsing in V. In case of the 2017 optics and tune, the $7Q_x$ as well as the $7Q_y$ resonances cross the tune footprint (see Fig.~\ref{fig:7th2017fma} top left) and are also excited by the $7^{\mathrm{th}}$~turn pulsing visible as an increase of the diffusion in tune around the corresponding resonance lines for pulsing only in H or only in V and thus also for H+V (see Fig.~\ref{fig:7th2017fma}). An increase in the diffusion in tune however much weaker than for the $7Q_x$ and $7Q_y$ resonances is also observed around the $7Q_x + 7Q_y$ resonances for pulsing in V and H+V suggesting also an excitation of this $14^{\mathrm{th}}$ order resonance in addition. Why it is not visible for pulsing only in H is not understood.
 \begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		no excitation
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerru_dp0_ord14_annotate.png}
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerru_dp0_ord14_annotate_7th.png}
 	\end{minipage}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		$7^{\mathrm{th}}$ H+V
 		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut7skhv_dp0_ord7.png}
 	\end{minipage}	
-	\caption{\label{fig:7th2017fma} FMA analysis in frequency space without excitation (left) and for $7^{\mathrm{th}}$~turn pulsing in H+V (right) based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $7Q_x$ and $7Q_y$ resonance are both excited and in addition the 14th order $7Q_x+7Q_y$.}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		$7^{\mathrm{th}}$ H
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut7skh_dp0_ord7.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		$7^{\mathrm{th}}$ V
+		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut7skv_dp0_ord7.png}
+	\end{minipage}	
+	\caption{\label{fig:7th2017fma} FMA analysis in frequency space without excitation (top left) and for $7^{\mathrm{th}}$~turn pulsing in H+V (top right), only in H (bottom left) and only in V (bottom right) based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $7Q_x$ and $7Q_y$ resonance are both excited and in addition to the 14th order $7Q_x+7Q_y$.}
 \end{figure}
 
 \begin{table}[b]
@@ -672,7 +684,7 @@ The $7^{\mathrm{th}}$~turn pulsing pattern has been tested during both experimen
 		\end{tabular}
 	\end{ruledtabular}
 \end{table}
-Consequently, the effect of the $7^{\mathrm{th}}$~turn pulsing on the beam losses, emittance and beam distribution also differ as depicted by the comparison of the distribution tracking for both experiments in Fig.~\ref{fig:7thsim}, the qualitative comparison of the experimental results in Table~\ref{tab:7thexp}, the comparison of the measured emittance in Fig.~\ref{fig:7thexp} and loss rate in Fig.~\ref{fig:7thexploss}.
+
 \begin{figure}[h]
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
@@ -730,7 +742,7 @@ Similar changes of the emittance as predicted in simulations were also experimen
 	\caption{\label{fig:7thexp} Relative horizontal (top) and vertical (bottom) emittance obtained during the 2016 experiments (left) and the 2017 experiment (right) averaged over the bunches experiencing the same excitation amplitude. For all bunches the damper was not active.}
 \end{figure}
 
-The loss rates measured during the experiment however differ from the simulations in terms of for which case the largest rate is observed as well as quantitatively for the specific cases. For example smaller losses are expected for the 2016 experiments compared to the 2017 experiments from simulations, while experimentally higher loss rates were measured in 2016 (see Fig.~\ref{fig:7thexploss}). For the 2017 experiment, the highest loss rates are expected for pulsing in H+V, than in H and then with a considerably reduction in V. During the experiment comparable loss rates are however measured for all three planes (see Appendix~\ref{app:sec:7}, Fig.~\ref{fig:7thexploss2017})
+The losses measured during the experiment however differ from the simulations in terms of for which case the largest rate is observed as well as quantitatively for the specific cases. For example smaller losses are expected for the 2016 experiments compared to the 2017 experiments from simulations, while experimentally higher loss rates were measured in 2016 (see Fig.~\ref{fig:7thexploss}). For the 2017 experiment, the highest loss rates are expected for pulsing in H+V, than in H and then with a considerably reduction in V. During the experiment comparable loss rates are however measured for all three planes (see Appendix~\ref{app:sec:7}, Fig.~\ref{fig:7thexploss2017}). Last but not least the loss rates as defined in Eqn.~\ref{eqn:lossrate} for the 2016 (red and yellow) and 2017 (black and gree) experiments are compared in Fig.~\ref{fig:7thexploss}. In both cases and as also observed for the $10^{\mathrm{th}}$~turn pulsing, the loss rate follows a quadratic scaling with the excitation amplitude. Loss rates were in general higher during the 2016 experiments. The loss rates from simulations are not shown in Fig.~\ref{fig:7thexploss} as losses were only observed for much higher excitation amplitudes than tried in the experiments.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\linewidth]{2016+2017_scale_amp_7h_lbllong.png}
