@@ -95,7 +95,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
     plt.plot(t.data['time'],t.data['emit%s'%p12]/t.data['emit%s'%p12][0],linestyle='-',color=camp,label=pltlbl)
     plt.plot(tran.data['time'],tran.data['emit%s'%p12]/tran.data['emit%s'%p12][0],linestyle=':',color=camp,label=pltlbl)
   plt.xlabel('time [s]')
-  plt.ylabel('rel. %s normalized emittance [$\mu$m]'%phv)
+  plt.ylabel('rel. %s normalized emittance'%phv)
 #  plt.grid(b=True)
 
 # now do the legends for all plots

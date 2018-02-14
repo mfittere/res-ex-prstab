@@ -22,8 +22,8 @@ opt0 = "2016injnocolc15o+19_6erra2b2u/1/eps3.5/p1e4t1e4s100weight"
 # with pulsing
 optsk = "2016injnocolc15o+19_6erra2b2ut%ssk/1/eps3.5/hv9_6e-8/p1e4t1e4s100weight"
 # random
-optran8 = "2016injnocolc15o+19_6erra2b2uran/1/eps3.5/hv9_6e-8/p1e4t1e4s100weight"
-optran9 = "2016injnocolc15o+19_6erra2b2uran/1/eps3.5/hv9_6e-9/p1e4t1e4s100weight"
+optran = "2016injnocolc15o+19_6erra2b2uran/1/eps3.5/hv9_6e-8/p1e4t1e4s100weight"
+#optran = "2016injnocolc15o+19_6erra2b2uran/1/eps3.5/hv9_6e-9/p1e4t1e4s100weight"
 
 # no excitation
 t0 = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,opt0),plt_dir=plt_dir)
@@ -46,7 +46,7 @@ plt.xlabel('time [s]')
 plt.ylabel('relative intensity')
 ax1=plt.gca()
 # second axis for random
-t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optran8),plt_dir=plt_dir)
+t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optran),plt_dir=plt_dir)
 ax2 = plt.gca().twinx()
 ax2.plot(t.data['time'],t.data['intensity'],linestyle='-',color='grey',label='random')
 ax2.set_ylabel('relative intensity random',color='grey')
@@ -74,7 +74,7 @@ plt.xlabel('time [s]')
 plt.ylabel('bunch length [cm]')
 ax1 = plt.gca()
 # second axis for random
-t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optran8),plt_dir=plt_dir)
+t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optran),plt_dir=plt_dir)
 ax2 = plt.gca().twinx()
 ax2.plot(t.data['time'],t.data['sigm'],linestyle='-',color='grey',label='random')
 ax2.set_ylabel('bunch length random [cm]',color='grey')
@@ -103,7 +103,7 @@ for phv,p12 in zip(['hor.','vert.'],'12'):
 #  plt.grid(b=True)
   ax1 = plt.gca()
   # second axis for random
-  t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optran8),plt_dir=plt_dir)
+  t = LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,optran),plt_dir=plt_dir)
   ax2 = plt.gca().twinx()
   ax2.plot(t.data['time'],t.data['emit%s'%p12],linestyle='-',color='grey',label='random')
   ax2.set_ylabel('%s normalized emittance random [$\mu$m]'%phv,color='grey')
