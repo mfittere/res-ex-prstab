@@ -10,17 +10,13 @@ SOURCES = $(BASE).tex bibliography.bib Makefile \
 TEX = pdflatex
 BIB = bibtex
 
-.PHONY: all refresh clean
+.PHONY: all clean
 
 all: $(BASE).pdf
 
 # generate PDF
 $(BASE).pdf: $(SOURCES)
 	$(TEX) $(BASE); $(BIB) $(BASE); $(TEX) $(BASE); $(TEX) $(BASE)
-
-# refresh
-refresh:
-	touch $(BASE).tex
 
 # cleanup
 clean:

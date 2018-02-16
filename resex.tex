@@ -361,14 +361,42 @@ Assuming now 10\% fluctuation between entrance and exit kick, the expected kick 
 
 \subsection{Kicks in the central region (main solenoid)}
 \label{core:sec:2}
-For a perfectly annular and axially symmetric profile, the field in the region of the proton beam core vanishes as can be seen from Eq.~\ref{eq:field_2} and as illustrated in Fig.~\ref{fig:hel_field}. Fields at the location of the proton beam core thus only arise in case of profile imperfections of the electron beam, in particular if the axial symmetry is broken. Recently, the latest LHC hollow electron gun prototype was characterized at the Fermilab electron lens test stand \cite{hel_test_stand_fnal}. A typical measurement of the electron beam current density is shown in Fig.~\ref{core:fig:0}.
-\begin{figure}[t]
-		\centering
-		\includegraphics[width=0.8\linewidth]{e-field-measured.png}
-	\caption{Current density from measurements of the CHG1b hollow electron gun at the Fermilab electron lens test stand in 2017 \cite{hel_res_field_stancari_2017}. \textcolor{red}{Replace by 2D simulations - Giulio.}}
-	\label{core:fig:0}
-\end{figure}
-      
+
+\begin{figure*}
+  \includegraphics[height=0.9\columnwidth]{CHG1b_170523_8p75A_2-4-2kG_500V_75mA_hires_2D} \hfill
+  \includegraphics[height=0.9\columnwidth]{CHG1b_170523_8p75A_2-4-2kG_500V_75mA_hires_j-vs-r_binned_nogrid_nolabel}
+  \caption{Example of current-density distribution measurements for
+    the hollow electron gun prototype CHG1b, taken at the Fermilab
+    electron lens test stand in
+    2017~\cite{hel_res_field_stancari_2017}: 2-dimensional transverse
+    profile measurement (left) and calculated 1-dimensional radial
+    projection (right).}
+  \label{core:fig:0}
+\end{figure*}
+
+\begin{figure*}
+  \includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Emap} \hfill
+  \includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Eslice}
+  \caption{Calculated relative electric field for the hollow electron
+    gun CHG1b in the transverse $x$-$y$ plane (left) and as
+    1-dimensional cuts through the $x$ and $y$ axes (right). The field
+    calculations are based on measurements at the Fermilab
+    electron-lens test stand combined with Warp calculations of the
+    electric potentials and fields in a cylindrical beam pipe.}
+\label{core:fig:1}
+\end{figure*}
+
+For a perfectly annular and axially symmetric profile, the field in
+the region of the proton beam core vanishes as can be seen from
+Eq.~\ref{eq:field_2} and as illustrated in
+Fig.~\ref{fig:hel_field}. Fields at the location of the proton beam
+core thus only arise in case of profile imperfections of the electron
+beam, in particular if the axial symmetry is broken. Recently, the
+latest LHC hollow electron gun prototype was characterized at the
+Fermilab electron lens test stand \cite{hel_test_stand_fnal}. A
+typical measurement of the electron beam current density is shown in
+Fig.~\ref{core:fig:0}.
+
 As at the test stand the solenoidal fields required for the HL-LHC
 electron lens can not be reached, an estimate of the electron beam
 profile for HL-LHC can only be obtained through simulations. For this
@@ -384,18 +412,6 @@ the inner and outer radius of the electron beam
 distribution. Therefore it is essential to track a distribution with
 the correct dimensions. Further details on the measurements and Warp
 simulations can be found in~\cite{hel_res_field_stancari_2017}.
-
-\begin{figure}[h]
-\includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Emap}
-\includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Eslice}
-\caption{Calculated relative electric field for the hollow electron
-  gun in the transverse $x$-$y$ plane (left) and as 1-dimensional cuts
-  through the $x$ and $y$ axes (right). The field calculations are
-  based on measurements at the Fermilab electron-lens test stand
-  combined with Warp calculations of the electric potentials and
-  fields in a cylindrical beam pipe.}
-\label{core:fig:1}
-\end{figure}
 
 Using these measurements and calculations of the relative electric field strengths in the transverse plane (Fig.~\ref{core:fig:1}), we obtain an average field in the hole of
 \begin{equation}
