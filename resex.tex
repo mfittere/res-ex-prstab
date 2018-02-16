@@ -368,18 +368,33 @@ For a perfectly annular and axially symmetric profile, the field in the region o
 	\caption{Current density from measurements of the CHG1b hollow electron gun at the Fermilab electron lens test stand in 2017 \cite{hel_res_field_stancari_2017}. \textcolor{red}{Replace by 2D simulations - Giulio.}}
 	\label{core:fig:0}
 \end{figure}
-As at the test stand the solenoidal fields required for the HL-LHC electron lens can not be reached, an estimate of the electron beam profile for HL-LHC can only be obtained through simulations. For this purpose, the measured distribution is compressed to the inner electron beam radius of $0.97$~mm. Afterwards an input distribution with $40\ 000$ particles is generated. As boundary condition, the LHC inner beam pipe radius $b=30$~mm is used. The potential and fields can then be calculated with the particle in cell simulation code WARP~\cite{warp} yielding the relative electric field strengths shown in Fig.~\ref{core:fig:1}. The electric field can in general be scaled with the beam current and energy, but can not easily be scaled with the inner and outer radius of the electron beam distribution. Therefore it is essential to track a distribution with the correct dimensions. Further details on the measurements and WARP simulations can be found in~\cite{hel_res_field_stancari_2017}.
+      
+As at the test stand the solenoidal fields required for the HL-LHC
+electron lens can not be reached, an estimate of the electron beam
+profile for HL-LHC can only be obtained through simulations. For this
+purpose, the measured distribution is compressed to the inner electron
+beam radius of 1.24~mm. Afterwards an input distribution with
+$40\ 000$ particles is generated. As boundary condition, the LHC inner
+beam pipe radius $b=30$~mm is used. The potential and fields can then
+be calculated with the particle in cell simulation code
+Warp~\cite{warp} yielding the relative electric field strengths shown
+in Fig.~\ref{core:fig:1}. The electric field can in general be scaled
+with the beam current and energy, but can not easily be scaled with
+the inner and outer radius of the electron beam
+distribution. Therefore it is essential to track a distribution with
+the correct dimensions. Further details on the measurements and Warp
+simulations can be found in~\cite{hel_res_field_stancari_2017}.
+
 \begin{figure}[h]
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Emap.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Eslice.png}
-	\end{minipage}
-	\caption{Calculated relative electric field for the new CHG1b hollow electron gun in the x-y plane (left) and as 1-dimensional cuts though the x- and y-axes (right). The field calculations are based on measurements at the Fermilab test stand combined with WARP  calculations of the electric potentials and fields in a cylindrical beam pipe.}
-	\label{core:fig:1}
+\includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Emap}
+\includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Eslice}
+\caption{Calculated relative electric field for the hollow electron
+  gun in the transverse $x$-$y$ plane (left) and as 1-dimensional cuts
+  through the $x$ and $y$ axes (right). The field calculations are
+  based on measurements at the Fermilab electron-lens test stand
+  combined with Warp calculations of the electric potentials and
+  fields in a cylindrical beam pipe.}
+\label{core:fig:1}
 \end{figure}
 
 Using these measurements and calculations of the relative electric field strengths in the transverse plane (Fig.~\ref{core:fig:1}), we obtain an average field in the hole of
