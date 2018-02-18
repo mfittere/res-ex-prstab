@@ -1,23 +1,3 @@
-% ****** Start of file apssamp.tex ******
-%
-%   This file is part of the APS files in the REVTeX 4.1 distribution.
-%   Version 4.1r of REVTeX, August 2010
-%
-%   Copyright (c) 2009, 2010 The American Physical Society.
-%
-%   See the REVTeX 4 README file for restrictions and more information.
-%
-% TeX'ing this file requires that you have AMS-LaTeX 2.0 installed
-% as well as the rest of the prerequisites for REVTeX 4.1
-%
-% See the REVTeX 4 README file
-% It also requires running BibTeX. The commands are as follows:
-%
-%  1)  latex apssamp.tex
-%  2)  bibtex apssamp
-%  3)  latex apssamp.tex
-%  4)  latex apssamp.tex
-%
 \documentclass[%
  reprint,
 %superscriptaddress,
@@ -67,8 +47,11 @@ prstab,
 
 \begin{document}
 
-%\title{Effects of pulsed hollow electron lens operation on the beam core in HL-LHC: \\First experimental studies and simulations.}% Force line breaks with \\
-\title{Effect of resonant and random excitation on the LHC beam in the context of pulsed hollow electron lens operation.}% Force line breaks with \\
+\title{Experimental and numerical studies of the effects of resonant
+  and random excitations of the proton beam in the LHC, with
+  applications to the design of a pulsed hollow electron lens for
+  active halo control}
+
 \thanks{Fermilab is operated by Fermi Research Alliance, LLC under
 	Contract No.~DE-AC02-07CH11359 with the United States Department of
 	Energy. This work was partially supported by the US DOE LHC
@@ -77,22 +60,43 @@ prstab,
 
 \author{Miriam Fitterer}
  \email{mfittere@fnal.gov}
-\author{Giulio Stancari}%
-\author{Alexander Valishev}%
-\affiliation{Fermi National Accelerator Laboratory, Batavia, Illinois, USA
-% This line break forced with \textbackslash\textbackslash
-}%
+\author{Giulio Stancari}
+\author{Alexander Valishev}
+\affiliation{Fermi National Accelerator Laboratory, Batavia, Illinois, USA}
 
 \author{Stefano Redaelli}
 \author{Daniel Valuch}
-\affiliation{CERN, Geneva, Switzerland}%
+\affiliation{CERN, Geneva, Switzerland}
 
-\date{\today}% It is always \today, today,
-             %  but any date may be explicitly specified
+\date{\today}
 
 \begin{abstract}
-At the High Luminosity Large Hadron Collider (HL-LHC), a considerable amount of energy is expected to be stored in the beam tails due to the high beam intensity and, in addition, an overpopulation of the tails compared to a Gaussian distribution. To control and clean the tail population, the installation of two hollow electron lenses, one per beam, is presently under consideration. Beside the DC operation of the lenses, also pulsed operation is considered having the advantage to increase the diffusion speed by exerting white or colored noise on the halo particles. For an ideal electron lens, only the halo particles are excited while the core stays untouched. If a residual field is present at the location of the beam core, also the particles in the center are being exposed to noise. In this paper, we present 
-a summary of the LHC experiments conducted in 2016 and 2017 to study the effects on the beam core in case of pulsed operation, where uniform random noise and a resonant excitation were studied. In both cases the excitation was generated with the transverse damper, which is capable of producing almost arbitrary colored noise spectra. In particular the resonant excitation features rich non-linear dynamics inducing unusual changes of the beam distribution and with it emittance and losses. These changes will be one of the main topics of this paper as they have not been observed and studied before in this detail. In addition to the presentation of the experimental and supportive simulation results, we also give first estimates of the residual field at the proton beam core expected from the HL-LHC hollow electron lens for comparison to the noise tolerances obtained in the experiments.
+  In the High Luminosity Large Hadron Collider (HL-LHC), a
+  considerable amount of energy will be stored in the beam tails, due
+  to the high beam intensity and to an overpopulation of the tails
+  compared to a Gaussian distribution. To control and clean the beam
+  halo, the installation of two hollow electron lenses (HEL), one per
+  beam, is being considered. In standard electron-lens operation, a
+  proton bunch sees the same electron current at every
+  revolution. Pulsed operation (i.e., different current for different
+  turns) is also considered, because it can widen the range of
+  achievable halo removal rates. For an axially symmetric electron
+  lens, only the halo particles are excited, leaving the core
+  unperturbed. If a residual field is present at the location of the
+  beam core, these particles are exposed to transverse kicks and to
+  noise. In this paper, we present the results of numerical
+  simulations and of the LHC experiments conducted in~2016 and~2017 to
+  study the effects of random noise and of resonant excitations on the
+  beam core. The excitation patterns were generated by the transverse
+  damper system, which is a very flexible source of transverse dipole
+  kicks. The main observables were losses, emittances, and transverse
+  distributions as a function of excitation patterns and
+  strengths. The resonant excitations showed rich nonlinear dynamics
+  and nontrivial changes of the beam distribution, which, to our
+  knowledge, have not previously been observed and studied in this
+  detail. We also give estimates, based upon existing measurements of
+  prototype electron guns, of the residual fields that may be expected
+  in the HL-LHC hollow electron lens.
 \end{abstract}
 
 % PACS 2008:
