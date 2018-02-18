@@ -114,20 +114,20 @@ prstab,
 \label{sec:intro}
 
 \begin{table*}
-	\caption{\label{tab:stored_energy}%
-		Stored beam energy for different past, present and future colliders. Each new machine represents a leap in stored beam energy.
-	}
-	\begin{ruledtabular}
-		\begin{tabular}{lccccc}
-			Collider& Tevatron (protons) \cite{tevatron} & LHC 2016 \cite{chamonix2017param}
-			& LHC nominal \cite{lhc_design} & HL-LHC \cite{hlcdr} & FCC \cite{fcc_param_2017} \\
-			\colrule
-			Beam energy [TeV] & 0.98 & 6.5 & 7.0 & 7.0 & 50.0\\
-			Number of bunches & 36 & 2220 & 2808 & 2748 & ? \\
-			Number of particles per bunch & $2.90\times 10^{11}$ & $1.15\times 10^{11}$ & $1.15\times 10^{11}$ & $2.2\times 10^{11}$ & $1.0\times 10^{11}$\\
-			Stored beam energy [MJ] & 1.6 & 265.9 & 362.2 & 678.0 & 8400 \\
-		\end{tabular}
-	\end{ruledtabular}
+  \caption{ Stored beam energy for different past, present and future
+    colliders. Each new machine represents a leap in stored beam
+    energy.}
+  \label{tab:stored_energy}
+  \begin{ruledtabular}
+    \begin{tabular}{lccccc}
+      Collider& Tevatron (protons) \cite{tevatron} & LHC 2016 \cite{chamonix2017param}	& LHC nominal \cite{lhc_design} & HL-LHC \cite{hlcdr} & FCC \cite{fcc_param_2017} \\
+      \colrule
+      Beam energy [TeV] & 0.98 & 6.5 & 7.0 & 7.0 & 50.0\\
+      Number of bunches & 36 & 2220 & 2808 & 2748 & ? \\
+      Number of particles per bunch & $2.90\times 10^{11}$ & $1.15\times 10^{11}$ & $1.15\times 10^{11}$ & $2.2\times 10^{11}$ & $1.0\times 10^{11}$\\
+      Stored beam energy [MJ] & 1.6 & 265.9 & 362.2 & 678.0 & 8400 \\
+    \end{tabular}
+  \end{ruledtabular}
 \end{table*}
       
 \begin{figure*}
@@ -140,51 +140,89 @@ prstab,
   \includegraphics[width=\columnwidth]{diffusion_illustration}
   \end{minipage}
   \caption{Left: Sketch of passive halo control with a conventional
-    collimation system (top) and active halo control with the addition
-    of a hollow electron lens (bottom). Right: Illustration of a
-    simplified model of active diffusion enhancement in the transverse
-    plane. The diffusion coefficient as a function of amplitude
-    (orange) is enhanced in a specific amplitude region when the
-    hollow beam is turned on (from solid to dashed line). A
+    collimation system (top) and active halo control, with the
+    addition of a hollow electron lens (bottom). Right: Illustration
+    of a simplified model of active diffusion enhancement in the
+    transverse plane. The diffusion coefficient as a function of
+    amplitude (orange) is enhanced in a specific amplitude region when
+    the hollow beam is turned on (from solid to dashed line). A
     corresponding reduction in beam tail population (black) is created
     (from solid to dashed line).}
   \label{fig:active_halo_control} 
 \end{figure*}
 
-Considering past, current and future high energy and intensity
-colliders, each new machine has represented a considerable leap in
-stored beam energy with rising values for future accelerators and
-colliders (see Table~\ref{tab:stored_energy}).
+Considering past, current and future high energy colliders, each new
+machine has represented a considerable leap in stored beam energy
+(Table~\ref{tab:stored_energy}).
 
-Recent measurements at the LHC furthermore show that the tails of the
+Furthermore, recent measurements at the LHC show that the tails of the
 transverse beam distribution are overpopulated compared to a Gaussian
-distribution resulting in a considerable amount of energy being stored
-in the beam tails alone. In case of the LHC explicitly around 5\% of
-the beam population is stored in the tails above 3.5~$\sigma$ compared
-to 0.22\% in case of a Gaussian distribution leading to 19~MJ of
-stored energy in the tails in case of nominal LHC parameters and 34~MJ
-in case of HL-LHC~\cite{helreview_valentino}. This leads to the
-conclusion that a mechanism is needed to deplete the beam tails in a
-controlled manner \cite{helreview}.
+distribution. This results in a considerable amount of energy being
+stored in the beam tails. In particular, in the case of the LHC, about
+5\% of the beam population is stored in the tails (i.e., above
+3.5$\sigma$, where $\sigma$ is the Gaussian rms core beam size),
+compared to 0.22\% in an ideal Gaussian distribution, leading to 19~MJ
+of stored energy for nominal LHC parameters and 34~MJ in the case of
+HL-LHC~\cite{helreview_valentino}. This leads to the conclusion that a
+mechanism is needed to deplete the beam tails in a controlled
+manner. Further information on the needs for halo control in LHC can
+be found in Ref.~\cite{helreview}.
 
-The most obvious idea is to decrease the collimator gaps or scrape the
-tails with a collimator type device. This approach is however not
-feasible as it would generate unacceptably large loss spikes due to
-the high intensity halo population in the LHC. Most promising are
-methods, which increase the diffusion speed in the region of the halo
-particles resulting in a smooth and continuous removal of the high
-amplitude tails while leaving the core of the beam unperturbed. The
-diffusing halo particles are then intercepted by the collimation
-system and removed. This concept is also referred to as active halo
-control compared to a passive system, which only intercepts the halo
-particles without actively controlling the diffusion speed (see
-Fig.~\ref{fig:active_halo_control} for illustration).
+The most direct approach is to decrease the collimator gaps or to
+periodically scrape the tails. However, this is not feasible, as it
+would generate unacceptably large loss spikes and possibly component
+damage. Most promising are methods which increase the diffusion speed
+in the region of the halo particles, resulting in a smooth and
+continuous removal of the high amplitude tails, while leaving the core
+of the beam unperturbed. The diffusing halo particles are then
+intercepted by the collimation system and removed. This concept is
+also referred to as active halo control, designed to enhance a
+conventional passive system, which is still needed to robustly
+intercept the halo particles. An illustration of the concept is shown
+in Fig.~\ref{fig:active_halo_control}.
 
-In a recent review, the need for such an active halo control system for HL-LHC has been assessed with the conclusion that it would considerably increase the margin and reduce the risk for machine protection compared to the current LHC collimation system being a passive halo control system ~\cite{helreview}. In view of the need of active halo control for HL-LHC and for future high power accelerators like HE-LHC and FCC-hh~\cite{helhcparam2011,fcc_coll_ipac2017}, different active halo control methods have been studied in recent years~\cite{helreview_bruce}, of which the hollow electron lens (HEL) is considered the superior device for the HL-LHC~\cite{helreview}. The beneficial effect of a future HEL for HL-LHC in terms of machine protection and beam collimation can not be, however, deployed at the expenses of the beam core as latter would ultimately lead to a degradation of the performance due to increased particle losses and emittance growth. In this paper, we will concentrate on the assessment in simulations and measurements of possible detrimental effets on the beam core. We will summarize possible sources of perturbations of the proton beam core focusing in particular on the case of pulsed operation and the beam experiments at the LHC conducted in this context.
+In a recent review, the need for such an active halo control system
+for HL-LHC has been assessed, with the conclusion that it would
+considerably increase the operational margins and reduce the risks for
+machine protection~\cite{helreview}. In view of the need of active
+halo control for HL-LHC and for future high power accelerators, like
+HE-LHC and FCC-hh~\cite{helhcparam2011, fcc_coll_ipac2017}, different
+active halo control methods have been
+studied~\cite{helreview_bruce}. The hollow electron lens (HEL) is
+considered the most established, flexible and suitable technology for
+the HL-LHC~\cite{helreview}.
 
-This paper is structured as follows: Section~\ref{sec:hel} gives an introduction to the concept of HELs and summarizes the design parameters of the HL-LHC HELs. Section~\ref{sec:core} is dedicated to describing the sources of a residual field from the HEL in the core region. Section~\ref{sec:exp} then describes in detail the two beam experiments conducted at the LHC studying the effect of pulsed operation on the proton beam core.
+However, the beneficial effects of an HL-LHC HEL for machine
+protection and for collimation cannot come at the expense of
+performance degradation due to losses or emittance growth in the beam
+core. In standard electron-lens operation, a proton bunch sees the
+same electron current at every revolution. It is also possible to have
+different currents for different groups of bunches. Under these
+conditions, the imperfections of the hollow beam have a negligible
+effect. On the other hand, in order to extend the range of achievable
+removal rates, pulsed operation is also being considered. In this
+case, different currents can be set to act on the same bunch at each
+turn. If a residual field is present at the location of the beam core,
+core particles can be exposed to resonant transverse kicks and to
+noise.
 
-\section{Hollow electron lens for HL-LHC\label{sec:hel}}
+In this paper, we concentrate on the experimental and numerical
+assessment of possible detrimental effects on the beam core of a
+pulsed electron lens. Section~\ref{sec:hel} gives an introduction to
+the concept of HELs and summarizes the design parameters of the HL-LHC
+HELs. Section~\ref{sec:core} is dedicated to the sources of residual
+fields from the HEL in the core region. Section~\ref{sec:exp}
+describes the setup of simulations and experimental
+conditions. Results and comparisons between simulations and
+measurements are given in Section~\ref{sec:simex}, with discussion and
+summary in Section~\ref{sec:sum}. Auxiliary data and plots are
+collected in the Appendices.
+
+
+
+\section{Hollow electron lens for HL-LHC}
+\label{sec:hel}
+
 \subsection{General Overview\label{sec:hel:intro}}
 Electron lenses produce DC or pulsed low energy electron beams, where the electron beam is generated in an electron gun, then guided and confined along a straight section by strong solenoids and finally dumped onto a collector. As an example the conceptual design of the HL-LHC HEL is shown in Fig.~\ref{fig:hel_layout}.
 \begin{figure}[h]
