@@ -3,8 +3,8 @@
 # sources
 BASE = resex
 
-SOURCES = $(BASE).tex bibliography.bib Makefile \
-  $(wildcard *.png) $(wildcard CHG1b*.pdf)
+SOURCES = $(BASE).tex resex-bibdesk.bib Makefile \
+  $(wildcard *.png) $(wildcard CHG1b*.pdf) diffusion_illustration.pdf
 
 # tools
 TEX = pdflatex

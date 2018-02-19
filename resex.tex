@@ -23,7 +23,7 @@ prstab,
 \usepackage{graphicx}% Include figure files
 \usepackage{dcolumn}% Align table columns on decimal point
 \usepackage{bm}% bold math
-%\usepackage{hyperref}% add hypertext capabilities
+\usepackage{hyperref}% add hypertext capabilities
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 \usepackage{color}
@@ -190,7 +190,7 @@ HE-LHC and FCC-hh~\cite{helhcparam2011, fcc_coll_ipac2017}, different
 active halo control methods have been
 studied~\cite{helreview_bruce}. The hollow electron lens (HEL) is
 considered the most established, flexible and suitable technology for
-the HL-LHC~\cite{helreview}.
+the HL-LHC~\cite{hel_tevatron_stancari, helreview}.
 
 However, the beneficial effects of an HL-LHC HEL for machine
 protection and for collimation cannot come at the expense of
@@ -223,12 +223,23 @@ collected in the Appendices.
 \section{Hollow electron lens for HL-LHC}
 \label{sec:hel}
 
-\subsection{General Overview\label{sec:hel:intro}}
-Electron lenses produce DC or pulsed low energy electron beams, where the electron beam is generated in an electron gun, then guided and confined along a straight section by strong solenoids and finally dumped onto a collector. As an example the conceptual design of the HL-LHC HEL is shown in Fig.~\ref{fig:hel_layout}.
-\begin{figure}[h]
-	\includegraphics[width=1.0\linewidth]{hel_layout_epbeam}% Here is how to import EPS art
-	\caption{\label{fig:hel_layout} Layout of HL-LHC HEL. Courtesy of CERN EN-MME group.}
-\end{figure}
+\subsection{General Overview}
+\label{sec:hel:intro}
+
+Electron lenses are based upon continuous or pulsed low energy,
+magnetically confined electron
+beams~\cite{Shiltsev:elens-book:2016}. The electron beam is generated
+in an electron gun, guided and confined by strong solenoids and
+finally dumped in a collector. As an example, the conceptual design of
+the HL-LHC HEL is shown in Fig.~\ref{fig:hel_layout}.
+
+
+\begin{figure*}
+  \includegraphics[width=0.75\textwidth]{hel_layout_epbeam}
+  \caption{Layout of the hollow electron lens for HL-LHC. (Courtesy of
+    CERN EN-MME mechanical engineering group.)}
+  \label{fig:hel_layout}
+\end{figure*}
 
 \begin{figure}[b]
 	\includegraphics[width=0.8\linewidth]{kick_hel_lhc_no_grid}% Here is how to import EPS art
@@ -319,9 +330,21 @@ for an inner radius of $R_1=4\sigma_p$, outer radius $R_2=7.5\sigma_p$, peak cur
 	\end{ruledtabular}
 \end{table}
 
-\subsection{Operation modes and effects on the beam core\label{sec:hel:core}}
-For the HEL two modes of operation are currently under consideration, the DC mode as standard operation mode and the pulsed mode. The main benefit of pulsed HEL operation is the increase in halo removal rates which might become essential as in ideal operation conditions featuring low non-linearities, in particular low chromaticity and octupole current, the DC mode is not effective~\cite{hel_halo_hllhc_fitterer,hl_halo_ipac2017}. 
-For this purpose, two different pulsing patterns are thus considered for the HL-LHC:
+\subsection{Operation modes and effects on the beam core}
+\label{sec:hel:core}
+
+For the HEL two modes of operation are currently under consideration,
+the continuous (also referred to as `DC', or direct current, in this
+paper) mode as standard operation mode and the pulsed mode. The main
+benefit of pulsed HEL operation is the increase in halo removal rates
+which might become essential as in ideal operation conditions
+featuring low non-linearities, in particular low chromaticity and
+octupole current, the DC mode is not
+effective~\cite{hel_halo_hllhc_fitterer,hl_halo_ipac2017}.
+
+For this purpose, two different pulsing patterns are thus considered
+for the HL-LHC:
+
 \begin{itemize}
 	\item \textbf{random excitation:} The electron gun voltage is modulated between:
 	\begin{eqnarray}
@@ -1213,15 +1236,8 @@ We wish to acknowledge Giulia Papotti with her help with the preparations for th
 	\caption{\label{fig:8thexpprof} Horizontal beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the $8^{\mathrm{th}}$~turn pulsing in H. For both bunches the transverse damper is not active. The distribution changes in the reference bunch (left), here slot 804, are much less than for the bunch experiencing the maximum excitation (right), here slot 632.}
 \end{figure}
 
-\newpage
-
-%\section{Additional plots for random excitation during 2017 experiments}
-%\label{app:sec:ran}
-
 \clearpage
 
-\bibliography{bibliography}% Produces the bibliography via BibTeX.
+\bibliography{resex-bibdesk}
 
 \end{document}
-%
-% ****** End of file apssamp.tex ******
