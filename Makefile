@@ -25,3 +25,4 @@ clean:
 	rm -f $(BASE)Notes.bib
 	rm -f $(BASE).blg
 	rm -f $(BASE).log
+	rm -f $(BASE).out
