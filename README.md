@@ -18,3 +18,5 @@ To-do
 * keywords
 
 * arrangement of figures
+
+* add acknowledgment to Sergei

@@ -223,17 +223,6 @@ collected in the Appendices.
 \section{Hollow electron lens for HL-LHC}
 \label{sec:hel}
 
-\subsection{General Overview}
-\label{sec:hel:intro}
-
-Electron lenses are based upon continuous or pulsed low energy,
-magnetically confined electron
-beams~\cite{Shiltsev:elens-book:2016}. The electron beam is generated
-in an electron gun, guided and confined by strong solenoids and
-finally dumped in a collector. As an example, the conceptual design of
-the HL-LHC HEL is shown in Fig.~\ref{fig:hel_layout}.
-
-
 \begin{figure*}
   \includegraphics[width=0.75\textwidth]{hel_layout_epbeam}
   \caption{Layout of the hollow electron lens for HL-LHC. (Courtesy of
@@ -241,94 +230,154 @@ the HL-LHC HEL is shown in Fig.~\ref{fig:hel_layout}.
   \label{fig:hel_layout}
 \end{figure*}
 
-\begin{figure}[b]
-	\includegraphics[width=0.8\linewidth]{kick_hel_lhc_no_grid}% Here is how to import EPS art
-	\caption{\label{fig:hel_field} Illustration of the hollow electron beam distribution (blue), the kick experienced by the proton beam (red) and the collimators (gray).}
+\begin{figure}
+  \includegraphics[width=0.8\columnwidth]{kick_hel_lhc_no_grid}
+  \caption{Illustration of the hollow electron beam charge
+    distribution (blue), of the magnitude of the transverse kick
+    experienced by the proton beam (red), and of the position of the
+    primary collimators (gray).}
+  \label{fig:hel_field}
 \end{figure}
-The circulating beam, in case of the LHC the proton beam, is then affected by the electromagnetic field of the electron beam. For the application of active halo control, the electron beam needs to generate an electromagnetic field at the location of the halo particles while leaving the core unperturbed. This field distribution can be achieved by using a uniform hollow distribution in radius $r=\sqrt{x^2+y^2}$ with inner radius $R_1$ and outer radius $R_2$. In this case, the circulating proton beam experiences a radial kick $\theta(r)$
-\begin{equation}\label{eq:field_1}
-\theta(r)=\frac{f(r)}{(r/R_2)}\cdot \theta_{\rm max},
+
+\begin{table}
+  \caption{HL-LHC design parameters at top energy~\cite{hlcdr} and
+    parameters relevant to the HEL. Optics parameters at the HEL are
+    based on a position of $-$40~m for Beam~1 (B1) and $+$40~m for
+    Beam~2 (B2) from the interaction point IP4, using HL-LHC optics
+    V1.3 with $\beta^{*} = \q{0.15}{m}$~\cite{hlv13}.}
+  \label{tab:hllhc_param}
+  \begin{ruledtabular}
+    \begin{tabular}{lccc}
+      Beam parameters & Value(B1) & Value(B2) & Unit\\
+      \colrule
+      Beam energy  $E_{p}$  &  \multicolumn{2}{c}{7} & TeV\\
+      Number of bunches $n_b$ & \multicolumn{2}{c}{2748} & - \\
+      Number of particles per bunch $N_b$ & \multicolumn{2}{c}{$2.2\times 10^{11}$} & -\\
+      Normalized emittance $\epsilon_{N,x/y}$ & \multicolumn{2}{c}{2.5} & $\mu$m\\
+      Bunch spacing & \multicolumn{2}{c}{25} & ns\\
+      \colrule
+      \multicolumn{4}{l}{Optics paramters at HEL (Beam~1) \footnote{As the Twiss parameters at IP4 do not change during the entire squeeze, and IP4 and the HEL are only separated by a drift space, the Twiss parameters stay constant also at the HEL during the entire squeeze.}} \\
+      \colrule
+      $\beta_{x}$ at HEL  & 197.5 & 280.6 & m\\
+      $\beta_{y}$ at HEL & 211.9 & 262.6 m\\
+      Dispersion $D_{x}$ at HEL & 0.0& 0.0 & m\\
+      Dispersion $D_{y}$ at HEL & 0.0& 0.0 & m\\
+      Proton beam size $\sigma_{p,x}$ at HEL & 0.26 & 0.31& mm \\		
+      Proton beam size $\sigma_{p,y}$ at HEL & 0.27 & 0.30 &mm \\
+      \multicolumn{4}{l}{scraping position}\\ \hspace{1cm}$\sigma_{p}=\max(\sigma_{p,x},\sigma_{p,y})$ & 0.27& 0.31 & mm\\
+    \end{tabular}
+  \end{ruledtabular}
+\end{table}
+
+\begin{table}
+  \caption{HL-LHC hollow electron lens parameters as defined in
+    Ref.~\cite{hel_cdr}.}
+  \label{tab:hel_param}
+  \begin{ruledtabular}
+    \begin{tabular}{lcc}
+      Geometry & Value& Unit\\
+      \colrule
+      Length $L$    &  3 & m\\
+      % 3-8 sigmap with 3.5 um -> 3.55-9.47 for 2.5 um emittance
+      Desired range of scraping positions & 3.5-9.5 &$\sigma_p$\\
+      \colrule
+      Magnetic fields & & \\
+      \colrule
+      Gun solenoid, $B_g$ & 0.2-0.4 & T\\
+      Main solenoid, $B_m$ & 2-6 & T\\
+      Collector solenoid, $B_c$ & 0.2-0.4 & T\\
+      Compression factor ($k=\sqrt{B_m/B_g}$) & 2.2-5.5 & -\\
+      \colrule
+      Electron gun & & \\
+      \colrule
+      Peak yield $I_e$ at 10~keV & 5.0 & A\\
+      Gun perveance $P$ & 5 & $\mu$perv\\
+      Inner/outer cathode radius, $R_1/R_2$ & 6.75/12.7 & mm\\
+      \colrule
+      High voltage modulator & & \\
+      \colrule
+      Cathode-anode voltage & 10.0 & kV\\
+      Rise time (10\%-90\%) & 200 & ns \\
+      Repetition rate & 35 & kHz
+    \end{tabular}
+  \end{ruledtabular}
+\end{table}
+
+
+\subsection{General Overview}
+\label{sec:hel:intro}
+
+Electron lenses are based upon continuous or pulsed low-energy,
+magnetically confined electron beams~\cite{Shiltsev:PRSTAB:2008,
+  Fischer:PRL:2015, Shiltsev:elens-book:2016}. The electron beam is
+generated in an electron gun, guided and confined by strong solenoids
+and finally dumped in a collector. As an example, the conceptual
+design of the HL-LHC HEL is shown in Fig.~\ref{fig:hel_layout}.
+
+The circulating beam (protons in the LHC case) is affected by the
+electromagnetic field of the electron beam. For the application of
+active halo control, the electron beam needs to generate an
+electromagnetic field only at the location of the halo particles. This
+field distribution can be achieved, for instance, by using a hollow
+charge distribution in radius $r=\sqrt{x^2+y^2}$, uniformly
+distributed between inner radius $R_1$ and outer radius $R_2$
+(Fig.~\ref{hel_field}). In this case, the circulating proton beam
+experiences the following radial kick $\theta(r)$:
+%
+\begin{equation}
+  \label{eq:field_1}
+  \theta(r)=\frac{f(r)}{(r/R_2)}\cdot \theta_{\rm max},
 \end{equation}
+%
 where $f(r)$ is a shape function with
-\begin{equation}\label{eq:field_2}
-f(r) =
-\begin{cases} 0 &,\quad r< R_1,\\
-\frac{r^2-R_1^2}{R_2^2-R_1^2} &,\quad R_1 \leq r < R_2,\\
-1 &,\quad R_2 \leq r
-\end{cases}
+%
+\begin{equation}
+  \label{eq:field_2}
+  f(r) =
+  \begin{cases}
+    0 &,\quad r< R_1,\\
+    \frac{r^2-R_1^2}{R_2^2-R_1^2} &,\quad R_1 \leq r < R_2,\\
+    1 &,\quad R_2 \leq r
+  \end{cases}
 \end{equation}
+%
 and $\theta_{\rm max}=\theta(R_2)$ is the maximum kick angle given by
-\begin{equation}\label{hel_kick_max}
-\theta_{\rm max} = \theta(R_2) = \frac{2LI_T(1\pm\beta_e\beta_p)}{4\pi\epsilon_0  \cdot \left(\frac{p_0}{q}\right)_p \cdot \beta_e\beta_p c^2}\cdot\frac{1}{R_2},
+%
+\begin{equation}
+  \label{hel_kick_max}
+  \theta_{\rm max} = \theta(R_2) =
+  \frac{2LI_T(1\pm\beta_e\beta_p)}{4\pi\epsilon_0  \cdot
+    \left(p_0/q\right)_p \cdot \beta_e\beta_p
+    c^2}\cdot\frac{1}{R_2},
 \end{equation}
-with $L$ the length of the HEL, $I_T$ the total electron beam current, $\beta_{e}$ and $\beta_{p}$ the relativistic $\beta$ of electron and proton beam, $\frac{q}{p_0}=\left(B\rho\right)_p$ the magnetic rigidity for the proton beam reference particle, $c$ the speed of light and $\epsilon_0$ the vacuum permittivity. The distribution together with the resulting kick are illustrated in Fig.~\ref{fig:hel_field}. The $\pm$-sign in Eq.~\ref{hel_kick_max} represents the two cases of the electron beam traveling in the direction of the proton beam ($v_e v_p>0$) leading to ``$-$" or in the opposite direction ($v_e v_p<0$) leading to ``$+$". For hollow electron beam collimation, the beams are chosen to counterrotate. Assuming HL-LHC and HEL design parameters (see Table~\ref{tab:hllhc_param}--\ref{tab:hel_param}) the maximum kick of the HEL is:
-\begin{equation}\label{eqn:helkick}
-\theta_{\rm max,B1} = 392~\rm{nrad}
+%
+with $L$ the length of the HEL, $I_T$ the total electron beam current,
+$\beta_{e}$ and $\beta_{p}$ the relativistic velocity parameters of
+electrons and protons, $\left(p_0/q\right)_p = \left(B\rho\right)_p$
+the magnetic rigidity for the proton beam reference particle, $c$ the
+speed of light and $\epsilon_0$ the vacuum permittivity. The
+$\pm$-sign in Eq.~\ref{hel_kick_max} represents the two cases of the
+electron beam traveling in the direction of the proton beam
+($v_e v_p>0$) leading to ``$-$" or in the opposite direction
+($v_e v_p<0$) leading to ``$+$". For hollow electron beam collimation,
+electrons and protons are chosen to counterrotate, so that the
+magnetic and electric kicks add up. (For simplicity, the dependence of
+the electron axial velocity on radius is neglected in
+Eq.~\ref{hel_kick_max}.)
+
+In the case of HL-LHC HEL design parameters
+(Table~\ref{tab:hllhc_param} and Table~\ref{tab:hel_param}), the
+maximum kick is:
+%
+\begin{equation}
+  \label{eqn:helkick}
+  \theta_{\rm max,B1} = 392~\rm{nrad}
 \end{equation}
-%\begin{eqnarray}
-%\theta_{\rm max,B1} = 392~\rm{nrad},\\
-%\theta_{\rm max,B2} = 341~\rm{nrad}.
-%\end{eqnarray}
-for an inner radius of $R_1=4\sigma_p$, outer radius $R_2=7.5\sigma_p$, peak current of $I_e=$\SI{5.0}{A} and Beam~1 of the LHC. Similar values are obtained for Beam~2.
-\begin{table}[t]
-	\caption{\label{tab:hllhc_param}%
-		HL-LHC design parameters at top energy \cite{hlcdr} and parameters relevant in connection with the HEL. Optics parameters at HEL are based on a position of the HEL of $-40$~m for Beam~1 (B1) and $+40$~m for Beam~2 (B2) from IP4 using HL-LHC optics V1.3 with $\beta^{*}=0.15$~m \cite{hlv13}.
-	}
-	\begin{ruledtabular}
-		\begin{tabular}{lccc}
-			Beam parameters & Value(B1) & Value(B2) & Unit\\
-			\colrule
-			Beam energy  $E_{p}$  &  \multicolumn{2}{c}{7} & TeV\\
-			Number of bunches $n_b$ & \multicolumn{2}{c}{2748} & - \\
-			Number of particles per bunch $N_b$ & \multicolumn{2}{c}{$2.2\times 10^{11}$} & -\\
-			Normalized emittance $\epsilon_{N,x/y}$ & \multicolumn{2}{c}{2.5} & $\mu$m\\
-			Bunch spacing & \multicolumn{2}{c}{25} & ns\\
-			\colrule
-			\multicolumn{4}{l}{Optics paramters at HEL (Beam~1) \footnote{As the Twiss parameters at IP4 do not change during the entire squeeze, and IP4 and the HEL are only separated by a drift space, the Twiss parameters stay constant also at the HEL during the entire squeeze.}} \\
-			\colrule
-			$\beta_{x}$ at HEL  & 197.5 & 280.6 & m\\
-			$\beta_{y}$ at HEL & 211.9 & 262.6 m\\
-			Dispersion $D_{x}$ at HEL & 0.0& 0.0 & m\\
-			Dispersion $D_{y}$ at HEL & 0.0& 0.0 & m\\
-			Proton beam size $\sigma_{p,x}$ at HEL & 0.26 & 0.31& mm \\			
-			Proton beam size $\sigma_{p,y}$ at HEL & 0.27 & 0.30 &mm \\
-			\multicolumn{4}{l}{scraping position}\\ \hspace{1cm}$\sigma_{p}=\max(\sigma_{p,x},\sigma_{p,y})$ & 0.27& 0.31 & mm\\
-		\end{tabular}
-	\end{ruledtabular}
-\end{table}
-\begin{table}[t]
-	\caption{\label{tab:hel_param}%
-		HL-LHC hollow electron lens parameters as in~\cite{hel_cdr}.
-	}
-	\begin{ruledtabular}
-		\begin{tabular}{lcc}
-			Geometry & Value& Unit\\
-			\colrule
-			Length $L$    &  3 & m\\
-			% 3-8 sigmap with 3.5 um -> 3.55-9.47 for 2.5 um emittance
-			Desired range of scraping positions & 3.5-9.5 &$\sigma_p$\\
-			\colrule
-			Magnetic fields & & \\
-			\colrule
-			Gun solenoid, $B_g$ & 0.2-0.4 & T\\
-			Main solenoid, $B_m$ & 2-6 & T\\
-			Collector solenoid, $B_c$ & 0.2-0.4 & T\\
-			Compression factor ($k=\sqrt{B_m/B_g}$) & 2.2-5.5 & -\\
-			\colrule
-			Electron gun & & \\
-			\colrule
-			Peak yield $I_e$ at 10~keV & 5.0 & A\\
-			Gun perveance $P$ & 5 & $\mu$perv\\
-			Inner/outer cathode radius, $R_1/R_2$ & 6.75/12.7 & mm\\
-			\colrule
-			High voltage modulator & & \\
-			\colrule
-			Cathode-anode voltage & 10.0 & kV\\
-			Rise time (10\%-90\%) & 200 & ns \\
-			Repetition rate & 35 & kHz
-		\end{tabular}
-	\end{ruledtabular}
-\end{table}
+%
+for an inner radius of $R_1 = 4\sigma_p$, outer radius $R_2 =
+7.5\sigma_p$, peak current of $I_e = \q{5.0}{A}$, using the Beam~1
+lattice of the LHC. Similar values are obtained for Beam~2.
+
 
 \subsection{Operation modes and effects on the beam core}
 \label{sec:hel:core}
