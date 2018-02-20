@@ -309,7 +309,7 @@ collected in the Appendices.
 \end{table}
 
 
-\subsection{General Overview}
+\subsection{General overview}
 \label{sec:hel:intro}
 
 Electron lenses are based upon continuous or pulsed low-energy,
@@ -326,7 +326,7 @@ electromagnetic field only at the location of the halo particles. This
 field distribution can be achieved, for instance, by using a hollow
 charge distribution in radius $r=\sqrt{x^2+y^2}$, uniformly
 distributed between inner radius $R_1$ and outer radius $R_2$
-(Fig.~\ref{hel_field}). In this case, the circulating proton beam
+(Fig.~\ref{fig:hel_field}). In this case, the circulating proton beam
 experiences the following radial kick $\theta(r)$:
 %
 \begin{equation}
@@ -387,42 +387,77 @@ lattice of the LHC. Similar values are obtained for Beam~2.
 \subsection{Operation modes and effects on the beam core}
 \label{sec:hel:core}
 
-For the HEL two modes of operation are currently under consideration,
-the continuous (also referred to as `DC', or direct current, in this
-paper) mode as standard operation mode and the pulsed mode. The main
-benefit of pulsed HEL operation is the increase in halo removal rates
-which might become essential as in ideal operation conditions
-featuring low non-linearities, in particular low chromaticity and
-octupole current, the DC mode is not
-effective~\cite{hel_halo_hllhc_fitterer,hl_halo_ipac2017}.
+For the HEL, two modes of operation are currently under consideration:
+the continuous mode (also referred to as `DC', or direct current, in
+this paper) as standard operation mode, described above; and the
+pulsed mode. The main benefit of pulsed HEL operation is the increase
+in halo removal rates. A wider range of removal rates may become
+important under operating conditions with small nonlinearities, in
+particular low chromaticity and octupole current, when the DC mode may
+be too slow~\cite{hel_halo_hllhc_fitterer, hl_halo_ipac2017}.
 
-For this purpose, two different pulsing patterns are thus considered
-for the HL-LHC:
+Two different pulsing patterns are considered for the HL-LHC. In both
+cases, at each passage, a given bunch sees a different electron-lens
+current and, therefore, experiences a different transverse kick. The
+patterns are defined as follows:
 
 \begin{itemize}
-	\item \textbf{random excitation:} The electron gun voltage is modulated between:
-	\begin{eqnarray}
-	U_{\mathrm{e-gun}}&=&a\cdot U_{\mathrm{max}}\\
-	& &+(1-a)\cdot \mathrm{ran}(0,1)\cdot U_{\mathrm{max}}
-	\end{eqnarray}
-	with $U_{\mathrm{max}}$ the maximum voltage in DC operation, $a$ the modulation strength with $a\in[0,1]$, and $\mathrm{ran}(0,1)$ a uniformly distributed random number between~[0,1].
-	\item \textbf{resonant excitation:} The HEL is switched on only every $k^{\mathrm{th}}$ turn. The excitation can then be represented by:
-	\begin{eqnarray}\label{intro:eqn:1}
-	f(t)&=&\sum_{n=-\infty}^{+\infty}\delta(t-n\cdot(kT)),
-	\end{eqnarray}
-	where $n$ is the turn number and $T$ the revolution time, and its Fourier series by:
-	\begin{eqnarray}\label{intro:eqn:2}
-	f(t)=\Sh_{kT}(t)
-	&=&\frac{1}{kT}\sum_{n=-\infty}^{+\infty}e^{2\pi i f_nt} \\
-	& & \quad \text{with} \ f_n=\frac{n}{k}f_{\rm rev},
-	\end{eqnarray}
-	where $\Sh_{kT}$ is the Dirac comb. As can be seen from the Fourier series, $k^{\mathrm{th}}$~turn pulsing in general drives $k^{\mathrm{th}}$ order resonances \cite{md_sim_hel_res_ex_fitterer}. Historically, the $k^{\mathrm{th}}$~turn pulsing was used in regular operation in the Tevatron for abort cleaning \cite{hel_tevatron_abortgap_zhang}.
+
+\item \textbf{random excitation:} The extraction voltage in the
+  electron gun is modulated according to the
+  following expression:
+%
+  \begin{equation}
+    U_{\mathrm{e-gun}} = (1-a) \cdot U_{\mathrm{max}} +
+    a \cdot \eta \cdot U_{\mathrm{max}},
+  \end{equation}
+%
+  where $U_{\mathrm{max}}$ is the maximum voltage, $a$ is the
+  modulation strength, with $a \in [0,1]$, and $\eta$ is a uniformly
+  distributed random number in the interval~$[0,1]$. Simulations and
+  experiments, discussed below, were usually conducted with $a = 1$.
+
+\item \textbf{resonant excitation:} The electron beam is switched on
+  only every $k^{\mathrm{th}}$ turn. The excitation can be represented
+  by the following expression:
+  \begin{eqnarray}
+    \label{intro:eqn:1}
+    f(t) & = & \sum_{n=-\infty}^{+\infty}\delta\left[t-n\cdot(kT)\right],
+  \end{eqnarray}
+  where $n$ is the turn number and $T$ is the revolution period. Its
+  Fourier representation is
+  \begin{equation}
+    \label{intro:eqn:2}
+    f(t) = \Sh_{kT}(t) = \frac{1}{kT}\sum_{n=-\infty}^{+\infty}e^{2\pi i f_nt},
+  \end{equation}
+  with $f_n = n \cdot f_{\rm rev} / k$ and
+  where $\Sh_{kT}$ is the Dirac comb. In general,
+  $k^{\mathrm{th}}$~turn pulsing drives $k^{\mathrm{th}}$-order
+  resonances~\cite{md_sim_hel_res_ex_fitterer}. This type of pulsing
+  pattern was used in the Tevatron during regular collider operations
+  for abort-gap cleaning~\cite{hel_tevatron_abortgap_zhang}.
 \end{itemize}
 
-As depicted in Fig.~\ref{fig:hel_field} and in evidence from Eqs.~\ref{eq:field_1}--\ref{eq:field_2}, the field at the beam core vanishes in case of an ideal HEL. Effects on the beam core thus only arise from imperfections, where possible sources are the bends of the HEL (see Section~\ref{core:sec:1}), as here the electron beam crosses directly the proton beam, and distortions in the electron beam profile (see Section~\ref{core:sec:2}). Both sources result in non-linear kicks~\cite{hel_bends_stancari,hel_model_polynomial_morozov}. In DC operation, these non-linear kicks stay in the shadow of the non-linearities otherwise present in the machine if the electron beam is kept at a decent quality. Tolerances on imperfections are therefore not particularly stringent and of no concern. The picture changes significantly in case of pulsed operation, in which case the electron gun voltage is modulated using a white or colored noise spectrum. If the electromagnetic field of the HEL does not vanish at the proton beam core, noise is transferred not only to the halo particles, as intended, but also to the beam core. Tolerances on the residual field in this case rapidly become much more stringent than in the case of DC operation. Studies of the effect of the HEL on the beam core therefore focus on this mode of operation which will also be the main subject of this paper.
+For an axially symmetric electron lens, the field at the beam core
+vanishes. Effects on the proton core arise from imperfections, with
+two main sources: the injection and extraction bends of the HEL
+(discussed below in Section~\ref{core:sec:1}), where the electron beam
+crosses the proton beam; and distortions of the electron beam profile
+during its propagation under magnetic focusing and space charge
+(Section~\ref{core:sec:2}). Both sources result in nonlinear
+kicks~\cite{hel_bends_stancari, hel_model_polynomial_morozov}. In
+continuous operation, these nonlinear kicks are usually much smaller
+than the machine nonlinearities. Tolerances on imperfections are
+therefore not particularly stringent. The picture changes
+significantly in case of pulsed operation. If the electromagnetic
+field does not vanish at the proton beam core, noise or resonant kicks
+are transferred not only to the halo particles, as intended, but also
+to the beam core. Tolerances on the residual fields in this case
+become much more stringent. Studies of the effects of the HEL on the
+beam core therefore focus on this mode of operation, which is also the
+main subject of this paper.
 
 
-%In comparison, the random excitation mode is the most effective and operationally easiest pulsing mode, but also the most stringent in terms of tolerances on the residual field at the proton beam center as it induces white noise exciting all beam frequencies. As the resonant excitation acts on specific resonances, the pulsing pattern has to be chosen according to the machine and beam parameters. On the one hand, this makes the operation more difficult as one has to find the most efficient $k^{\mathrm{th}}$~turn pulsing for each operation mode, on the other hand, it also relaxes the tolerances on the residual field at the beam core as, depending on the machine and beam configuration, it might be possible to find a resonant excitation pattern, which mainly affects the halo and not the beam core.
 
 \section{Sources of residual field in the proton beam core region and first order estimates\label{sec:core}}
 With the current HEL layout as shown in Fig.~\ref{fig:hel_layout}, parasitic kicks on the proton beam core can arise in the central region due to profile imperfections in the electron beam and at the entrance and exit of the HEL, where electron and proton beam overlap. Currently, no HEL is installed in the LHC, and the kick on the proton beam core must therefore be emulated with the help of other devices already installed in the LHC. For this purpose the kick is approximated to first order by a dipole kick. During the experiments presented in this paper, the dipole kick with the corresponding excitation pattern could then be applied with the LHC transverse damper as will be described in detail in Section~\ref{sec:adt}. As will be shown in Sec.~\ref{core:sec:1} and \ref{core:sec:2}, the expected kick to first order from the HEL bends is estimated to be~(Eq.~\ref{eqn:kick_bends}):
