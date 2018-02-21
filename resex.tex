@@ -27,7 +27,7 @@ prstab,
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 \usepackage{color}
-\usepackage{siunitx}
+%\usepackage{siunitx}
 \usepackage{url}
 
 %\usepackage[showframe,%Uncomment any one of the following lines to test 
@@ -459,14 +459,21 @@ main subject of this paper.
 
 
 
-\section{Sources of residual field in the proton beam core region and first order estimates\label{sec:core}}
-With the current HEL layout as shown in Fig.~\ref{fig:hel_layout}, parasitic kicks on the proton beam core can arise in the central region due to profile imperfections in the electron beam and at the entrance and exit of the HEL, where electron and proton beam overlap. Currently, no HEL is installed in the LHC, and the kick on the proton beam core must therefore be emulated with the help of other devices already installed in the LHC. For this purpose the kick is approximated to first order by a dipole kick. During the experiments presented in this paper, the dipole kick with the corresponding excitation pattern could then be applied with the LHC transverse damper as will be described in detail in Section~\ref{sec:adt}. As will be shown in Sec.~\ref{core:sec:1} and \ref{core:sec:2}, the expected kick to first order from the HEL bends is estimated to be~(Eq.~\ref{eqn:kick_bends}):
+\section{Sources and estimates of residual fields}
+\label{sec:core}
+
+Parasitic kicks on the proton beam core can be due to electron-beam
+profile imperfections in the overlap region, or to the injection and
+extraction toroidal bends, where electrons and protons overlap, as
+shown in the layout of Fig.~\ref{fig:hel_layout}.
+
+Currently, no HEL is installed in the LHC, and the kick on the proton beam core must therefore be emulated with the help of other devices already installed in the LHC. For this purpose the kick is approximated to first order by a dipole kick. During the experiments presented in this paper, the dipole kick with the corresponding excitation pattern could then be applied with the LHC transverse damper as will be described in detail in Section~\ref{sec:adt}. As will be shown in Sec.~\ref{core:sec:1} and \ref{core:sec:2}, the expected kick to first order from the HEL bends is estimated to be~(Eq.~\ref{eqn:kick_bends}):
 \begin{equation}
-	\Delta x'_{\rm{bends}},\Delta y'_{\rm{bends}}\approx \SI{0.5}{nrad},
+	\Delta x'_{\rm{bends}},\Delta y'_{\rm{bends}}\approx \q{0.5}{nrad},
 \end{equation}
 and for the central region due to profile imperfections~(Eq.~\ref{eqn:kick_central}):
 \begin{equation}
-	\Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} \approx \SI{20}{nrad} % this should be rounded to the same number of digits as the 0.5nrad
+	\Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} \approx \q{20}{nrad} % this should be rounded to the same number of digits as the 0.5nrad
 \end{equation}
 where the current HEL design parameters are used (see Table~\ref{tab:hllhc_param}--\ref{tab:hel_param}). The contribution from the central region is clearly dominating.
 
@@ -476,12 +483,12 @@ As reference for the estimate of the dipole component originating from the HEL b
 \begin{equation}
 \int_{z_1}^{z_2} E_{x,y} dz= 10 \ \mathrm{kV}.
 \end{equation}
-%given an \SI{1}{A}, \SI{5}{keV} electron beam.
-%For \SI{7}{TeV} protons and neglecting magnetic effects, this yields a kick of:
+%given an \q{1}{A}, \q{5}{keV} electron beam.
+%For \q{7}{TeV} protons and neglecting magnetic effects, this yields a kick of:
 %\begin{equation}
-%\Delta x'=\Delta y'= \SI{1.4}{nrad},
+%\Delta x'=\Delta y'= \q{1.4}{nrad},
 %\end{equation}
-%Scaling to the HEL design parameters of a \SI{5}{A} and \SI{10}{keV} electron beam (Table~\ref{tab:hel_param}), one obtains:
+%Scaling to the HEL design parameters of a \q{5}{A} and \q{10}{keV} electron beam (Table~\ref{tab:hel_param}), one obtains:
 %\begin{equation}
 %\int_{z_1}^{z_2} E_{x} dz= 36 \ \mathrm{kV} \Rightarrow \Delta x'= \q{5.1}{nrad}
 %\end{equation}
@@ -619,7 +626,7 @@ the estimated dipole kick amplitude at the proton beam core is then
 
 \begin{equation}
   \label{eqn:kick_central}
-  \Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} = \SI{20}{nrad}.
+  \Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} = \q{20}{nrad}.
 \end{equation}
 
 For the scope of this paper, only the approximate magnitude of the
