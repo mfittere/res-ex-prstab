@@ -646,52 +646,65 @@ the effects on the circulating beam.
 
 
 
-\section{Experimental and simulation setup\label{sec:exp}}
-% put picture on top
+\section{Experimental and simulation setup}
+\label{sec:exp}
 
 \begin{table*}
-	\caption{\label{tab:md_param}%
-		Beam parameters and machine configuration as used in the two resonant excitation experiments in 2016 and~2017~\cite{resexmd2016,resexmd2017}. The plane of the excitation is abbreviated with H for horizontal, V for vertical and H+V horizontal and vertical at the same time.
-	}
-	\begin{ruledtabular}
-		\begin{tabular}{lcc}
-			Parameter & Experiment 2016 & Experiment 2017  \\
-			\colrule
-			beam &\multicolumn{2}{c}{Beam~1} \\
-			beam energy &\multicolumn{2}{c}{injection energy, 450 GeV} \\\hline
-			single bunch intensity &\multicolumn{2}{c}{$0.7\times10^{11}$} \\
-			normalized emittance &\multicolumn{2}{c}{$2.5-3.5~\mathrm{\mu m}$} \\
-			$4\sigma$ bunch length & \multicolumn{2}{c}{1.3~ns}\\
-			$1\sigma$ bunch length & \multicolumn{2}{c}{9.7~cm}\\
-			number of bunches & $12\times4=48$ single bunches & $3\times72=216$ bunches\\
-			&  & (+ 1 pilot + 12 nominal) \\\hline
-			injection optics, $\beta^*=11$~m & standard optics 2016 & standard optics 2017\\
-			Landau damping octupoles  & \multicolumn{2}{c}{$I_{\mathrm{MO}}=+19.6~\mathrm{A}$ for MOF circuit and}\\
-			& \multicolumn{2}{c}{$I_{\mathrm{MO}}=-19.6~\mathrm{A}$ for MOD circuit (standard 2016 settings)}\\\hline
-			working point $(Q_x,Q_y)$ & (64.28,59.31) & (62.27,60.295) \\
-			chromaticity $(Q'_x,Q'_y)$ & \multicolumn{2}{c}{(+15,+15)}\\\hline
-			pulsing patterns  &$7^{\mathrm{th}}$~turn H; &$7^{\mathrm{th}}$~turn H,V,H+V; \\
-			& $10^{\mathrm{th}}$~turn V; & $8^{\mathrm{th}}$~turn H,V,H+V; \\
-			& &  random  H,V,H+V;\\
-		\end{tabular}
-	\end{ruledtabular}
+  \caption{ Beam parameters and machine configuration as used in the
+    two resonant excitation experiments in 2016
+    and~2017~\cite{resexmd2016,resexmd2017}. The plane of the
+    excitation is abbreviated with H for horizontal, V for vertical
+    and H+V horizontal and vertical at the same time.}
+  \label{tab:md_param}
+  \begin{ruledtabular}
+    \begin{tabular}{lcc}
+      Parameter & Experiment 2016 & Experiment 2017  \\
+      \colrule
+      beam &\multicolumn{2}{c}{Beam~1} \\
+      beam energy &\multicolumn{2}{c}{injection energy, 450 GeV} \\\hline
+      single bunch intensity &\multicolumn{2}{c}{$0.7\times10^{11}$} \\
+      normalized emittance &\multicolumn{2}{c}{$2.5-3.5~\mathrm{\mu m}$} \\
+      $4\sigma$ bunch length & \multicolumn{2}{c}{1.3~ns}\\
+      $1\sigma$ bunch length & \multicolumn{2}{c}{9.7~cm}\\
+      number of bunches & $12\times4=48$ single bunches & $3\times72=216$ bunches\\
+                &  & (+ 1 pilot + 12 nominal) \\\hline
+      injection optics, $\beta^*=11$~m & standard optics 2016 & standard optics 2017\\
+      Landau damping octupoles  & \multicolumn{2}{c}{$I_{\mathrm{MO}}=+19.6~\mathrm{A}$ for MOF circuit and}\\
+                & \multicolumn{2}{c}{$I_{\mathrm{MO}}=-19.6~\mathrm{A}$ for MOD circuit (standard 2016 settings)}\\\hline
+      working point $(Q_x,Q_y)$ & (64.28,59.31) & (62.27,60.295) \\
+      chromaticity $(Q'_x,Q'_y)$ & \multicolumn{2}{c}{(+15,+15)}\\\hline
+      pulsing patterns  &$7^{\mathrm{th}}$~turn H; &$7^{\mathrm{th}}$~turn H,V,H+V; \\
+                & $10^{\mathrm{th}}$~turn V; & $8^{\mathrm{th}}$~turn H,V,H+V; \\
+                & &  random  H,V,H+V;\\
+    \end{tabular}
+  \end{ruledtabular}
 \end{table*}
 
 \begin{figure*}
-	\begin{minipage}[t]{1.0\linewidth}
-		\centering
-		2016 experiment\\
-		\includegraphics[width=0.9\linewidth]{bunchfilling_2016.png}	
-	\end{minipage}
-	\begin{minipage}[t]{1.0\linewidth}
-		\centering
-		$ $\\
-		2017 experiment\\
-		\includegraphics[width=0.9\linewidth]{bunchfilling_2017.png}	
-	\end{minipage}
-	\caption{\label{fig:fill} Filling and excitation scheme for LHC experiments in 2016 (top) and 2017 (bottom). In 2016 a total of 48~bunches was used and in 2017 a total of 216~bunches. Each bunch is indicated with a cyan vertical bar. The bunches were grouped in sub-groups of 4~for 2016 and 6~for 2017 bunches, where each sub-group experienced the same excitation pattern and amplitude. The excitation amplitude is shown in blue and red. In 2016 the excitation was only applied in one plane. In 2017 more bunches could be injected without compromising machine protection making it possible to test all three planes in one fill.}
+  \begin{minipage}[t]{1.0\linewidth}
+    \centering
+    2016 experiment\\
+    \includegraphics[width=0.9\linewidth]{bunchfilling_2016.png}	
+  \end{minipage}
+  \begin{minipage}[t]{1.0\linewidth}
+    \centering
+    $ $\\
+    2017 experiment\\
+    \includegraphics[width=0.9\linewidth]{bunchfilling_2017.png}	
+  \end{minipage}
+  \caption{Filling and excitation scheme for LHC experiments in 2016
+    (top) and 2017 (bottom). In 2016 a total of 48~bunches was used
+    and in 2017 a total of 216~bunches. Each bunch is indicated with a
+    cyan vertical bar. The bunches were grouped in sub-groups of 4~for
+    2016 and 6~for 2017 bunches, where each sub-group experienced the
+    same excitation pattern and amplitude. The excitation amplitude is
+    shown in blue and red. In 2016 the excitation was only applied in
+    one plane. In 2017 more bunches could be injected without
+    compromising machine protection making it possible to test all
+    three planes in one fill.}
+  \label{fig:fill}
 \end{figure*}
-%put picture on top
+
 
 \subsection{Overview of LHC experiments\label{sec:exp_sum}}
 The experiments at the LHC which are presented in this paper were aiming at deriving tolerances on the residual HEL field at the location of the beam core in case of pulsed operation. In total, two experiments were conducted, the first one in 2016 \cite{resexmd2016} and the second one in 2017 \cite{resexmd2017}. Beam and machine parameters for both experiments are summarized in Table~\ref{tab:md_param}. Preceding the beam experiments, simulations were performed to identify the most effective $k^{\mathrm{th}}$~turn pulsing pattern and yield estimates for losses and emittance growth. The two $k^{\mathrm{th}}$~turn pulsing patterns with the largest effect, one $k^{\mathrm{th}}$~turn pulsing pattern with no effect and the random excitation could then be experimentally tested in the LHC. In order to test the reproducibility of the results at least on the example of one pulsing pattern, the $7^{\mathrm{th}}$~turn pulsing was first tried in 2016 and then repeated in 2017.
