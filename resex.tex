@@ -28,7 +28,7 @@ longbibliography,
 %\usepackage[mathlines]{lineno}% Enable numbering of text and display math
 %\linenumbers\relax % Commence numbering lines
 \usepackage{color}
-\usepackage{siunitx}
+%\usepackage{siunitx}
 \usepackage{url}
 
 %\usepackage[showframe,%Uncomment any one of the following lines to test 
@@ -460,68 +460,195 @@ main subject of this paper.
 
 
 
-\section{Sources of residual field in the proton beam core region and first order estimates\label{sec:core}}
-With the current HEL layout as shown in Fig.~\ref{fig:hel_layout}, parasitic kicks on the proton beam core can arise in the central region due to profile imperfections in the electron beam and at the entrance and exit of the HEL, where electron and proton beam overlap. Currently, no HEL is installed in the LHC, and the kick on the proton beam core must therefore be emulated with the help of other devices already installed in the LHC. For this purpose the kick is approximated to first order by a dipole kick. During the experiments presented in this paper, the dipole kick with the corresponding excitation pattern could then be applied with the LHC transverse damper as will be described in detail in Section~\ref{sec:adt}. As will be shown in Sec.~\ref{core:sec:1} and \ref{core:sec:2}, the expected kick to first order from the HEL bends is estimated to be~(Eq.~\ref{eqn:kick_bends}):
-\begin{equation}
-	\Delta x'_{\rm{bends}},\Delta y'_{\rm{bends}}\approx \SI{0.5}{nrad},
-\end{equation}
-and for the central region due to profile imperfections~(Eq.~\ref{eqn:kick_central}):
-\begin{equation}
-	\Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} \approx \SI{20}{nrad} % this should be rounded to the same number of digits as the 0.5nrad
-\end{equation}
-where the current HEL design parameters are used (see Table~\ref{tab:hllhc_param}--\ref{tab:hel_param}). The contribution from the central region is clearly dominating.
+\section{Sources and estimates of residual fields}
+\label{sec:core}
 
-\subsection{Uncompensated kicks from HEL bends}
+\begin{figure*}
+  \includegraphics[height=0.9\columnwidth]{CHG1b_170523_8p75A_2-4-2kG_500V_75mA_hires_2D} \hfill
+  \includegraphics[height=0.9\columnwidth]{CHG1b_170523_8p75A_2-4-2kG_500V_75mA_hires_j-vs-r_binned_nogrid_nolabel}
+  \caption{Example of current-density distribution measurements for
+    the hollow electron gun prototype CHG1b, taken at the Fermilab
+    electron lens test stand in
+    2017~\cite{hel_res_field_stancari_2017}: 2-dimensional transverse
+    profile measurement (left) and calculated 1-dimensional radial
+    projection (right).}
+  \label{core:fig:0}
+\end{figure*}
+
+\begin{figure*}
+  \includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Emap} \hfill
+  \includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Eslice}
+  \caption{Calculated relative electric field for the hollow electron
+    gun CHG1b in the transverse $x$-$y$ plane (left) and as
+    1-dimensional cuts through the $x$ and $y$ axes (right). The field
+    calculations are based on measurements at the Fermilab
+    electron-lens test stand combined with Warp calculations of the
+    electric potentials and fields in a cylindrical beam pipe.}
+\label{core:fig:1}
+\end{figure*}
+
+Parasitic kicks on the proton beam core can be due to electron-beam
+profile imperfections in the overlap region, or to the injection and
+extraction toroidal bends, where electrons and protons overlap, as
+shown in the layout of Fig.~\ref{fig:hel_layout}.
+
+Because no HEL is currently installed in the LHC, the kicks on the
+proton beam core must be emulated by other devices to determine their
+effects experimentally in a given machine and to guide design and
+tolerances. In particular, during the experiments presented in this
+paper, the LHC transverse damper system (described in detail in
+Section~\ref{sec:adt}) was used for this purpose. This system can
+generate transverse dipole kicks with a wide range of excitation
+patterns.
+
+For comparison with experiments and simulations, here we estimate to
+first order the magnitude of the dipole kicks that may be expected
+from the HEL. As one can see below, the contribution from the central
+region is in general dominating.
+
+
+\subsection{Kicks from injection and extraction bends}
 \label{core:sec:1}
-As reference for the estimate of the dipole component originating from the HEL bends, the symplectic map derived in \cite{hel_bends_stancari} is used. In this case the HEL bends are modeled as a bent cylindrical pipe with a static charge distribution of 1~A and 5~keV electrons deflected in the horizontal plane, where the parameters were her still based on the old gun design for the Tevatron electron lens \textcolor{red}{Giulio, is this correct?}. In case of an U-shaped HEL, the transverse dipole kicks at entrance and exit add up, while for a S-shape the kicks compensate each other. For this reason a S-shape has been chosen for the HL-LHC HEL (see Fig.~\ref{fig:hel_layout}). Assuming and S-shaped HEL, uncompensated kicks therefore only arise from imperfections, which can originate from profile imperfections and current fluctuations. As a first estimate, we assume in this paper 10\% fluctuations between the entrance and exit and, in addition, that the kicks from entrance and exit due to these imperfections add up. Using the electric field calculations in \cite{hel_bends_stancari}, the maximum values for the integrated electric field are then
+
+To estimate the dipole component of the kicks that originate from the
+injection and extraction bends, we used the approach described in
+Ref.~\cite{hel_bends_stancari}. The bends are modeled as a bent
+cylindrical pipe with a static charge distribution of electrons. The
+resulting electric field is calculated, with the vacuum pipe as
+boundary, using the solvers of the Warp particle-in-cell
+code~\cite{warp}. (The contribution of the magnetic field generated by
+the electron current was neglected in this study.) The field,
+integrated over the trajectory of the protons, is then translated into
+a symplectic kick map.
+
+In case of a U-shaped electron lens, where electron gun and collector
+are on the same side, the transverse (and possibly pulsed) dipole
+kicks generated by the electron charge at the entrance and exit add
+up. For an S-shaped electron lens, on the other hand, where gun and
+collector are on opposite sides, these kicks compensate each
+other. For this reason, an S-shape was chosen for the HL-LHC HEL
+(Fig.~\ref{fig:hel_layout}). A disadvantage of the S-shape is that the
+static magnetic kicks due to the toroidal sections do add up, but they
+can be compensated by conventional dipole correctors, especially in a
+high-energy machine.
+
+In the case under study of an S-shaped electron lens, residual
+uncompensated kicks arise from differences in electron charge
+distribution between the injection and extraction bends. Here we
+conservatively assume 10\% fluctuations between the entrance and exit
+and, furthermore, that these differences add up.
+
+The maximum values of the integrated electric fields calculated in
+Ref.~\cite{hel_bends_stancari}, based upon an electron beam of 1~A at
+5~keV, are
+%
 \begin{equation}
-\int_{z_1}^{z_2} E_{x,y} dz= 10 \ \mathrm{kV}.
+  \int_{z_1}^{z_2} E_{x,y} \, dz= \q{10}{kV}.
 \end{equation}
-%given an \SI{1}{A}, \SI{5}{keV} electron beam.
-%For \SI{7}{TeV} protons and neglecting magnetic effects, this yields a kick of:
-%\begin{equation}
-%\Delta x'=\Delta y'= \SI{1.4}{nrad},
-%\end{equation}
-%Scaling to the HEL design parameters of a \SI{5}{A} and \SI{10}{keV} electron beam (Table~\ref{tab:hel_param}), one obtains:
-%\begin{equation}
-%\int_{z_1}^{z_2} E_{x} dz= 36 \ \mathrm{kV} \Rightarrow \Delta x'= \q{5.1}{nrad}
-%\end{equation}
-Neglecting magnetic effects and scaling to HL-LHC and HEL design parameters (Tables~\ref{tab:hllhc_param}--\ref{tab:hel_param}) yields a kick of \cite{md_sim_hel_res_ex_fitterer}:
+%
+Scaling to HL-LHC and HEL design parameters
+(Table~\ref{tab:hllhc_param} and Table~\ref{tab:hel_param}) yields the
+following integrated field and corresponding kick:
+%
 \begin{equation}
-\int_{z_1}^{z_2} E_{y} dz= 36 \ \mathrm{kV} \Rightarrow \Delta y'= \q{5.1}{nrad}
+  \int_{z_1}^{z_2} E_{y} \, dz = \q{36}{kV} \Rightarrow \Delta y' = \q{5.1}{nrad},
 \end{equation}
-Assuming now 10\% fluctuation between entrance and exit kick, the expected kick from the HEL bends is
-\begin{equation}\label{eqn:kick_bends}
-\Delta x', \Delta y'\approx \q{0.5}{nrad}.
+%
+as described in detail in
+Ref.~\cite{md_sim_hel_res_ex_fitterer}. Assuming a residual difference
+of 10\% between entrance and exit, the expected kick is approximately
+%
+\begin{equation}
+  \label{eqn:kick_bends}
+  \Delta x', \Delta y' = \q{0.5}{nrad}.
 \end{equation}
 
-%\begin{table*}
-%	\caption{\label{tab:md_param}%
-%		Beam parameters and machine configuration as used in the two resonant excitation experiments in 2016 and 2017 \cite{resexmd2016,resexmd2017}. The plane of the excitation is abbreviated with H for horizontal, V for vertical and H+V horizontal and vertical at the same time.
-%	}
-%	\begin{ruledtabular}
-%		\begin{tabular}{lcc}
-%			Parameter & Experiment 2017 & Experiment 2016  \\
-%			\colrule
-%			beam &\multicolumn{2}{c}{Beam~1} \\
-%			beam energy &\multicolumn{2}{c}{injection energy, 450 GeV} \\\hline
-%			single bunch intensity &\multicolumn{2}{c}{$0.7\times10^{11}$} \\
-%			normalized emittance &\multicolumn{2}{c}{$2.5-3.5~\mathrm{\mu m}$} \\
-%			$4\sigma$ bunch length & \multicolumn{2}{c}{1.3~ns}\\
-%			$1\sigma$ bunch length & \multicolumn{2}{c}{9.7~cm}\\
-%			number of bunches & $3\times72=216$ bunches & $12\times4=48$ single bunches\\
-%			& (+ 1 pilot + 12 nominal) & \\\hline
-%			injection optics, $\beta^*=11$~m & standard optics 2017 & standard optics 2016\\
-%			Landau damping octupoles  & \multicolumn{2}{c}{$I_{\mathrm{MO}}=\pm19.6~\mathrm{A}$, explicitly +19.6 A for MOF circuit and}\\
-%			& \multicolumn{2}{c}{-19.6~A for MOD circuit (standard 2016 settings)}\\\hline
-%			working point $(Q_x,Q_y)$ & (62.27,60.295) & (64.28,59.31)\\
-%			chromaticity $(Q'_x,Q'_y)$ & \multicolumn{2}{c}{(+15,+15)}\\\hline
-%			pulsing patterns  & $7^{\mathrm{th}}$~turn H,V,H+V;& $7^{\mathrm{th}}$~turn H;\\
-%			& $8^{\mathrm{th}}$~turn H,V,H+V;& $10^{\mathrm{th}}$~turn V;\\
-%			& random  H,V,H+V;& \\
-%		\end{tabular}
-%	\end{ruledtabular}
-%\end{table*}
+
+\subsection{Kicks in the central overlap region}
+\label{core:sec:2}
+
+For a perfectly annular and axially symmetric electron beam profile,
+the electromagnetic field in the region of the proton beam core
+vanishes. This is expressed by Eq.~\ref{eq:field_2} and is illustrated
+in Fig.~\ref{fig:hel_field}. Fields at the location of the proton beam
+core can arise if the axial symmetry is broken.
+
+Recently, a hollow electron gun prototype for the LHC (called CHG1b)
+was characterized at the Fermilab electron lens test
+stand~\cite{hel_test_stand_fnal}. An example of a measurement of the
+electron beam current density is shown in Fig.~\ref{core:fig:0}.
+
+In the test stand, only resistive solenoids are available. One can
+estimate the fields generated by the compressed electron beam profile
+in the superconducting solenoids of the HL-LHC HEL using a combination
+of experimental measurements and calculations.
+
+Experimentally, it was verified that the current-density profiles
+scale with electron beam current and confining axial field according
+to space-charge evolution~\cite{Jo:PoP:2018,
+  hel_res_field_stancari_2017}. Specifically, the same profile is
+obtained for a given family of experimental conditions with constant
+ratio $\sqrt{V} / B$, where $V$ is the accelerating voltage and $B$ is
+the axial field. This ratio is proportional to the space-charge
+evolution number $g = \omega_D \cdot \tau \propto \sqrt{V}/B$,
+representing the number of $\vec{E} \times \vec{B}$ rotations in the
+propagation time~$\tau$, with
+$\omega_D \equiv \omega_p^2 / (2 \omega_c)$ the diocotron frequency,
+$\omega_p$ the plasma frequency, and $\omega_c$ the cyclotron
+frequency of the magnetically confined electrons in the
+solenoid~\cite{Davidson:nonneutral-plasmas:2001}.
+
+For a given HL-LHC HEL configuration, the corresponding
+current-density profile measured in the Fermilab test stand is used as
+input to calculate the electromagnetic fields. For the purpose of
+estimating the residual fields, the measured distribution is
+compressed to the inner electron beam radius of 1.24~mm, corresponding
+to $4\sigma_p$, as described in Table~\ref{tab:hllhc_param} and
+Table~\ref{tab:hel_param}. A distribution with about $65\,000$
+particles is generated according to the measured current-density
+profile. As boundary condition, the LHC inner beam pipe radius
+$b = \q{30}{mm}$ is used. The potential and fields are then calculated
+with Warp~\cite{warp}. The resulting relative electric field strengths
+are shown in Fig.~\ref{core:fig:1}. The electric field is obviously
+proportional to the charge density of electrons. Its relative strength
+is rather insensitive to the hollow beam radii, as long as these
+remain small compared to the beam pipe radius. Further details on the
+measurements and Warp simulations can be found in
+Ref.~\cite{hel_res_field_stancari_2017}.
+
+Using these measurements and calculations of the relative electric
+field strengths in the transverse plane (Fig.~\ref{core:fig:1}), we
+obtain a median field in the hole of
+%
+\begin{equation}
+  \langle E_\mathrm{hole} \rangle / E_\mathrm{max} =  5\%.
+\end{equation}
+%
+For a maximum kick of 392~nrad, as derived in Eq.~\ref{eqn:helkick},
+the estimated dipole kick amplitude at the proton beam core is therefore
+approximately
+%
+\begin{equation}
+  \label{eqn:kick_central}
+  \Delta x' , \Delta y' = \q{20}{nrad}.
+\end{equation}
+%
+The relative magnitude of the residual field depends on several
+factors, including cathode quality, electron gun geometry, solenoid
+field configuration, space-charge evolution, etc. It can be improved,
+if needed.
+
+For the purposes of this paper, only the approximate magnitude of the
+residual dipole kick is considered. In general, the field map,
+including its multipolar components, can be parameterized in
+symplectic form, as described for instance in
+Ref.~\cite{hel_bends_stancari}, and used in tracking codes to estimate
+the effects on the circulating beam.
+
+
+
+\section{Experimental and simulation setup\label{sec:exp}}
+% put picture on top
 
 \begin{table*}
 	\caption{\label{tab:md_param}%
@@ -551,88 +678,6 @@ Assuming now 10\% fluctuation between entrance and exit kick, the expected kick 
 	\end{ruledtabular}
 \end{table*}
 
-\subsection{Kicks in the central region (main solenoid)}
-\label{core:sec:2}
-
-\begin{figure*}
-  \includegraphics[height=0.9\columnwidth]{CHG1b_170523_8p75A_2-4-2kG_500V_75mA_hires_2D} \hfill
-  \includegraphics[height=0.9\columnwidth]{CHG1b_170523_8p75A_2-4-2kG_500V_75mA_hires_j-vs-r_binned_nogrid_nolabel}
-  \caption{Example of current-density distribution measurements for
-    the hollow electron gun prototype CHG1b, taken at the Fermilab
-    electron lens test stand in
-    2017~\cite{hel_res_field_stancari_2017}: 2-dimensional transverse
-    profile measurement (left) and calculated 1-dimensional radial
-    projection (right).}
-  \label{core:fig:0}
-\end{figure*}
-
-\begin{figure*}
-  \includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Emap} \hfill
-  \includegraphics[width=\columnwidth]{CHG1b_170512_8p75A_2-4-2p7kG_500V_76mA_hires_Eslice}
-  \caption{Calculated relative electric field for the hollow electron
-    gun CHG1b in the transverse $x$-$y$ plane (left) and as
-    1-dimensional cuts through the $x$ and $y$ axes (right). The field
-    calculations are based on measurements at the Fermilab
-    electron-lens test stand combined with Warp calculations of the
-    electric potentials and fields in a cylindrical beam pipe.}
-\label{core:fig:1}
-\end{figure*}
-
-For a perfectly annular and axially symmetric profile, the field in
-the region of the proton beam core vanishes. This is expressed by
-Eq.~\ref{eq:field_2} and is illustrated in
-Fig.~\ref{fig:hel_field}. Fields at the location of the proton beam
-core can arise in case of profile imperfections of the electron
-beam, in particular if the axial symmetry is broken.
-
-Recently, a hollow electron gun prototype for the LHC (called CHG1b)
-was characterized at the Fermilab electron lens test
-stand~\cite{hel_test_stand_fnal}. An example of a measurement of the
-electron beam current density is shown in Fig.~\ref{core:fig:0}.
-
-In the test stand, only resistive solenoids are available. Through
-simulations, one can estimate the fields generated by the compressed
-electron beam profile needed for HL-LHC. The measured distribution is
-compressed to the inner electron beam radius of 1.24~mm, corresponding
-to $4\sigma_p$, as described in Table~\ref{tab:hllhc_param} and
-Table~\ref{tab:hel_param}. A distribution with about $65\,000$
-particles is generated according to the measured current-density
-profile. As boundary condition, the LHC inner beam pipe radius
-$b=30$~mm is used. The potential and fields are then calculated with
-the particle-in-cell code Warp~\cite{warp}. The resulting relative
-electric field strengths are shown in Fig.~\ref{core:fig:1}. The
-electric field is obviously proportional to the charge density of
-electrons. Its relative strength is rather insensitive to the hollow
-beam radii, as long as these remain small compared to the beam pipe
-radius. Further details on the measurements and Warp simulations can
-be found in Ref.~\cite{hel_res_field_stancari_2017}.
-
-Using these measurements and calculations of the relative electric
-field strengths in the transverse plane (Fig.~\ref{core:fig:1}), we
-obtain an average field in the hole of
-
-\begin{equation}
-  E_{\mathrm{rel}}= 5\%.
-\end{equation}
-
-For a maximum kick of 392~nrad, as derived in Eq.~\ref{eqn:helkick},
-the estimated dipole kick amplitude at the proton beam core is then
-
-\begin{equation}
-  \label{eqn:kick_central}
-  \Delta x'_{\rm{central \ region}}, \Delta y'_{\rm{central \ region}} = \SI{20}{nrad}.
-\end{equation}
-
-For the scope of this paper, only the approximate magnitude of the
-residual dipole kick is considered. In general, the field map,
-including its multipolar components, can be parameterized in a
-symplectic form, as described for instance in
-Ref.~\cite{hel_bends_stancari}, and used in tracking codes to estimate
-the effects on the circulating beam.
-
-
-\section{Experimental and simulation setup\label{sec:exp}}
-%put picture on top
 \begin{figure*}
 	\begin{minipage}[t]{1.0\linewidth}
 		\centering
