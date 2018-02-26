@@ -6,16 +6,9 @@
 *.Rproj
 
 # texstudio
+*.bib.bak
 *.aux
 *.bbl
 *.blg
 *.log
 *.synctex.gz
-*.out
-
-# jabref
-*.bak
-
-# general
-.DS_Store
-
