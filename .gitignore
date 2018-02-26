@@ -5,10 +5,14 @@
 .Ruserdata
 *.Rproj
 
-# texstudio
-*.bib.bak
+# TeX
 *.aux
 *.bbl
+*Notes.bib
 *.blg
 *.log
+*.out
 *.synctex.gz
+
+# PDF output
+resex.pdf
