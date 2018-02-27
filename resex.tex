@@ -710,9 +710,11 @@ the effects on the circulating beam.
 
 \begin{figure*}
   \includegraphics[width=\textwidth]{bunchfilling_measured.png}	
-  \caption{Example of bunch-by-bunch excitation detected by the
-    real-time transverse activity monitor during the 2017 experiment,
-    when the beam was excited every $8^\mathrm{th}$~turn.}
+  \caption{Example of bunch-by-bunch beam centroid motion for Beam~1
+    in the horizontal (B1H, left) and vertical (B1V, right) planes,
+    detected by the real-time transverse activity monitor during the
+    2017 experiment, when the beam was excited every
+    $8^\mathrm{th}$~turn.}
   \label{fig:fill_meas} 
 \end{figure*}
 
@@ -751,93 +753,105 @@ results under different machine configurations, one pulsing pattern
 repeated in~2017.
 
 
-\subsection{Excitations with the transverse damper and filling schemes}
+\subsection{Excitations with the transverse damper and bunch filling schemes}
 \label{sec:adt}
 
-The primary function of the transverse feedback system in LHC, also
-referenced to as ADT, is to provide injection oscillation damping and
-actively damp the coupled bunch instabilities driven by the machine
-impedance. The main building blocks of the ADT system are stipline
-pickups at the position Q7 and Q9 at Point~4 of the LHC, connected to
-the beam position measurement modules at the surface, the digital
-signal processing modules (mDSPU) and a set of tetrode power
-amplifiers feeding electrostatic kickers in the RF zone of the
-LHC~\cite{adt_sum_2008,adt_sum_2011}. Though originally designed to
-damp the undesired transverse activities only, the damper is being
-routinely used for sophisticated beam excitations as well thanks to
-the state of the art digital signal processing hardware. These include
-among others abort and injection gap cleaning, single bunch excitation
-for tune and linear coupling measurements and special modes of
-operation for dedicated experiments at the LHC.
+The primary function of the LHC transverse damping and feedback
+system, also known as ADT, is to mitigate injection oscillations and
+to actively damp the coupled-bunch instabilities driven by machine
+impedance~\cite{adt_sum_2008, adt_sum_2011}. The main building blocks
+of the system are the following: strip-line pickups at positions Q7
+and Q9 near Interaction Point~4 (IP4) of the LHC, which are connected
+to the beam position measurement modules at the surface; the digital
+signal processing modules (mDSPU); and a set of tetrode power
+amplifiers feeding electrostatic kickers in the same radio-frequency
+sector of the LHC (IP4).
 
-The transverse feedback is in general active during the whole LHC
-cycle, therefore it is critical that the noise introduced by the
-system does not contribute to any emittance growth. The typical
-machine cycle requires a short damping time of ~10-20 turns (high
-feedback gain) for injection oscillation damping, which is increased
-during the ramp and collisions to ~50-100 turns (lower feedback
-gain). It has been demonstrated that noise introduced by the
-transverse feedback system itself is sufficiently low not to introduce
-any measurable emittance growth \cite{adt_noise_emit_2017}. All
-excitation signals referenced to in this paper are digitally
-synthesized in the damper's digital signal processing units and
-therefore can be considered as ``noise-free''. This point is important
-as then the effect on the beam can be attributed entirely to the
-applied excitation and any effect due to unwanted residual noise can
-be neglected.
+Because of its flexibility and state-of-the-art hardware, the system
+is being routinely used for sophisticated beam excitations. These
+include abort- and injection-gap cleaning, excitation of individual
+bunches for tune and linear-coupling measurements, and other special
+modes of operation for dedicated experiments in the LHC.
 
-The resonant excitation experiment in 2017 involved simultaneous
-measurements on three groups of 72 bunches with a dedicated excitation
-pattern and transverse feedback configuration on each subset of 6
-bunches. In 2016 a similar configuration was used, but with only 48
-bunches in total and subsets of 4 bunches. Both schemes are
-illustrated in Fig.~\ref{fig:fill}. In order to reduce the error of
-the measurements, the observables are averaged over each subset of
-bunches experiencing the same excitation amplitude, yielding in total
-5~different amplitudes $n\Delta A$ with $n=1,\cdots, 5$ plus the
-references bunch without excitation for each transverse feedback
-configuration and excitation plane. Furthermore, the experiments were
-usually split in 3 different parts:
+The transverse feedback is in general active during all phases of LHC
+operation. The typical machine cycle requires a short damping time of
+10--20 turns (high feedback gain) for injection oscillation
+damping. During the acceleration ramp and during collisions, the
+damping time is increased to 50--100 turns (lower feedback gain).
+
+Because the damper is always active in operations, it is critical that
+the noise introduced by the system does not cause any measurable
+emittance growth, and this fact was verified
+experimentally~\cite{adt_noise_emit_2017}. All excitation signals
+described in this paper were digitally synthesized in the ADT's
+digital signal processing units and are therefore assumed to be
+`noise-free.' The observed effects on the beam are attributed to the
+applied excitations and the effects of unwanted residual noise are
+assumed to be negligible.
+
+The resonant excitation experiment in~2017 involved simultaneous
+measurements on 3~groups of 72~bunches, with dedicated excitation
+patterns and transverse feedback configurations (i.e., damper active
+or damper off) on each subset of 6~bunches. In~2016, a similar
+configuration was used, with 48~bunches in total and subsets of
+4~bunches. Both schemes are illustrated in Fig.~\ref{fig:fill}. A
+total of 5 different amplitudes could be applied simultaneously to
+different subsets of bunches, denoted as $n \, \Delta A$, with
+$n = 1, \ldots, 5$. In addition, there were reference bunches without
+excitation for each transverse feedback configuration and excitation
+plane. Observables (losses, emittances, etc.) were averaged over each
+subset of bunches experiencing the same excitation and damping
+conditions.
+
+In~2017, the excitations in the horizontal and vertical planes were
+generated by a different set of signal-processing devices, but
+synchronized at a turn-by-turn level. Therefore, the bunches of the
+third group of 72 bunches (see Fig.~\ref{fig:fill}) were affected by
+the kicks in both horizontal and vertical planes during the same turn.
+
+The experiments were usually split in time into 3 different periods:
+%
 \begin{description}
-	\item[Part 1] No excitation is applied in order to allow the distribution to reach an equilibrium state after injection.
-	\item[Part 2] The excitation is applied with a first maximum excitation amplitude of $A_{\mathrm{max,1}}=5\Delta A_1$.
-	\item[Part 3] The maximum excitation amplitude is further increased to $A_{\mathrm{max,1}} < A_{\mathrm{max,2}}=5\Delta A_2$.
+\item[Period 1] No excitation was applied, to allow the beam to reach
+  an equilibrium state after injection.
+\item[Period 2] The excitation was applied with a first maximum
+  excitation amplitude of $A_{\mathrm{max,1}} = 5 \, \Delta A_1$.
+\item[Period 3] The maximum excitation amplitude was further increased
+  to $A_{\mathrm{max,2}} = 5 \, \Delta A_2 > A_{\mathrm{max,1}}$.
 \end{description}
-Each part lasted approximately 10-15~minutes, which is considered to
-be a long enough time window to allow the beam distribution to reach
-its new equilibrium state. In the plots of the experimental results
-shown later in the paper, the maximum excitation amplitude is
-indicated with black horizontal arrows, while the average of each
-subset of bunches with the same excitation amplitude $n\Delta A$ is
-distinguished with different colors.
+%
+Each period lasted approximately 10--15~minutes, which was considered
+long enough to allow the beam to reach its new equilibrium state. In
+the discussion of the experimental results (Section~\ref{sec:simex}
+below), the 3~periods are labeled according to the maximum excitation
+amplitude~$A_\mathrm{max}$, and subsets of bunches with the same
+excitation amplitude $n \, \Delta A$ ($n = 1, \ldots, 5$) are grouped
+by color.
 
-The excitation in the horizontal and the vertical plane is generated
-by a different set of signal processing hardware, however during this
-experiment the signals were synchronized at a turn level. This means
-the bunches of the third group (of 72 bunches) experienced the kick in
-both horizontal and vertical plane during the same turn.
+The proton deflection angle generated by the ADT kicker was calculated
+from the kicker geometry and from the excitation voltage on the
+deflection plates. The voltage depends on a complex chain of hardware
+(digital signal processor, transmission lines, low- and high-power
+amplifiers, etc.). In~2016, the kick was estimated from the
+operational system parameters and it was assigned an uncertainty of
+50\%. In~2017, the excitation voltage could be indirectly measured
+once, using the probes mounted on the kickers, with an estimated
+uncertainty of 10--15\%. A precise in-situ calibration was not
+possible due to the limited machine availability for dedicated
+studies.
 
-The ADT kicker deflection angle is calculated from the kicker geometry
-and the excitation voltage on the deflection plates. The excitation
-voltage used in the experiments is a complicated waveform, generated
-by a very complex hardware (digital signal processor, chain of
-transmission lines, low and high power amplifiers). The peak
-excitation voltage (and subsequently the kick) seen by the beam can be
-only indirectly measured using the probes on each kicker. The measured
-values are therefore believed to be known with an error margin of
-10-15\% for the experiments in 2017 and 50\% in 2016. The estimate for
-2017 is based on only a single measurement and in the future and with
-more time available the determination of the error would definitely
-have to be improved. The error in 2016 is estimated from the
-transverse damper operational parameters. Due to lack of the dedicated
-machine time no precision calibration was performed. The maximum kick
-strength reachable with the ADT at injection without risking
-saturation is 96~nrad. As an example Fig.~\ref{fig:fill_meas} shows
-the oscillation amplitude of each bunch in both H and V planes
-captured by the LHC real time transverse activity monitor during the
-2017 experiments and an excitation with $8^{\mathrm{th}}$ turn
-pulsing. The measured activity is well in line with the expected
+The maximum ADT kick strength that could be obtained at injection
+without risking saturation was approximately 100~nrad. For the
+experiments, a maximum nominal kick strength of 96~nrad was chosen.
+
+Figure~\ref{fig:fill_meas} shows an example of the oscillation
+amplitude of each bunch centroid in both horizontal and vertical
+planes, captured by the LHC real-time transverse activity monitor
+during the 2017 experiments, when the beam was excited every
+$8^{\mathrm{th}}$~turn. The measured activity shows the typical
+amplitude of bunch centroid excursions and reflects the expected
 excitation pattern.
+
 
 
 \section{Numerical tracking simulations}
