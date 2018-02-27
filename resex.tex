@@ -857,44 +857,71 @@ excitation pattern.
 \section{Numerical tracking simulations}
 \label{sec:sim}
 
-For the preparation and interpretation of the experiments two different types of simulations were performed:
-\begin{enumerate}
-	\item tracking of a Gaussian distribution, referred to as ``distribution tracking" in this paper, to obtain loss rates and emittance growth,
-	\item Frequency map analysis (FMA) for the visualization of resonances~\cite{fmalaskar}.
-\end{enumerate}
-For both simulation types, the tracking code Lifetrac \cite{lifetrac} was used. The simulation parameters are summarized in Table~\ref{tab:sim_param}. Further details on the simulations are given in Refs.~\cite{md_sim_hel_res_ex_fitterer,resexmd2017}.
-\begin{table}[h]
-	\caption{\label{tab:sim_param}%
-		Summary of simulation parameters for the distribution tracking and FMA analysis. For details see \cite{md_sim_hel_res_ex_fitterer,resexmd2017}.
-	}
-	\begin{ruledtabular}
-		\begin{tabular}{lcc}
-			Parameter & distribution tracking & FMA \\
-			\colrule
-			beam &\multicolumn{2}{c}{Beam~1} \\
-			beam energy &\multicolumn{2}{c}{450 GeV} \\
-			emittance & $3.5~\mu$m& $2.5~\mu$m\\
-			$4\sigma$ bunch length & \multicolumn{2}{c}{1.3~ns}\\
-			$1\sigma$ bunch length & \multicolumn{2}{c}{9.7~cm}\\
-			particle & 6D Gaussian & equally spaced grid\\
-			distribution &  distribution & in $x,y$ up to $10~\sigma$\\
-			&  ($10^4$ particles) & with $\frac{\Delta p}{p_0}=0$\\
-			turns tracked & $10^6$ turns & $10^4$ turns \\\hline
-			optics & \multicolumn{2}{c}{2016 or 2017 injection optics,}\\
-			& \multicolumn{2}{c}{$\beta_{\mathrm{IP1/5}}^*=11$~m}\\
-			machine  & standard errors & no errors \\
-			imperfections &with $a_1=b_1=0$\footnote{Orbit errors are disabled due to different implementation of the $a_1,b_1$ errors in Lifetrac and MAD-X. $b_2$ errors are adjusted to yield an average (over 60 seeds) peak $\beta$-beat of 15\% as expected from optics measurements in the LHC.} &  \\
-			octupoles  & \multicolumn{2}{c}{$I_{\mathrm{MOF}}=+19.6~\mathrm{A}$, $I_{\mathrm{MOD}}=-19.6~\mathrm{A}$}\\
-			tune $(Q_x,Q_y)$ & \multicolumn{2}{c}{(64.28,59.31) for 2016,}\\
-			& \multicolumn{2}{c}{(62.27,60.295) for 2017}\\
-			chromaticity & \multicolumn{2}{c}{(+15,+15)}\\
-			$(Q'_x,Q'_y)$ & & \\\hline
-			transv. aperture & $5.7~\sigma$ & - \\
-			long. aperture & $10~\sigma$ & - \\
-		\end{tabular}
-	\end{ruledtabular}
-\end{table}
+\begin{table*}
+  \caption{Summary of parameters used in numerical simulations of
+    distribution tracking and frequency-map analysis (FMA). Further
+    details can be found in Refs.~\cite{md_sim_hel_res_ex_fitterer,
+      resexmd2017}.}
+  \label{tab:sim_param}
+  \begin{ruledtabular}
+    \begin{tabular}{lcc}
+      Parameter & distribution & FMA \\
+      \colrule
+      beam &\multicolumn{2}{c}{Beam~1} \\
+      beam energy &\multicolumn{2}{c}{450 GeV} \\
+      normalized emittance & \q{3.5}{\mu m} & \q{2.5}{\mu m} \\
+      $4\sigma$ bunch length & \multicolumn{2}{c}{1.3~ns} \\
+      $1\sigma$ bunch length & \multicolumn{2}{c}{9.7~cm} \\
+      particle distribution & \parbox{0.4\textwidth}{6D Gaussian
+                              distribution with $10^4$ particles}
+                               & \parbox{0.4\textwidth}{equally spaced
+                                 grid in $x, y$ up to $10\sigma$, with
+                                 $(\Delta p / p_0) = 0$} \\
+      turns tracked & $10^6$ & $10^4$ \\
+      \hline
+      optics & \multicolumn{2}{c}{2016 or 2017 injection optics, with
+               $\beta^* = \q{11}{m}$ at IP1 and IP5} \\
+      machine imperfections & standard errors, with $a_1 = b_1 =
+                              0$\footnote{Orbit
+                              errors are disabled due to
+                              different implementation of the
+                              $a_1, b_1$ coefficients in Lifetrac and
+                              MAD-X. $b_2$ errors are adjusted to
+                              yield an average
+                              peak $\beta$-beat of 15\% over 60~seeds, as
+                              observed in optics measurements
+                              in the LHC.} & no errors \\
+      octupoles  & \multicolumn{2}{c}{$I_{\mathrm{MOF}} =
+                   \q{+19.6}{A}$, $I_{\mathrm{MOD}} = \q{-19.6}{A}$} \\
+      tunes $(Q_x, Q_y)$ & \multicolumn{2}{c}{(64.28, 59.31) for 2016,
+                           (62.27, 60.295) for 2017} \\
+      chromaticities $(Q'_x, Q'_y)$ & \multicolumn{2}{c}{(+15, +15)} \\
+      \hline
+      transverse aperture & $5.7\sigma$ &  \\
+      longitudinal aperture & $10\sigma$ &  \\
+    \end{tabular}
+  \end{ruledtabular}
+\end{table*}
 
+For the preparation and interpretation of the experiments, two
+different types of simulations were performed:
+%
+\begin{itemize}
+\item tracking of a Gaussian distribution, referred to as
+  `distribution tracking' in this paper, to obtain particle loss rates
+  and emittance evolution;
+\item frequency-map analysis (FMA), to visualize the location and
+  intensity of resonances~\cite{fmalaskar}.
+\end{itemize}
+%
+For both simulation types, the tracking code Lifetrac~\cite{lifetrac}
+was used. The simulation parameters are summarized in
+Table~\ref{tab:sim_param}. Further details are given in
+Refs.~\cite{md_sim_hel_res_ex_fitterer, resexmd2017}.
+
+Simulation results are discussed below in Section~\ref{sec:simex}
+together with the experimental results to enhance the understanding
+and interpretation of the models and observations.
 
 
 \section{Results}
