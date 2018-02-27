@@ -212,12 +212,12 @@ assessment of possible detrimental effects on the beam core of a
 pulsed electron lens. Section~\ref{sec:hel} gives an introduction to
 the concept of HELs and summarizes the design parameters of the HL-LHC
 HELs. Section~\ref{sec:core} is dedicated to the sources of residual
-fields from the HEL in the core region. Section~\ref{sec:exp}
-describes the setup of simulations and experimental
-conditions. Results and comparisons between simulations and
-measurements are given in Section~\ref{sec:simex}, with discussion and
-summary in Section~\ref{sec:sum}. Auxiliary data and plots are
-collected in the Appendices.
+fields from the HEL in the core region. Sections~\ref{sec:exp}
+and~\ref{sec:sim} describe the experimental conditions and the setup
+of the numerical tracking simulations. Results and comparisons between
+simulations and measurements are given in Section~\ref{sec:simex},
+with discussion and summary in Section~\ref{sec:sum}. Auxiliary data
+and plots are collected in the Appendices.
 
 
 
@@ -647,15 +647,15 @@ the effects on the circulating beam.
 
 
 
-\section{Experimental and simulation setup}
+\section{Experimental setup}
 \label{sec:exp}
 
 \begin{table*}
-  \caption{ Beam parameters and machine configuration as used in the
-    two resonant excitation experiments in 2016
-    and~2017~\cite{resexmd2016,resexmd2017}. The plane of the
-    excitation is abbreviated with H for horizontal, V for vertical
-    and H+V horizontal and vertical at the same time.}
+  \caption{Beam parameters and machine configuration for the two
+    resonant excitation experiments of~2016
+    and~2017~\cite{resexmd2016, resexmd2017}. The plane of the
+    excitation is abbreviated as H for horizontal, V for vertical and
+    H+V for horizontal and vertical at the same time.}
   \label{tab:md_param}
   \begin{ruledtabular}
     \begin{tabular}{lcc}
@@ -664,45 +664,47 @@ the effects on the circulating beam.
       beam &\multicolumn{2}{c}{Beam~1} \\
       beam energy &\multicolumn{2}{c}{injection energy, 450 GeV} \\\hline
       single bunch intensity &\multicolumn{2}{c}{$0.7\times10^{11}$} \\
-      normalized emittance &\multicolumn{2}{c}{$2.5-3.5~\mathrm{\mu m}$} \\
+      normalized emittance &\multicolumn{2}{c}{$2.5$--\q{3.5}{\mu m}} \\
       $4\sigma$ bunch length & \multicolumn{2}{c}{1.3~ns}\\
       $1\sigma$ bunch length & \multicolumn{2}{c}{9.7~cm}\\
-      number of bunches & $12\times4=48$ single bunches & $3\times72=216$ bunches\\
+      number of bunches & $12 \times 4 = 48$ & $3 \times 72 = 216$ \\
                 &  & (+ 1 pilot + 12 nominal) \\\hline
-      injection optics, $\beta^*=11$~m & standard optics 2016 & standard optics 2017\\
-      Landau damping octupoles  & \multicolumn{2}{c}{$I_{\mathrm{MO}}=+19.6~\mathrm{A}$ for MOF circuit and}\\
-                & \multicolumn{2}{c}{$I_{\mathrm{MO}}=-19.6~\mathrm{A}$ for MOD circuit (standard 2016 settings)}\\\hline
-      working point $(Q_x,Q_y)$ & (64.28,59.31) & (62.27,60.295) \\
-      chromaticity $(Q'_x,Q'_y)$ & \multicolumn{2}{c}{(+15,+15)}\\\hline
-      pulsing patterns  &$7^{\mathrm{th}}$~turn H; &$7^{\mathrm{th}}$~turn H,V,H+V; \\
-                & $10^{\mathrm{th}}$~turn V; & $8^{\mathrm{th}}$~turn H,V,H+V; \\
-                & &  random  H,V,H+V;\\
+      injection optics, $\beta^* = \q{11}{m}$ & standard optics 2016 & standard optics 2017\\
+      Landau-damping octupoles  & \multicolumn{2}{c}{$I_{\mathrm{MO}}
+                                  = \q{+19.6}{A}$ for MOF circuit and}\\
+                & \multicolumn{2}{c}{$I_{\mathrm{MO}} = \q{-19.6}{A}$
+                  for MOD circuit (standard 2016 settings)} \\ \hline
+      working point $(Q_x, Q_y)$ & (64.28, 59.31) & (62.27, 60.295) \\
+      chromaticity $(Q'_x, Q'_y)$ & \multicolumn{2}{c}{(+15, +15)}\\ \hline
+      pulsing patterns  & $7^{\mathrm{th}}$~turn H
+                                  &$7^{\mathrm{th}}$~turn H, V, H+V \\
+                & $10^{\mathrm{th}}$~turn V & $8^{\mathrm{th}}$~turn
+                                              H, V, H+V \\
+                & &  random  H, V, H+V\\
     \end{tabular}
   \end{ruledtabular}
 \end{table*}
 
 \begin{figure*}
-  \begin{minipage}[t]{1.0\linewidth}
-    \centering
-    2016 experiment\\
-    \includegraphics[width=0.9\linewidth]{bunchfilling_2016.png}	
-  \end{minipage}
-  \begin{minipage}[t]{1.0\linewidth}
-    \centering
-    $ $\\
-    2017 experiment\\
-    \includegraphics[width=0.9\linewidth]{bunchfilling_2017.png}	
-  \end{minipage}
-  \caption{Filling and excitation scheme for LHC experiments in 2016
-    (top) and 2017 (bottom). In 2016 a total of 48~bunches was used
-    and in 2017 a total of 216~bunches. Each bunch is indicated with a
-    cyan vertical bar. The bunches were grouped in sub-groups of 4~for
-    2016 and 6~for 2017 bunches, where each sub-group experienced the
-    same excitation pattern and amplitude. The excitation amplitude is
-    shown in blue and red. In 2016 the excitation was only applied in
-    one plane. In 2017 more bunches could be injected without
-    compromising machine protection making it possible to test all
-    three planes in one fill.}
+  \begin{tabular}{c}
+    \multicolumn{1}{l}{\emph{2016 experiment}} \\
+    \includegraphics[width=0.95\textwidth]{bunchfilling_2016.png} \\
+    \\
+    \multicolumn{1}{l}{\emph{2017 experiment}} \\
+    \includegraphics[width=0.95\textwidth]{bunchfilling_2017.png}
+  \end{tabular}
+  \caption{Bunch filling scheme and excitation patterns for the
+    2016~(top) and 2017~(bottom) LHC experiments. In 2016, a total of
+    48~bunches was used, whereas in 2017 there were 216~bunches. Each
+    bunch is represented by a vertical cyan bar. The bunches were
+    grouped in subsets of~4 in 2016 and in subsets of~6 in 2017. Each
+    subset experienced the same excitation pattern and amplitude. The
+    excitation amplitudes and relative phases are shown in blue or
+    red. In 2016, the excitation was only applied in one plane. In
+    2017, more injected bunches were allowed without compromising
+    machine protection, so it was possible to test all~3 excitation
+    planes in the same fill. The transverse damper was active on half
+    of the bunches, indicated by the black lines.}
   \label{fig:fill}
 \end{figure*}
 
@@ -717,13 +719,13 @@ The primary function of the transverse feedback system in LHC, also referenced t
 
 The transverse feedback is in general active during the whole LHC cycle, therefore it is critical that the noise introduced by the system does not contribute to any emittance growth. The typical machine cycle requires a short damping time of ~10-20 turns (high feedback gain) for injection oscillation damping, which is increased during the ramp and collisions to ~50-100 turns (lower feedback gain). It has been demonstrated that noise introduced by the transverse feedback system itself is sufficiently low not to introduce any measurable emittance growth \cite{adt_noise_emit_2017}. All excitation signals referenced to in this paper are digitally synthesized in the damper's digital signal processing units and therefore can be considered as ``noise-free''. This point is important as then the effect on the beam can be attributed entirely to the applied excitation and any effect due to unwanted residual noise can be neglected.
 
-The resonant excitation experiment in 2017 involved simultaneous measurements on three groups of 72 bunches with a dedicated excitation pattern and transverse feedback configuration on each sub-group of 6 bunches. In 2016 a similar configuration was used, but with only 48 bunches in total and sub-groups of 4 bunches. Both schemes are illustrated in Fig.~\ref{fig:fill}. In order to reduce the error of the measurements, the observables are averaged over each sub-group of bunches experiencing the same excitation amplitude, yielding in total 5~different amplitudes $n\Delta A$ with $n=1,\cdots, 5$ plus the references bunch without excitation for each transverse feedback configuration and excitation plane. Furthermore, the experiments were usually split in 3 different parts:
+The resonant excitation experiment in 2017 involved simultaneous measurements on three groups of 72 bunches with a dedicated excitation pattern and transverse feedback configuration on each subset of 6 bunches. In 2016 a similar configuration was used, but with only 48 bunches in total and subsets of 4 bunches. Both schemes are illustrated in Fig.~\ref{fig:fill}. In order to reduce the error of the measurements, the observables are averaged over each subset of bunches experiencing the same excitation amplitude, yielding in total 5~different amplitudes $n\Delta A$ with $n=1,\cdots, 5$ plus the references bunch without excitation for each transverse feedback configuration and excitation plane. Furthermore, the experiments were usually split in 3 different parts:
 \begin{description}
 	\item[Part 1] No excitation is applied in order to allow the distribution to reach an equilibrium state after injection.
 	\item[Part 2] The excitation is applied with a first maximum excitation amplitude of $A_{\mathrm{max,1}}=5\Delta A_1$.
 	\item[Part 3] The maximum excitation amplitude is further increased to $A_{\mathrm{max,1}} < A_{\mathrm{max,2}}=5\Delta A_2$.
 \end{description}
-Each part lasted approximately 10-15~minutes, which is considered to be a long enough time window to allow the beam distribution to reach its new equilibrium state. In the plots of the experimental results shown later in the paper, the maximum excitation amplitude is indicated with black horizontal arrows, while the average of each sub-group of bunches with the same excitation amplitude $n\Delta A$ is distinguished with different colors.
+Each part lasted approximately 10-15~minutes, which is considered to be a long enough time window to allow the beam distribution to reach its new equilibrium state. In the plots of the experimental results shown later in the paper, the maximum excitation amplitude is indicated with black horizontal arrows, while the average of each subset of bunches with the same excitation amplitude $n\Delta A$ is distinguished with different colors.
 
 The excitation in the horizontal and the vertical plane is generated by a different set of signal processing hardware, however during this experiment the signals were synchronized at a turn level. This means the bunches of the third group (of 72 bunches) experienced the kick in both horizontal and vertical plane during the same turn.
 
@@ -734,7 +736,10 @@ The ADT kicker deflection angle is calculated from the kicker geometry and the e
 	\caption{\label{fig:fill_meas} Bunch by bunch excitation detected by the real time transverse activity monitor during the 2017 experiment and an excitation with 8th turn pulsing.}
 \end{figure*}
 
-\subsection{Overview of simulations\label{sec:sim}}
+
+\section{Numerical tracking simulations}
+\label{sec:sim}
+
 For the preparation and interpretation of the experiments two different types of simulations were performed:
 \begin{enumerate}
 	\item tracking of a Gaussian distribution, referred to as ``distribution tracking" in this paper, to obtain loss rates and emittance growth,
@@ -774,7 +779,10 @@ For both simulation types, the tracking code Lifetrac \cite{lifetrac} was used. 
 \end{table}
 
 
-\section{Experimental and simulation results\label{sec:simex}}
+
+\section{Results}
+\label{sec:simex}
+
 In the following we will jump forth and back between both experimental and simulation results as the experimental results are best understood on the base of the simulations. In summary, the most efficient pulsing patterns could be successfully predicted in simulations, which we will demonstrate on the example of the 2016 experiments (see Sec.~\ref{sec:pattern}). Afterwards we will present the simulation and experimental results of the tested excitation patterns, explicitly the $10^{\mathrm{th}}$~turn, $7^{\mathrm{th}}$~turn and $8^{\mathrm{th}}$~turn pulsing in Secs.~\ref{sec:simex10}--\ref{sec:simex8} as well as the random excitation in Sec.~\ref{sec:simexran}. As a last chapter, Sec.~\ref{sec:damp}, we will address the influence of the transverse damper in the presence of an external excitation source on emittance, losses and beam distribution.
 
 Quantitative predictions of loss rates and emittance growth proved in general challenging as both observables are influenced in addition by the natural noise present in the LHC, originating for example from vibrations and magnetic field ripple. The observed effect is then the result of the interaction of the external excitation with the natural noise. At injection, this natural noise component is not known and thus presents a very influential but undefined input to the simulations. Beside the natural noise, also collective effects like intra-beam scattering and electron cloud influence the time evolution of emittance and losses. Both are also not taken into account in these simulations, but the effect was minimized during the experiments by choosing an as small as possible bunch intensity of only $0.7\times10^{11}$ protons per bunch.
