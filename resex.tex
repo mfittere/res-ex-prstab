@@ -1013,27 +1013,35 @@ emittances.
 \end{figure*}
 
 \begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		$7^{\mathrm{th}}$ H+V
-		\includegraphics[width=1.0\linewidth]{2016injerra2b2u_t7skhv_3_5um_hist_x.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		$10^{\mathrm{th}}$ H+V
-		\includegraphics[width=1.0\linewidth]{2016injerra2b2u_t10skhv_3_5um_hist_y.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		random H+V
-		\includegraphics[width=1.0\linewidth]{2016injerra2b2u_ranhv_3_5um_hist_x.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		no excitation
-		\includegraphics[width=1.0\linewidth]{2016injerra2b2u_3_5um_hist_y.png}
-	\end{minipage}	
-	\caption{\label{fig:patternhist} Horizontal beam distribution for $7^{\mathrm{th}}$~turn pulsing (top left), vertical beam distribution for $10^{\mathrm{th}}$~turn pulsing (top right) and horizontal (bottom left) and vertical (bottom right) beam distribution for random excitation from distribution tracking simulations based on the 2016 injection optics with $(Q_x,Q_y)=(64.28,59.31)$ and standard errors. The excitation is applied in both planes with an amplitude of 96~nrad. The residual is defined as the final distribution (here after $10^4$~turns) minus the initial distribution (here after $10^2$~turns) as \%, and the ratio as the final distribution divided by the initial distribution. The red line in the plot of the residual is the difference between the Gaussian fit of the distribution and the distribution itself.}
+  \begin{tabular}{cc}
+    no excitation & random, H+V \\
+    \includegraphics[width=0.49\textwidth]{2016injerra2b2u_3_5um_hist_y.png} &
+    \includegraphics[width=0.49\textwidth]{2016injerra2b2u_ranhv_3_5um_hist_x.png} \\
+    $7^{\mathrm{th}}$, H+V & $10^{\mathrm{th}}$, H+V \\
+    \includegraphics[width=0.49\textwidth]{2016injerra2b2u_t7skhv_3_5um_hist_x.png}
+                  &
+    \includegraphics[width=0.49\textwidth]{2016injerra2b2u_t10skhv_3_5um_hist_y.png} \\
+  \end{tabular}
+  \caption{Calculated beam distributions as a function of vertical
+    position from distribution-tracking simulations based on the 2016
+    injection optics with $(Q_x, Q_y) = (64.28, 59.31)$ and standard
+    lattice errors: no excitation (top left), random excitation (top
+    right), $7^{\mathrm{th}}$~turn pulsing (bottom left), and
+    $10^{\mathrm{th}}$~turn pulsing (bottom right). The excitations
+    are applied in both planes with an amplitude of 96~nrad. For each
+    of the 4~cases, 3~plots are shown. The top plot shows the
+    normalized transverse distributions: `initial' (after
+    $10^2$~turns, in gray), `final' (after $10^4$~turns, in black),
+    and their Gaussian fits (light and dark red, respectively). The
+    middle plots show the relative residuals (i.e., differences, in
+    percent of the peak value) between final and initial distributions
+    (in black) and between each distribution and its Gaussian fit (in
+    light and dark red). The ratios between final and initial
+    distributions are drawn in black in the bottom plots. The
+    residuals emphasize changes near the core of the distributions,
+    whereas ratios (when statistically significant), reveal variations
+    in the tails.}
+  \label{fig:patternhist}
 \end{figure*}
 
 
@@ -1070,28 +1078,36 @@ be thus attributed to an interaction of the excitation with the
 lattice errors, implying also a sensitivity to the chosen random seed
 in simulations and to the specific lattice in experiments.
 
-One may have noticed that the emittance in case of the
-$7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing starts at an
-increased initial value and then stays almost constant during the
-entire simulation time, which usually points to an error in the chosen
-simulation setup. This behavior is however typical for any resonant
-excitation and can be ascribed to the adjustment of the beam
-distribution during the first $10^4$ turns to a new equilibrium. As
-the beam distribution is only dumped every $10^4$ turns, this initial
-fast adjustment manifests itself in an increased initial emittance
-value in Fig.~\ref{fig:patternsim}, and also any other simulations
-over $10^6$ turns presented in this paper. Besides an increased
-emittance, the new distribution also becomes non-Gaussian. This is
-illustrated by means of the residual in respect to the Gaussian
-distribution for $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing
-in Fig.~\ref{fig:patternhist}. This initial fast change of the beam
-distribution is not an artifact of the simulation, but has been, to
-the knowledge of the authors, also for the first time experimentally
-observed during the 2016 and 2017 LHC experiments presented in this
-paper. The timescale of this fast adjustment is in experiments however
-much slower than predicted in simulations --- on the timescale of
-minutes compared to seconds.
- 
+In Fig.~\ref{fig:patternsim}, one can see that, in the cases of
+$7^{\mathrm{th}}$ and $10^{\mathrm{th}}$~turn pulsing, the emittances
+start from an increased initial value and then stay almost constant
+for the duration of the simulation. This behavior is typical of the
+resonant excitation and it is not an artifact of the simulation. It
+was verified that it is due to the adjustment of the input beam
+distribution to a new equilibrium during the first $10^4$~turns. In
+all long-term simulations ($10^6$~turns, corresponding to 89~s)
+presented in this paper, the beam distribution is saved every
+$10^4$~turns. Therefore, this initial fast adjustment manifests itself
+in an increased initial emittance value.
+
+Besides having a larger emittance, the new distribution also differs
+from a Gaussian distribution.  This is illustrated in
+Fig.~\ref{fig:patternhist}, which shows, for different excitation
+patterns, two snapshots of the normalized transverse beam
+distributions, the `initial' one at $10^2$~turns and the `final' one
+at $10^4$~turns, and how they differ from each other and from a
+Gaussian distribution. For instance, for $7^{\mathrm{th}}$ turn
+pulsing (bottom left plot in Fig.~\ref{fig:patternhist}), simulations
+indicate a clear shift in beam population from the core ($< 1\sigma$)
+towards the regions at $\pm 1.5\sigma$ and towards the tails at
+$\pm 4\sigma$.
+
+Although on a different time scale (minutes instead of seconds), a
+similar re-adjustment of the beam distribution in response to an
+external excitation was directly observed experimentally for the first
+time, to our knowledge, during the 2016 and 2017 LHC experiments
+presented in this paper, as discussed below.
+
 In the presence of only a resonant excitation, this modified
 distribution is stable in simulations with a constant emittance. As we
 will see later, an increase of the emittance with the applied
