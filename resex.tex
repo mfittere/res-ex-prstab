@@ -926,7 +926,16 @@ factors. For instance, the natural noise present in the machine
 power supplies, etc.) may have complex interactions with the external
 excitations. In the LHC, noise sources at top energy are well
 characterized, whereas they are not well known at injection,
-presenting an influential but undefined input for simulations.
+presenting an influential but undefined input for simulations.  An
+estimate is obtained by scaling the value at
+6.5~TeV~\cite{md1433_noise_top_energy, md_noise_bbLHC} with proton
+magnetic rigidity to the injection energy of 450~GeV. This yields a
+maximum kick amplitude at the transverse damper of approximately
+%
+\begin{equation}
+  \label{eq:noise-kick}
+  \theta_{\mathrm{random,ADT,max}}(\mathrm{450~GeV}) = \q{6}{nrad}.
+\end{equation}
 
 Collective effects, such as intra-beam scattering and electron cloud,
 influence the time evolution of losses and emittance as well. To
@@ -1127,15 +1136,10 @@ studied in a separate experiment at the LHC for the case of colliding
 beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
 
 
-\subsection{$10^{\mathrm{th}}$ turn pulsing\label{sec:simex10}}
-The $10^{\mathrm{th}}$~turn pulsing pattern was tested in 2016 with an excitation in the vertical plane only. As this was the first time a resonant excitation was tested in the LHC, only in total 48~bunches could be injected in order to still guarantee the protection of the machine. To test different excitation amplitudes during one fill and have enough statistics, the excitation was therefore only applied in one plane. As described earlier, the experiment started with a period of 12~minutes without excitation in order to let the beam distribution fully adjust to its equilibrium state after injection. Afterwards the excitation was applied with the excitation scheme shown in Fig.~\ref{fig:fill} and a maximum excitation amplitude of $A_{\mathrm{max}}=5\Delta A = 48~$nrad for a total of 11~minutes. The excitation was then further increased to the maximum value reachable without saturation of $A_{\mathrm{max}}=5\Delta A = 96~$nrad and kept for 11~minutes. In both cases, the excitation induced the following changes:
-\begin{enumerate}
-	\item Increase of the loss rate with the excitation amplitude (Figs.~\ref{fig:10thexp}.
-	\item Increase of the emittance growth with the excitation amplitude in the vertical plane but not in the horizontal plane (Fig.~\ref{fig:10thexp}).
-	\item Change of the beam distribution for the excited bunches (Fig.~\ref{fig:10thexpprof}).	
-\end{enumerate}
-As loss rates, emittance growth and beam distribution stayed unchanged for the $4$~reference bunches, the above observations can be also truly associated with the effect of the $10^{\mathrm{th}}$~turn pulsing.
-\begin{figure*}[h]
+\subsection{Pulsing every $10^{\mathrm{th}}$ turn}
+\label{sec:simex10}
+
+\begin{figure*}
 	\begin{minipage}[t]{0.32\linewidth}
 		\centering
 		\includegraphics[height=0.75\linewidth]{2016_bunch_intensity_v10th_no_damper_avg.png}
@@ -1150,11 +1154,8 @@ As loss rates, emittance growth and beam distribution stayed unchanged for the $
 	\end{minipage}	
 	\caption{\label{fig:10thexp} Relative intensity (top) and relative horizontal (bottom left) and vertical (bottom right) emittance averaged over the bunches experiencing the same excitation amplitude during the 2016 experiments and for $10^{\mathrm{th}}$~turn pulsing in~V. For all bunches the damper was not active. Relative refers here to the normalization to the initial value. For each maximum amplitude $A_{\mathrm{max}}=48$~nrad and 96~nrad indicated with black arrows, the excitation amplitude was linearly increased for each group of 4~bunches (see Fig.~\ref{fig:fill}). The different colored solid lines labeled with $n\Delta A$ are the average over the 4~bunches with the same excitation amplitude together with the $1\sigma$ standard deviation shown as envelope. The area with a blue background indicates the fast adjustment period of the beam distribution transitioning into a new equilibrium state highlighted with a gray background.}
 \end{figure*}
-These experimentally obtained scalings of the loss rate and emittance growth with the excitation amplitude can be then used for the actual specification of the hollow electron lens.
 
-Besides the numerical determination of tolerances, the vertical emittance actually features indeed the strange and interesting behavior predicted in simulations: a fast adjustment phase of the beam distribution visible as a rapid increase of the emittance followed by the reach of a new equilibrium distribution apparent by a slower continuous emittance growth. These two phases are indicated in Fig.~\ref{fig:10thexp} in blue and black.
-
-\begin{figure*}[h]
+\begin{figure*}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		reference bunch, no excitation
@@ -1166,8 +1167,8 @@ Besides the numerical determination of tolerances, the vertical emittance actual
 	\end{minipage}
 	\caption{\label{fig:10thexpprof} Vertical beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2016 experiments. The profiles are taken at the end of the $10^{\mathrm{th}}$~turn pulsing in V. For both bunches the transverse damper is not active. The black line in the plot of the residual is the current profile minus the profile before applying the excitation and is a measure for the overall change of the distribution. The red line is the current profile minus its Gaussian fit, which gives and indication for the deviation of the distribution from a Gaussian distribution. For details on the analysis it is referred to \cite{bsrtprofinj}. The distribution of the reference bunch (left), here slot 50, stays unchanged, while the bunch experiencing the maximum excitation (right), here slot 1300, clearly shows a change to a non-Gaussian distribution.}
 \end{figure*}
-Thanks to the good performance of the Beam Synchrotron Radiation Telescope (BSRT)~\cite{bsrtprofinj}, the distribution changes indirectly observed as changes of the emittance could also be for the first time directly measured. As example Fig.~\ref{fig:10thexpprof} shows the vertical profile of a reference bunch and one bunch experiencing the maximum excitation of $5\cdot\Delta A=A_{\mathrm{max}}=48$~nrad and afterwards 96~nrad. The distribution of the excited bunch not only changes but becomes clearly non-Gaussian, while the reference bunch stays unchanged.
-\begin{figure*}[h]
+
+\begin{figure*}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_intensity.png}
@@ -1186,23 +1187,115 @@ Thanks to the good performance of the Beam Synchrotron Radiation Telescope (BSRT
 	\end{minipage}	
 	\caption{\label{fig:10thsim} Relative intensity (top left) and relative vert. emittance (top right), and hor. (bottom left) and vert. (bottom right) emittance obtained from simulations (distribution tracking) based on the 2016 injection optics with standard errors and $(Q_x,Q_y)=(64.28,59.31)$. The solid line indicates an excitation with only $10^{\mathrm{th}}$~turn pulsing in V and the dotted line with $10^{\mathrm{th}}$~turn pulsing in V plus a random dipole noise component in H+V of 6~nrad.}
 \end{figure*}
-The simulation results from the distribution tracking for $10^{\mathrm{th}}$~turn pulsing and without (solid line) and with (dotted line) additional random noise component to emulate the natural noise present in the LHC are shown in Fig.~\ref{fig:10thsim}. As no estimate of the natural noise is available at injection for the LHC, a first estimate is obtained by scaling the estimate for 6.5~TeV \cite{md1433_noise_top_energy,md_noise_bbLHC} by the magnetic rigidity to the injection energy of 450~GeV. This yields a maximum kick amplitude at the transverse damper of approximately
-\begin{equation}
-\theta_{\mathrm{random,ADT,max}}(\mathrm{450~GeV}) = 6~\mathrm{nrad}.
-\end{equation}
-As can be seen from simulations, adding a random noise component not only yields the correct qualitative behavior of the emittance but also increases the losses. As the losses are in general underestimated in simulations compared to the experimental results, the discrepancy between simulations and experiment can be thus reduced.  To better compare the experimental results for the two different maximum excitation amplitudes applied for slightly different time intervals and also the simulations conducted for a much shorter interval of only 90~s, we define the relative loss rate $R$:
-\begin{equation}\label{eqn:lossrate}
-R = \frac{I_{\mathrm{start}}-I_{\mathrm{end}}}{I_{\mathrm{start}}\cdot \Delta t}
-\end{equation}
-where $I$ is the intensity and $\Delta t$ the time interval during which the excitation with fixed $A_{\mathrm{max}}$ is applied during the experiments or the duration of the simulation respectively. A qualitative comparison of the loss rates obtained in experiments and simulations is shown in Fig.~\ref{fig:10thexploss} featuring a surprisingly good agreement. It should be also kept in mind that the additional random noise component considerably influences the simulation results and as long as it is unknown should be seen more as a fit parameter than a real experimentally confirmed input parameter. The measured loss rates for $A_{\mathrm{max}}=48$~nrad and $A_{\mathrm{max}}=96$~nrad should furthermore follow the same scaling. Instead the loss rates for the same excitation amplitude are smaller for $A_{\mathrm{max}}=96$~nrad compared to $A_{\mathrm{max}}=48$~nrad. That losses and also emittance growth for a fixed excitation amplitude do not exactly agree for both experiments, is a general tendency observed in all experiments. As the second excitation however starts from an already by the previous excitation changed beam distribution, the difference is however not surprising and can be explained by this difference in initial conditions. For checking the reproducibility of the results in a possible future experiment, it would be interesting to see if the same loss rates are measured if for each $A_{\mathrm{max}}$ a new fill is used. 
-\begin{figure}[h]
+
+\begin{figure}
 		\centering
 %		\includegraphics[width=0.8\linewidth]{2016_scale_amp_10v_ran_lbllong_sim.png}
 \includegraphics[width=1.0\linewidth]{2016_scale_amp_10v_ran_lblshort_sim_prstab.png}
 	\caption{\label{fig:10thexploss} Comparison of scaling of loss rates $R$ as defined in Eqn.~\ref{eqn:lossrate} with the excitation amplitude for $10^{\mathrm{th}}$~turn pulsing in~V. The experimental results for a maximum excitation of $A_{\mathrm{max}}=48$~nrad are shown in black and for $A_{\mathrm{max}}=96$~nrad in green. The excitation amplitude error is 50\% and the error on the loss rate is the pure statistical error on the mean. The simulation results (see Fig.~\ref{fig:10thsim}) for 2016 injection optics, standard errors, $(Q_x,Q_y)=(64.28,59.31)$, $10^{\mathrm{th}}$~turn pulsing in V plus random dipole noise in H+V of 6~nrad are shown in red together with their statistical error. The loss rates follow approximately a quadratic behavior illustrated by a second order polynomial fit to the data shown as solid (for bunches with transverse damper off) or dashed (for bunches with transverse damper on) line.}
 \end{figure}
 
-\clearpage
+The $10^{\mathrm{th}}$~turn pulsing pattern was tested in 2016 with an
+excitation in the vertical plane only. As this was the first time a
+resonant excitation was tested in the LHC, only 48~bunches were
+injected, in order to guarantee safe operation of the machine. To test
+different excitation amplitudes during one fill and have enough
+statistics, the excitation was only applied in one plane. The
+experiment started with a period of 12~minutes without excitation, to
+let the beam distribution fully adjust to its equilibrium state after
+injection. The excitation was then applied for 11~minutes, with the
+excitation scheme shown in Fig.~\ref{fig:fill} and a maximum
+excitation amplitude of
+$A_{\mathrm{max}} = 5 \, \Delta A = \q{48}{nrad}$. The excitation was
+then further increased to the maximum value of
+$A_{\mathrm{max}} = 5 \, \Delta A = \q{96}{nrad}$ and kept for another
+period of 11~minutes.
+
+The main observations are collected in Figures~\ref{fig:10thexp}
+and~\ref{fig:10thexpprof}. In Fig.~\ref{fig:10thexp}, one can see the
+evolution in time of losses and emittances for the control bunches and
+for the affected bunches, as a function of excitation amplitude. In
+brief, during both phases of the experiment, the excitation induced
+the following changes:
+%
+\begin{itemize}
+  \item loss rates increased with excitation amplitude
+    (Fig.~\ref{fig:10thexp}, left);
+  \item emittance growth increased with amplitude in the vertical
+    plane, but not in the horizontal plane (Fig.~\ref{fig:10thexp},
+    center and right);
+  \item a change of the beam distribution for the excited bunches was
+    directly observed (Fig.~\ref{fig:10thexpprof}).
+\end{itemize}
+
+As loss rates, emittance-growth rates and beam distributions of the 4
+reference bunches were unchanged, the above observations can be
+directly attributed to the pulsing pattern. The quantitative
+dependence of the loss rates and emittance-growth rates on excitation
+amplitude measured in these experiments provides an estimate of the
+effects of external resonant excitations, such as the residual fields
+of a pulsed hollow electron lens.
+
+The vertical emittance features a behavior similar to that predicted
+in simulations: a fast adjustment phase of the beam distribution,
+which manifests itself as a rapid increase of the emittance, followed
+by a new equilibrium, inferred from a slower and continuous emittance
+growth. In Fig.~\ref{fig:10thexp}, these two phases are indicated in
+blue and black.
+
+Distribution changes could also be directly observed, thanks to the
+performance of the Beam Synchrotron Radiation Telescope
+(BSRT)~\cite{bsrtprofinj}. As an example, Fig.~\ref{fig:10thexpprof}
+shows the vertical profile of a reference bunch and of a bunch
+experiencing the maximum excitation
+$A_{\mathrm{max}} = 5 \, \Delta A = \q{48}{nrad}$ and later
+96~nrad. While the reference bunch stays unchanged, the distribution
+of the excited bunch clearly changes and re-adjusts to a non-Gaussian
+shape, with particles shifting from the core towards the regions at
+approximately $\pm 2\sigma$. This behavior is similar to what was
+calculated in simulations, as discussed in Section~\ref{sec:pattern}
+and in Fig.~\ref{fig:patternhist}.
+
+Numerical simulations of intensities and emittances for this
+experiment are shown in Fig.~\ref{fig:10thsim}. They are the results
+of distribution tracking for $10^{\mathrm{th}}$~turn pulsing without
+additional noise (solid lines) and with an additional noise component
+(dotted lines), to emulate the natural noise present in the LHC
+(Eq.~\ref{eq:noise-kick}). The presence of noise significantly changes
+the calculated effect of the resonant excitation on both losses and
+emittances.
+
+A direct comparison of measured and predicted loss rates is presented
+in Fig.~\ref{fig:10thexploss}. As experiments and simulations were
+conducted on different time intervals (11~minutes vs.\ 90~s), we
+compare the relative average loss rate~$R$:
+%
+\begin{equation}
+  \label{eqn:lossrate}
+  R = \frac{I_{\mathrm{start}} - I_{\mathrm{end}}}{I_{\mathrm{start}}}
+  \cdot \frac{1}{\Delta t},
+\end{equation}
+%
+where $I$ is the beam intensity and
+$\Delta t = t_\mathrm{end} - t_\mathrm{start}$ is the time interval
+during which the excitation with given amplitude is
+applied. Uncertainties on the excitation amplitude arise from the
+calibration of the transverse damping system
+(Section~\ref{sec:adt}). For both experiments and simulations, the
+error bars on the loss rate are statistical. The magnitude of the
+random noise component introduces a systematic uncertainty in the
+calculations, which was not evaluated for the scope of this paper. The
+systematic uncertainty on the measurements can be inferred from the
+difference between the 2~periods of the experiment, which should in
+principle be the same. Part of this systematic effect could be due to
+the fact that the second set of excitations with double amplitude
+started with a modified beam distribution. The magnitude of this
+effect could be verified in future experiments in which the
+excitations are reversed or where a new beam fill is used for each set
+of measurements. Overall, we conclude that the effects of this
+resonant excitation could be measured in the LHC within a factor~2 and
+could be predicted with similar accuracy.
+
 
 \subsection{$7^{\mathrm{th}}$ turn pulsing\label{sec:simex7}}
 The $7^{\mathrm{th}}$~turn pulsing pattern has been tested during both experiments in 2016 and 2017. In 2016 the resonant excitation was tested for the first time in the LHC and the experiments were therefore still in the exploratory state. Based on the experience gained in 2016, the experiments could then be repeated more systematically with more bunches allowing to also test in addition the dependence on the excitation plane. Also in case of the $7^{\mathrm{th}}$~turn pulsing, the experiment in 2016 as well as in 2017 can be divided in different parts: the first part without excitation, the second part with a resonant excitation with a maximum amplitude of $A_{\mathrm{max}}=6$~nrad, a third part in which the excitation amplitude is further increased to $A_{\mathrm{max}}=12$~nrad and in case of the 2016 experiments even further to $A_{\mathrm{max}}=24$~nrad. As the machine tune was changed in standard operation from (64.28,59.31) in 2016 to (62.27,60.295) in 2017 accompanied by a slight change in optics, considered irrelevant in the context of the presented measurements, a direct comparison of the two experiments and thus check of reproducibility is however not possible. 
