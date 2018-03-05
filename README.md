@@ -9,14 +9,15 @@ circulated draft.
 To-do
 -----
 
-* revise format of bibliography
+- [ ] revise format of bibliography
 
-* suppress unused bibliographic entries
+- [ ] add PACS numbers
 
-* PACS numbers
+- [ ] add keywords
 
-* keywords
+- [ ] arrangement of figures
 
-* arrangement of figures
+- [X] add acknowledgment to Sergei
 
-* add acknowledgment to Sergei
+- [ ] "probability A" on the vertical axis of beam distributions is confusing:
+it is not a probability, and A already indicates excitation amplitudes.
