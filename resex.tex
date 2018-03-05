@@ -1139,6 +1139,7 @@ beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
 \subsection{Pulsing every $10^{\mathrm{th}}$ turn}
 \label{sec:simex10}
 
+
 \begin{figure*}
   \begin{tabular}{ccc}
     \includegraphics[width=0.32\textwidth]{2016_bunch_intensity_v10th_no_damper_avg.png}&
@@ -1161,6 +1162,7 @@ beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
     (indicated by the gray background).}
   \label{fig:10thexp}
 \end{figure*}
+
 
 \begin{figure*}
   \begin{tabular}{cc}
@@ -1188,32 +1190,48 @@ beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
     \label{fig:10thexpprof}
 \end{figure*}
 
+
 \begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_intensity.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit2_rel.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit1.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit2.png}
-	\end{minipage}	
-	\caption{\label{fig:10thsim} Relative intensity (top left) and relative vert. emittance (top right), and hor. (bottom left) and vert. (bottom right) emittance obtained from simulations (distribution tracking) based on the 2016 injection optics with standard errors and $(Q_x,Q_y)=(64.28,59.31)$. The solid line indicates an excitation with only $10^{\mathrm{th}}$~turn pulsing in V and the dotted line with $10^{\mathrm{th}}$~turn pulsing in V plus a random dipole noise component in H+V of 6~nrad.}
+  \begin{tabular}{cc}
+    \includegraphics[width=0.49\textwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_intensity.png} &
+    \includegraphics[width=0.49\textwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit2_rel.png} \\
+    \includegraphics[width=0.49\textwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit1.png} &
+    \includegraphics[width=0.49\textwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit2.png} \\
+  \end{tabular}	
+  \caption{Simulations (with the distribution-tracking method) based
+    on the 2016 injection optics with standard lattice errors and
+    tunes $(Q_x, Q_y) = (64.28, 59.31)$: relative beam intensity (top
+    left); normalized horizontal (bottom left) and vertical (bottom
+    right) emittances; vertical emittance relative to its initial
+    value (top right). The solid lines indicate the effect of
+    $10^{\mathrm{th}}$~turn pulsing in the vertical plane. The dotted
+    lines include both the resonant excitation and a random dipole
+    noise component of 6~nrad (in both horizontal and vertical
+    planes).}
+  \label{fig:10thsim}
 \end{figure*}
 
+
 \begin{figure}
-		\centering
-%		\includegraphics[width=0.8\linewidth]{2016_scale_amp_10v_ran_lbllong_sim.png}
-\includegraphics[width=1.0\linewidth]{2016_scale_amp_10v_ran_lblshort_sim_prstab.png}
-	\caption{\label{fig:10thexploss} Comparison of scaling of loss rates $R$ as defined in Eqn.~\ref{eqn:lossrate} with the excitation amplitude for $10^{\mathrm{th}}$~turn pulsing in~V. The experimental results for a maximum excitation of $A_{\mathrm{max}}=48$~nrad are shown in black and for $A_{\mathrm{max}}=96$~nrad in green. The excitation amplitude error is 50\% and the error on the loss rate is the pure statistical error on the mean. The simulation results (see Fig.~\ref{fig:10thsim}) for 2016 injection optics, standard errors, $(Q_x,Q_y)=(64.28,59.31)$, $10^{\mathrm{th}}$~turn pulsing in V plus random dipole noise in H+V of 6~nrad are shown in red together with their statistical error. The loss rates follow approximately a quadratic behavior illustrated by a second order polynomial fit to the data shown as solid (for bunches with transverse damper off) or dashed (for bunches with transverse damper on) line.}
+  \centering
+  \includegraphics[width=\linewidth]{2016_scale_amp_10v_ran_lblshort_sim_prstab.png}
+  \caption{Comparison between experiments and simulations of loss
+    rates vs.\ resonant excitation amplitude for
+    $10^{\mathrm{th}}$~turn pulsing in the vertical plane. The
+    relative average loss rate~$R$ is defined in
+    Eq.~\ref{eqn:lossrate}. The experimental results for a maximum
+    excitation amplitude of 48~nrad are shown in black and those for
+    96~nrad are plotted in green (see also Fig.~\ref{fig:10thexp},
+    left, for instance). The results with damper off are represented
+    by solid dots, those with damper on are shown with open
+    circles. The simulation results, including random dipole noise,
+    are shown in red (see also Fig.~\ref{fig:10thsim}). Statistical
+    and systematic uncertainties are discussed in the text. The curves
+    represent empirical quadratic fits to the data with damper off
+    (solid) and with damper on (dashed).}
+  \label{fig:10thexploss}
 \end{figure}
+
 
 The $10^{\mathrm{th}}$~turn pulsing pattern was tested in 2016 with an
 excitation in the vertical plane only. As this was the first time a
