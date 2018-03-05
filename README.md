@@ -21,3 +21,6 @@ To-do
 
 - [ ] "probability A" on the vertical axis of beam distributions is confusing:
 it is not a probability, and A already indicates excitation amplitudes.
+
+- [ ] 7th turn pulsing, figure with comparison: no data for 2016 at 24 nrad or
+for simulations. Useful to add?

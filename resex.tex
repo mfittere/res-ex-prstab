@@ -1335,11 +1335,11 @@ resonant excitation could be measured in the LHC within a factor~2 and
 could be predicted with similar accuracy.
 
 
-\subsection{$7^{\mathrm{th}}$ turn pulsing\label{sec:simex7}}
-The $7^{\mathrm{th}}$~turn pulsing pattern has been tested during both experiments in 2016 and 2017. In 2016 the resonant excitation was tested for the first time in the LHC and the experiments were therefore still in the exploratory state. Based on the experience gained in 2016, the experiments could then be repeated more systematically with more bunches allowing to also test in addition the dependence on the excitation plane. Also in case of the $7^{\mathrm{th}}$~turn pulsing, the experiment in 2016 as well as in 2017 can be divided in different parts: the first part without excitation, the second part with a resonant excitation with a maximum amplitude of $A_{\mathrm{max}}=6$~nrad, a third part in which the excitation amplitude is further increased to $A_{\mathrm{max}}=12$~nrad and in case of the 2016 experiments even further to $A_{\mathrm{max}}=24$~nrad. As the machine tune was changed in standard operation from (64.28,59.31) in 2016 to (62.27,60.295) in 2017 accompanied by a slight change in optics, considered irrelevant in the context of the presented measurements, a direct comparison of the two experiments and thus check of reproducibility is however not possible. 
 
-The described change in tune entailed a change in the driving resonances, from previously the $7Q_x$ resonances in 2016 to mainly the $7Q_x$ and $7Q_y$ resonance in 2017. This can be seen from the FMA analysis for the 2016 optics (see Fig.~\ref{fig:patternfma} bottom left and bottom right), which shows a strong increase in diffusion for $7^{\mathrm{th}}$~turn pulsing in H around the $7Q_x$ resonances and only small changes for pulsing in V. In case of the 2017 optics and tune, the $7Q_x$ as well as the $7Q_y$ resonances cross the tune footprint (see Fig.~\ref{fig:7th2017fma} top left) and are also excited by the $7^{\mathrm{th}}$~turn pulsing visible as an increase of the diffusion in tune around the corresponding resonance lines for pulsing only in H or only in V and thus also for H+V (see Fig.~\ref{fig:7th2017fma}). An increase in the diffusion in tune however much weaker than for the $7Q_x$ and $7Q_y$ resonances is also observed around the $7Q_x + 7Q_y$ resonances for pulsing in V and H+V suggesting also an excitation of this $14^{\mathrm{th}}$ order resonance in addition. Why it is not visible for pulsing only in H is not understood.
-\begin{figure*}[h]
+\subsection{Pulsing every $7^{\mathrm{th}}$ turn}
+\label{sec:simex7}
+
+\begin{figure*}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		no excitation
@@ -1363,7 +1363,7 @@ The described change in tune entailed a change in the driving resonances, from p
 	\caption{\label{fig:7th2017fma} FMA analysis in frequency space without excitation (top left) and for $7^{\mathrm{th}}$~turn pulsing in H+V (top right), only in H (bottom left) and only in V (bottom right) based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $7Q_x$ and $7Q_y$ resonance are both excited and in addition to the 14th order $7Q_x+7Q_y$.}
 \end{figure*}
 
-\begin{table}[b]
+\begin{table}
 	\caption{\label{tab:7thexp}%
 		Overview of the effect of $7^{\mathrm{th}}$~turn pulsing during the two resonant excitation experiments in 2016~\cite{resexmd2016} and 2017~\cite{resexmd2017}. The plane of the excitation is abbreviated with H for horizontal, V for vertical and H+V for horizontal and vertical at the same time.
 	}
@@ -1384,7 +1384,7 @@ The described change in tune entailed a change in the driving resonances, from p
 	\end{ruledtabular}
 \end{table}
 
-\begin{figure*}[h]
+\begin{figure*}
 	\begin{minipage}[t]{0.49\linewidth}
 		\centering
 		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_intensity.png}
@@ -1404,13 +1404,8 @@ The described change in tune entailed a change in the driving resonances, from p
 	\caption{\label{fig:7thsim} Relative intensity (top left), relative vertical emittance (top right), and horizontal (bottom left) and vertical (bottom right) emittance obtained from distribution tracking based on the 2016 injection optics with standard errors and $(Q_x,Q_y)=(64.28,59.31)$ and 2017 injection optics with standard errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates an excitation with only a random dipole noise component in H+V of 6~nrad, and the dotted and dashed line the results for $7^{\mathrm{th}}$~turn pulsing with two different excitation amplitudes plus a random dipole noise component in H+V of 6~nrad.}
 \end{figure*}
 
-The simulation results from the distribution tracking shown in Fig.~\ref{fig:7thsim} in general predict in terms of emittance for the two experiments:
-\begin{description}
-	\item[2016 experiment] Excitation amplitude dependent emittance growth in the horizontal but not in the vertical plane.
-	\item[2017 experiment] Excitation amplitude dependent emittance growth in the vertical plane but not in the horizontal plane for an excitation in V and H+V. For an excitation only in H no emittance growth is observed.
-\end{description}
-Similar changes of the emittance as predicted in simulations were also experimentally observed as depicted in Fig.~\ref{fig:7thexp}, where emittance growth was observed only in the horizontal plane for pulsing in H in 2016, and only in the vertical plane for pulsing in V and H+V in 2017 with no emittance growth at all for pulsing in H. Just as for the $10^{\mathrm{th}}$~turn pulsing, the emittance growth can be divided also for the $7^{\mathrm{th}}$~turn pulsing in a phase of fast adjustment of the beam distribution and the reach of a new equilibrium state indicated in blue (fast adjustment) and black (equilibrium state) in Fig.~\ref{fig:7thexp}. Also in this case, the distribution changes are directly visible on the beam profiles taken with the BSRT (see Appendix~\ref{app:sec:7}, Fig.~\ref{fig:7thexpprof}).
-\begin{figure*}[h]
+
+\begin{figure*}
 		2016 experiment, $7^\mathrm{th}$ H	\\	\begin{minipage}[t]{0.32\linewidth}
 		\centering
 		\includegraphics[height=0.75\linewidth]{2016_bunch_intensity_h7th_no_damper_avg.png}
@@ -1439,14 +1434,97 @@ Similar changes of the emittance as predicted in simulations were also experimen
 	\caption{\label{fig:7thexp} Relative horizontal (top) and vertical (bottom) emittance obtained during the 2016 experiments (left) and the 2017 experiment (right) averaged over the bunches experiencing the same excitation amplitude. For all bunches the damper was not active.}
 \end{figure*}
 
-The losses measured during the experiment however differ from the simulations in terms of for which case the largest rate is observed as well as quantitatively for the specific cases. For example smaller losses are expected for the 2016 experiments compared to the 2017 experiments from simulations, while experimentally higher loss rates were measured in 2016 (see Fig.~\ref{fig:7thexploss}). For the 2017 experiment, the highest loss rates are expected for pulsing in H+V, than in H and then with a considerably reduction in V. During the experiment comparable loss rates are however measured for all three planes (see Appendix~\ref{app:sec:7}, Fig.~\ref{fig:7thexploss2017}). Last but not least the loss rates as defined in Eqn.~\ref{eqn:lossrate} for the 2016 (red and yellow) and 2017 (black and gree) experiments are compared in Fig.~\ref{fig:7thexploss}. In both cases and as also observed for the $10^{\mathrm{th}}$~turn pulsing, the loss rate follows a quadratic scaling with the excitation amplitude. Loss rates were in general higher during the 2016 experiments. The loss rates from simulations are not shown in Fig.~\ref{fig:7thexploss} as losses were only observed for much higher excitation amplitudes than tried in the experiments.
-\begin{figure}[h]
+
+\begin{figure}
 	\centering
 	\includegraphics[width=1.0\linewidth]{2016+2017_scale_amp_7h_lblshort.png}
 	\caption{\label{fig:7thexploss} Comparison of scaling of loss rates with excitation amplitude for $7^{\mathrm{th}}$~turn pulsing in H and data obtained during the 2016 experiment (black and blue) and 2017 experiment (red and yellow). The excitation amplitude error is 50\% in 2016 and was reduced to 15\% in 2017. The solid and dashed line indicate the second order polynomial fit to the loss rate.}
 \end{figure}
 
-\clearpage
+
+The $7^{\mathrm{th}}$~turn pulsing pattern was tested during both the
+2016 and 2017 experiments. In 2016, the resonant excitation was
+employed for the first time in the LHC and the experiments were
+therefore still in an exploratory stage. Based on the experience
+gained in 2016, the experiments were then repeated more
+systematically, with more bunches and on both excitation planes.
+
+The experiments were divided into different periods: the first period
+without excitation, the second period with a resonant excitation with
+a maximum amplitude of
+$A_{\mathrm{max}} = 5 \, \Delta A = \q{6}{nrad}$, and a third period
+in which the excitation amplitude was further increased to
+$A_{\mathrm{max}} = \q{12}{nrad}$. In~2016, experiments included a
+fourth period at $A_{\mathrm{max}} = \q{24}{nrad}$.
+
+The machine tunes were changed in standard operations from (64.28,
+59.31) in~2016 to (62.27, 60.295) in~2017. This change was accompanied
+by a small change in optics, considered negligible for these
+measurements. A direct comparison of the two experiments is therefore
+not possible. However, these differences provide a rough estimate of
+how the effects of resonant excitations are affected by lattice
+changes.
+
+An insight on how the change in tune entails a change in driving
+resonances is provided by frequency-map analysis.
+Fig.~\ref{fig:patternfma} (bottom left and bottom right plots), which
+was described previously, shows a strong increase in diffusion for
+$7^{\mathrm{th}}$~turn pulsing in the horizontal plane around the
+$7Q_x$ resonances, and only small changes for pulsing in the vertical
+plane. In the case of the 2017 optics and tune, both the $7Q_x$ and
+the $7Q_y$ resonances cross the tune footprint
+(Fig.~\ref{fig:7th2017fma}, top left). Both of these resonances are
+excited by $7^{\mathrm{th}}$~turn pulsing, as one can see from the
+increase in tune jitter around the corresponding resonance lines for
+each excitation plane separately, and thus also for their combined
+action (Fig.~\ref{fig:7th2017fma}, bottom left, bottom right, and top
+right plots). Although much weaker, an increase in tune diffusion is
+also observed around the $7Q_x + 7Q_y$ line when pulsing in the
+vertical plane or in both planes (diagonal yellow-green line in
+Fig.~\ref{fig:7th2017fma}, top right and bottom right plots). This
+suggests an excitation of this $14^{\mathrm{th}}$-order resonance. The
+reason why this phenomenon is much less pronounced for horizontal
+excitations is not understood.
+
+The simulation results from the distribution tracking shown in Fig.~\ref{fig:7thsim} in general predict in terms of emittance for the two experiments:
+\begin{description}
+	\item[2016 experiment] Excitation amplitude dependent emittance growth in the horizontal but not in the vertical plane.
+	\item[2017 experiment] Excitation amplitude dependent emittance growth in the vertical plane but not in the horizontal plane for an excitation in V and H+V. For an excitation only in H no emittance growth is observed.
+\end{description}
+Similar changes of the emittance as predicted in simulations were also
+experimentally observed as depicted in Fig.~\ref{fig:7thexp}, where
+emittance growth was observed only in the horizontal plane for pulsing
+in H in 2016, and only in the vertical plane for pulsing in V and H+V
+in 2017 with no emittance growth at all for pulsing in H. Just as for
+the $10^{\mathrm{th}}$~turn pulsing, the emittance growth can be
+divided also for the $7^{\mathrm{th}}$~turn pulsing in a phase of fast
+adjustment of the beam distribution and the reach of a new equilibrium
+state indicated in blue (fast adjustment) and black (equilibrium
+state) in Fig.~\ref{fig:7thexp}. Also in this case, the distribution
+changes are directly visible on the beam profiles taken with the BSRT
+(see Appendix~\ref{app:sec:7}, Fig.~\ref{fig:7thexpprof}).
+
+The losses measured during the experiment however differ from the
+simulations in terms of for which case the largest rate is observed as
+well as quantitatively for the specific cases. For example smaller
+losses are expected for the 2016 experiments compared to the 2017
+experiments from simulations, while experimentally higher loss rates
+were measured in 2016 (see Fig.~\ref{fig:7thexploss}). For the 2017
+experiment, the highest loss rates are expected for pulsing in H+V,
+than in H and then with a considerably reduction in V. During the
+experiment comparable loss rates are however measured for all three
+planes (see Appendix~\ref{app:sec:7},
+Fig.~\ref{fig:7thexploss2017}). Last but not least the loss rates as
+defined in Eqn.~\ref{eqn:lossrate} for the 2016 (red and yellow) and
+2017 (black and gree) experiments are compared in
+Fig.~\ref{fig:7thexploss}. In both cases and as also observed for the
+$10^{\mathrm{th}}$~turn pulsing, the loss rate follows a quadratic
+scaling with the excitation amplitude. Loss rates were in general
+higher during the 2016 experiments. The loss rates from simulations
+are not shown in Fig.~\ref{fig:7thexploss} as losses were only
+observed for much higher excitation amplitudes than tried in the
+experiments.
+
 
 \subsection{$8^{\mathrm{th}}$ turn pulsing\label{sec:simex8}}
 Pulsing patterns which have little effect on the beam core are particularly interesting for the hollow electron lens operation if they in addition have a large effect on the halo. This is in general feasible considering the highly nonlinear field generated at the location of the halo particles by the HEL compared to no field or only a very small field at the location of the beam core. With this motivation in mind the $8^{\mathrm{th}}$~turn pulsing pattern was studied, for which a small effect in comparison to the $7^{\mathrm{th}}$ and $10^{\mathrm{th}}$ turn pulsing is expected (see Fig.~\ref{fig:8thsim}).
