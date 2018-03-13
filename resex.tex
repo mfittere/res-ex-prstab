@@ -46,6 +46,12 @@ longbibliography
 
 \newcommand{\q}[2]{\ensuremath{#1\ \mathrm{#2}}} % quantity with units
 
+\newcommand{\seventhtp}{7th-turn pulsing}
+\newcommand{\eighthtp}{8th-turn pulsing}
+\newcommand{\tenthtp}{10th-turn pulsing}
+
+
+
 \begin{document}
 
 \title{Experimental and numerical studies of the effects of resonant
@@ -1336,103 +1342,100 @@ could be predicted with similar accuracy.
 
 
 
-\subsection{Pulsing every $7^{\mathrm{th}}$ turn}
+\subsection{Pulsing every 7th turn}
 \label{sec:simex7}
 
-\begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		no excitation
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerru_dp0_ord14_annotate_7th.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		$7^{\mathrm{th}}$ H+V
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut7skhv_dp0_ord7.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		$7^{\mathrm{th}}$ H
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut7skh_dp0_ord7.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		$7^{\mathrm{th}}$ V
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut7skv_dp0_ord7.png}
-	\end{minipage}	
-	\caption{\label{fig:7th2017fma} FMA analysis in frequency space without excitation (top left) and for $7^{\mathrm{th}}$~turn pulsing in H+V (top right), only in H (bottom left) and only in V (bottom right) based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $7Q_x$ and $7Q_y$ resonance are both excited and in addition to the 14th order $7Q_x+7Q_y$.}
-\end{figure*}
-
-\begin{table}
-	\caption{\label{tab:7thexp}%
-		Overview of the effect of $7^{\mathrm{th}}$~turn pulsing during the two resonant excitation experiments in 2016~\cite{resexmd2016} and 2017~\cite{resexmd2017}. The plane of the excitation is abbreviated with H for horizontal, V for vertical and H+V for horizontal and vertical at the same time.
-	}
-	\begin{ruledtabular}
-		\begin{tabular}{lcc}
-			Parameter & Experiment 2017 & Experiment 2016  \\
-			\colrule
-			optics & 2017 injection optics & 2016 injection optics \\
-			tune $(Q_x,Q_y)$ & (62.27,60.295) & (64.28,59.31)\\\hline
-			excitation plane  & H,V and H+V&  H\\
-			losses & similar loss rates for  & large losses for \\
-			& pulsing in H,V &  pulsing in H \\
-			&  and H+V & \\
-			hor. emit. growth & no & yes, very small \\
-			vert. emit. growth & yes, for pulsing in & no\\
-			&  V and H+V & \\
-		\end{tabular}
-	\end{ruledtabular}
-\end{table}
 
 \begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_intensity.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_rel_emit2.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit1.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit2.png}
-	\end{minipage}
-	\caption{\label{fig:7thsim} Relative intensity (top left), relative vertical emittance (top right), and horizontal (bottom left) and vertical (bottom right) emittance obtained from distribution tracking based on the 2016 injection optics with standard errors and $(Q_x,Q_y)=(64.28,59.31)$ and 2017 injection optics with standard errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates an excitation with only a random dipole noise component in H+V of 6~nrad, and the dotted and dashed line the results for $7^{\mathrm{th}}$~turn pulsing with two different excitation amplitudes plus a random dipole noise component in H+V of 6~nrad.}
+  \begin{tabular}{cc}
+    no excitation & 7th, H+V \\
+    \includegraphics[width=0.49\textwidth]{2017injnocolc15o+19_6noerru_dp0_ord14_annotate_7th.png} &
+    \includegraphics[width=0.49\textwidth]{2017injnocolc15o+19_6noerrut7skhv_dp0_ord7.png} \\
+    7th, H & 7th, V \\
+    \includegraphics[width=0.49\textwidth]{2017injnocolc15o+19_6noerrut7skh_dp0_ord7.png} &
+    \includegraphics[width=0.49\textwidth]{2017injnocolc15o+19_6noerrut7skv_dp0_ord7.png} \\
+  \end{tabular}
+  \caption{FMA in betatron tune space based on the 2017 injection
+    optics with no machine errors and tunes (62.27, 60.295): without
+    excitation (top left) and for \seventhtp\ in H+V (top right), H
+    only (bottom left) and V only (bottom right). The excitation
+    amplitude is 96~nrad. The $7 Q_x$, $7 Q_y$, and 14th-order
+    $7 Q_x + 7 Q_y$ resonances are excited.}
+  \label{fig:7th2017fma} 
 \end{figure*}
 
 
 \begin{figure*}
-		2016 experiment, $7^\mathrm{th}$ H	\\	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2016_bunch_intensity_h7th_no_damper_avg.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2016_emith_avg_rel_h7th_no_damper.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2016_emitv_avg_rel_h7th_no_damper.png}
-	\end{minipage}	
-		2017 experiment, $7^\mathrm{th}$ H+V\\
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_bunch_intensity_hv7th_no_damper_avg.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_emith_avg_rel_hv7th_no_damper.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_emitv_avg_rel_hv7th_no_damper.png}
-	\end{minipage}	
-	\caption{\label{fig:7thexp} Relative horizontal (top) and vertical (bottom) emittance obtained during the 2016 experiments (left) and the 2017 experiment (right) averaged over the bunches experiencing the same excitation amplitude. For all bunches the damper was not active.}
+  \begin{tabular}{cc}
+    \includegraphics[width=0.49\textwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_intensity.png} &
+    \includegraphics[width=0.49\textwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_rel_emit2.png} \\
+    \includegraphics[width=0.49\textwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit1.png} &
+    \includegraphics[width=0.49\textwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit2.png} \\
+  \end{tabular}
+  \caption{Calculated bunch intensities and emittances from
+    distribution tracking based on the 2016 injection optics with
+    standard errors and $(Q_x, Q_y) = (64.28, 59.31)$ and 2017
+    injection optics with standard errors and
+    $(Q_x, Q_y) = (62.27, 60.295)$: relative intensity (top left);
+    horizontal emittance (bottom left); vertical emittance (bottom
+    right); the relative vertical emittance is also shown (top
+    right). The solid black line includes only a random dipole noise
+    component in H+V of 6~nrad. The dotted and dashed lines correspond
+    to \seventhtp\ with two different excitation amplitudes (24~nrad
+    and 48~nrad), plus a random dipole noise component in H+V of
+    6~nrad.}
+  \label{fig:7thsim}
 \end{figure*}
+
+
+\begin{figure*}
+  \begin{tabular}{ccc}
+    \multicolumn{3}{c}{2016 experiment, 7th, H}	\\
+    \includegraphics[width=0.32\textwidth]{2016_bunch_intensity_h7th_no_damper_avg.png} &
+    \includegraphics[width=0.32\textwidth]{2016_emith_avg_rel_h7th_no_damper.png} &
+    \includegraphics[width=0.32\textwidth]{2016_emitv_avg_rel_h7th_no_damper.png} \\
+    \multicolumn{3}{c}{2017 experiment, 7th, H+V} \\
+    \includegraphics[width=0.32\textwidth]{2017_bunch_intensity_hv7th_no_damper_avg.png} &
+    \includegraphics[width=0.32\textwidth]{2017_emith_avg_rel_hv7th_no_damper.png} &
+    \includegraphics[width=0.32\textwidth]{2017_emitv_avg_rel_hv7th_no_damper.png} \\
+  \end{tabular}
+  \caption{Measured losses and emittances during the 2016 and 2017
+    experiments: relative losses (left), relative horizontal
+    emittances (middle), and relative vertical emittances
+    (right). Measurements are averaged over the bunches experiencing
+    the same excitation amplitude. The transverse damping system was
+    not active in this set of measurements.}
+  \label{fig:7thexp}
+\end{figure*}
+
+% \begin{figure*}
+% 		2016 experiment, $7^\mathrm{th}$ H	\\	\begin{minipage}[t]{0.32\linewidth}
+% 		\centering
+% 		\includegraphics[height=0.75\linewidth]{2016_bunch_intensity_h7th_no_damper_avg.png}
+% 	\end{minipage}	
+% 	\begin{minipage}[t]{0.32\linewidth}
+% 		\centering
+% 		\includegraphics[height=0.75\linewidth]{2016_emith_avg_rel_h7th_no_damper.png}
+% 	\end{minipage}	
+% 	\begin{minipage}[t]{0.32\linewidth}
+% 		\centering
+% 		\includegraphics[height=0.75\linewidth]{2016_emitv_avg_rel_h7th_no_damper.png}
+% 	\end{minipage}	
+% 		2017 experiment, $7^\mathrm{th}$ H+V\\
+% 	\begin{minipage}[t]{0.32\linewidth}
+% 		\centering
+% 		\includegraphics[height=0.75\linewidth]{2017_bunch_intensity_hv7th_no_damper_avg.png}
+% 	\end{minipage}	
+% 	\begin{minipage}[t]{0.32\linewidth}
+% 		\centering
+% 		\includegraphics[height=0.75\linewidth]{2017_emith_avg_rel_hv7th_no_damper.png}
+% 	\end{minipage}	
+% 	\begin{minipage}[t]{0.32\linewidth}
+% 		\centering
+% 		\includegraphics[height=0.75\linewidth]{2017_emitv_avg_rel_hv7th_no_damper.png}
+% 	\end{minipage}	
+% 	\caption{\label{fig:7thexp} Relative horizontal (top) and vertical (bottom) emittance obtained during the 2016 experiments (left) and the 2017 experiment (right) averaged over the bunches experiencing the same excitation amplitude. For all bunches the damper was not active.}
+% \end{figure*}
 
 
 \begin{figure}
@@ -1441,6 +1444,35 @@ could be predicted with similar accuracy.
 	\caption{\label{fig:7thexploss} Comparison of scaling of loss rates with excitation amplitude for $7^{\mathrm{th}}$~turn pulsing in H and data obtained during the 2016 experiment (black and blue) and 2017 experiment (red and yellow). The excitation amplitude error is 50\% in 2016 and was reduced to 15\% in 2017. The solid and dashed line indicate the second order polynomial fit to the loss rate.}
 \end{figure}
 
+\begin{figure}
+	\begin{minipage}[t]{1.0\linewidth}
+	\centering
+	\includegraphics[width=0.9\linewidth]{2017_scale_amp_7h_lblshort.png}
+	\end{minipage}
+	\begin{minipage}[t]{1.0\linewidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{2017_scale_amp_7v_lblshort.png}
+	\end{minipage}
+	\begin{minipage}[t]{1.0\linewidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{2017_scale_amp_7hv_lblshort.png}
+	\end{minipage}
+	\caption{\label{fig:7thexploss2017} Comparison of scaling of loss rates with excitation amplitude for $7^{\mathrm{th}}$~turn pulsing only in H (top), only in V (center) and in H+V (bottom) during the 2017 experiment. The excitation amplitude error is 15\% indicated by horizontal error bars. The vertical errorbars represent the pure statistical error based on the averaging over several bunches with the same excitation amplitude.}
+      \end{figure}
+      
+\begin{figure}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		reference bunch,\\ no excitation
+		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2862.png}
+	\end{minipage}
+	\begin{minipage}[t]{0.49\linewidth}
+		\centering
+		excited bunch,\\ $7^{\mathrm{th}}$~turn H+V	
+		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2696.png}
+	\end{minipage}
+	\caption{\label{fig:7thexpprof} Vertical beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the $7^{\mathrm{th}}$~turn pulsing in H+V. For both bunches the transverse damper is not active. The distribution changes in the reference bunch (left), here slot 2862, are much less than for the bunch experiencing the maximum excitation (right), here slot 2696.}
+\end{figure}
 
 The $7^{\mathrm{th}}$~turn pulsing pattern was tested during both the
 2016 and 2017 experiments. In 2016, the resonant excitation was
@@ -1450,9 +1482,9 @@ gained in 2016, the experiments were then repeated more
 systematically, with more bunches and on both excitation planes.
 
 The experiments were divided into different periods: the first period
-without excitation, the second period with a resonant excitation with
+without excitation; the second period with a resonant excitation with
 a maximum amplitude of
-$A_{\mathrm{max}} = 5 \, \Delta A = \q{6}{nrad}$, and a third period
+$A_{\mathrm{max}} = 5 \, \Delta A = \q{6}{nrad}$; and a third period
 in which the excitation amplitude was further increased to
 $A_{\mathrm{max}} = \q{12}{nrad}$. In~2016, experiments included a
 fourth period at $A_{\mathrm{max}} = \q{24}{nrad}$.
@@ -1461,15 +1493,14 @@ The machine tunes were changed in standard operations from (64.28,
 59.31) in~2016 to (62.27, 60.295) in~2017. This change was accompanied
 by a small change in optics, considered negligible for these
 measurements. A direct comparison of the two experiments is therefore
-not possible. However, these differences provide a rough estimate of
-how the effects of resonant excitations are affected by lattice
-changes.
+not possible. However, these differences provide an estimate of how
+the effects of resonant excitations are affected by lattice changes.
 
 An insight on how the change in tune entails a change in driving
 resonances is provided by frequency-map analysis.
-Fig.~\ref{fig:patternfma} (bottom left and bottom right plots), which
-was described previously, shows a strong increase in diffusion for
-$7^{\mathrm{th}}$~turn pulsing in the horizontal plane around the
+Figure~\ref{fig:patternfma} (bottom left and bottom right plots),
+which was described previously, shows a strong increase in diffusion
+for $7^{\mathrm{th}}$~turn pulsing in the horizontal plane around the
 $7Q_x$ resonances, and only small changes for pulsing in the vertical
 plane. In the case of the 2017 optics and tune, both the $7Q_x$ and
 the $7Q_y$ resonances cross the tune footprint
@@ -1482,48 +1513,71 @@ right plots). Although much weaker, an increase in tune diffusion is
 also observed around the $7Q_x + 7Q_y$ line when pulsing in the
 vertical plane or in both planes (diagonal yellow-green line in
 Fig.~\ref{fig:7th2017fma}, top right and bottom right plots). This
-suggests an excitation of this $14^{\mathrm{th}}$-order resonance. The
+suggests an excitation of the $14^{\mathrm{th}}$-order resonance. The
 reason why this phenomenon is much less pronounced for horizontal
 excitations is not understood.
 
-The simulation results from the distribution tracking shown in Fig.~\ref{fig:7thsim} in general predict in terms of emittance for the two experiments:
-\begin{description}
-	\item[2016 experiment] Excitation amplitude dependent emittance growth in the horizontal but not in the vertical plane.
-	\item[2017 experiment] Excitation amplitude dependent emittance growth in the vertical plane but not in the horizontal plane for an excitation in V and H+V. For an excitation only in H no emittance growth is observed.
-\end{description}
-Similar changes of the emittance as predicted in simulations were also
-experimentally observed as depicted in Fig.~\ref{fig:7thexp}, where
-emittance growth was observed only in the horizontal plane for pulsing
-in H in 2016, and only in the vertical plane for pulsing in V and H+V
-in 2017 with no emittance growth at all for pulsing in H. Just as for
-the $10^{\mathrm{th}}$~turn pulsing, the emittance growth can be
-divided also for the $7^{\mathrm{th}}$~turn pulsing in a phase of fast
-adjustment of the beam distribution and the reach of a new equilibrium
-state indicated in blue (fast adjustment) and black (equilibrium
-state) in Fig.~\ref{fig:7thexp}. Also in this case, the distribution
-changes are directly visible on the beam profiles taken with the BSRT
-(see Appendix~\ref{app:sec:7}, Fig.~\ref{fig:7thexpprof}).
+The simulated losses and emittances for both 2016 and 2017 conditions
+are shown in Fig.~\ref{fig:7thsim}. The experimental results are
+summarized in Figures~\ref{fig:7thexp}, \ref{fig:7thexploss},
+\ref{fig:7thexploss2017}, and~\ref{fig:7thexpprof}.
 
-The losses measured during the experiment however differ from the
-simulations in terms of for which case the largest rate is observed as
-well as quantitatively for the specific cases. For example smaller
-losses are expected for the 2016 experiments compared to the 2017
-experiments from simulations, while experimentally higher loss rates
-were measured in 2016 (see Fig.~\ref{fig:7thexploss}). For the 2017
-experiment, the highest loss rates are expected for pulsing in H+V,
-than in H and then with a considerably reduction in V. During the
-experiment comparable loss rates are however measured for all three
-planes (see Appendix~\ref{app:sec:7},
-Fig.~\ref{fig:7thexploss2017}). Last but not least the loss rates as
-defined in Eqn.~\ref{eqn:lossrate} for the 2016 (red and yellow) and
-2017 (black and gree) experiments are compared in
-Fig.~\ref{fig:7thexploss}. In both cases and as also observed for the
-$10^{\mathrm{th}}$~turn pulsing, the loss rate follows a quadratic
-scaling with the excitation amplitude. Loss rates were in general
-higher during the 2016 experiments. The loss rates from simulations
-are not shown in Fig.~\ref{fig:7thexploss} as losses were only
-observed for much higher excitation amplitudes than tried in the
-experiments.
+Calculated losses for~2016 and~2017 are similar at 24~nrad and
+increase more rapidly with amplitude for 2017 conditions
+(Fig.~\ref{fig:7thsim}, top left). Horizontal pulsing is a few times
+stronger than vertical pulsing, and the combined H+V action appears
+slightly more effective than the sum of H and V separately.
+
+Experimental losses are plotted as a function of time in
+Fig.~\ref{fig:7thexp} and as a function of excitation amplitude in
+Figs.~\ref{fig:7thexploss}
+and~\ref{fig:7thexploss2017}. Figure~\ref{fig:7thexploss} shows that
+measured losses were actually larger in~2016 than they were
+in~2017. They were also a few times larger than those predicted by
+simulations. Another discrepancy was observed in the excitation plane:
+horizontal, vertical, and combined pulsing had similar effects
+(Fig.~\ref{fig:7thexploss2017}). The same considerations on systematic
+effects discussed in Section~\ref{sec:simex10} apply in this case.
+
+This pulsing pattern generated stronger losses than expected. In this
+case, we conclude that predictions are difficult, due to their
+sensitivity to lattice configuration, noise sources, and beam
+distributions.
+
+The simulated emittances from distribution tracking are shown in
+Fig.~\ref{fig:7thsim} (bottom left and right). The main calculated
+results are the following, for the two experimental conditions:
+%
+\begin{description}
+\item[2016 conditions] In this case, excitations were only in the
+  horizontal plane. There is a fast increase of the horizontal
+  emittance, dependent on the excitation amplitude, after which a
+  constant emittance growth is observed. Vertical emittance growth is
+  almost negligible.
+\item[2017 conditions] Horizontal emittances are mostly affected by
+  the amplitude of H+V excitations and, to a much smaller extent, by
+  H~excitations; no effect is observed from V excitations. Vertical
+  emittances are mostly affected by the amplitude of H+V and V
+  excitations; the effect of H excitations is much smaller, if any,
+  with no clear dependence on amplitude.
+\end{description}
+
+A set of measured emittances is plotted in Fig.~\ref{fig:7thexp}
+(middle and right plots). In~2016, with only horizontal excitations,
+amplitude-dependent horizontal emittance growth was observed, with no
+effect on the vertical emittance. In~2017, V and H+V excitations
+generated vertical emittance growth, while horizontal excitations had
+no effect. These observations are consistent with the predicted
+behavior.
+
+During these experiments, emittances changed in two phases, as they
+did during the $10^{\mathrm{th}}$~turn pulsing studies
+(Section~\ref{sec:simex10}) and in simulations: a fast adjustment
+phase (shaded in blue in Fig.~\ref{fig:7thexp}) followed by a new
+equilibrium (in gray). Changes in the transverse beam distribution
+could be observed directly through changes in the synchrotron-light
+(BSRT) profiles (Fig.~\ref{fig:7thexpprof}).
+
 
 
 \subsection{$8^{\mathrm{th}}$ turn pulsing\label{sec:simex8}}
@@ -1569,7 +1623,6 @@ In simulations no visible effect is indeed observed for excitation amplitudes sm
 \end{figure}
 The small effect on the beam expected from simulations could then be also confirmed experimentally during the 2017 experiment. For this purpose the excitation amplitude was increased to the maximum reachable amplitude of 96~nrad. As depicted in Fig.~\ref{fig:8thexploss}, the loss rate increased slightly with the excitation amplitude for an excitation in H+V. For an excitation only in V or only in H, no statistically relevant increase was observed (see Appendix~\ref{app:sec:8}, Fig.~\ref{fig:8thexploss2017}). In the horizontal plane, a change in beam distribution was measured with the BSRT profiles (Appendix~\ref{app:sec:8}, Fig.~\ref{fig:8thexpprof}) for an excitation only in~H. The distribution increased around $2.0~\sigma$ simultaneously with a depletion of the beam core. For an excitation in H+V one would expect to see a similar distribution change. However, this change is not visible as the emittance of the references bunches was much smaller, around $1.8~\mu$m normalized emittance, compared to around $2.6~\mu$m for the excited bunches \cite{resexmd2017}. This difference in emittance then resulted in a stronger emittance growth due to intra-beam scattering for the reference bunches in comparison to the excited bunches making the additional emittance growth and distribution changes due to the excitation undetectable. In the vertical plane, the beam distribution and emittance were not affected by the resonant excitation.
 
-\clearpage
 
 \subsection{random excitation\label{sec:simexran}}
 The random excitation presents in general the pulsing pattern leading to the fastest halo depletion rates achievable with an HEL. On the other hand this pattern is also the most dangerous one for the proton beam core. The aim of this experiment was to test the effect on the core in comparison to the resonant excitation represented in the 2017 experiment by primarily the $7^{\mathrm{th}}$~turn pulsing as for $8^{\mathrm{th}}$~turn pulsing basically no effect was observed. The random excitation is in general so powerful as it excites all frequencies of the beam equally.
@@ -1681,7 +1734,6 @@ The experimental results for a maximum excitation amplitude of $A_{\mathrm{max}}
 	\caption{\label{fig:ranexploss}  Comparison of scaling of loss rates with excitation amplitude for a random excitation and $7^{\mathrm{th}}$~turn pulsing in H+V measured during the 2017 experiment. The excitation amplitude error is 15\% indicated by the horizontal error bars.}
 \end{figure}
 
-\clearpage
 
 \subsection{Effect of the transverse damper\label{sec:damp}}
 \begin{figure*}[b]
@@ -1727,7 +1779,6 @@ For all $k^{\mathrm{th}}$~turn pulsing patterns tested experimentally, the trans
 	\item The ADT is capable of damping the oscillation of each bunch individually. The ADT should therefore be capable of applying the correct corrective kick for each group of bunches seeing the same excitation amplitude.
 \end{itemize}
 Further studies are therefore needed in order to obtain a deeper understanding of the interaction of the transverse damper with a resonant excitation.
-\clearpage
 
 \section{Summary\label{sec:sum}}
 This paper intends to give an overview of the effects of the hollow electron lens (HEL) on the proton beam core and the experiments conducted in this context at the LHC in 2016~\cite{resexmd2016} and 2017~\cite{resexmd2017}. For a perfect HEL without any imperfections no effect on the core is to be expected as the field at the center vanishes by construction. Only in the case of imperfections in the guidance and profile of the electron beam, a residual kick on the proton beam core can occur. In this case and assuming HL-LHC parameters (Tables~\ref{tab:hllhc_param}--\ref{tab:hel_param}), the contribution from the electron lens bends with approximately $0.5$~nrad to first order is negligible with respect to the kick expected from the central region of the HEL of approximatley $20$~nrad to first order caused by profile imperfections in the electron beam. In DC operation these kicks, even if nonlinear in reality, are negligible compared to the nonlinearities present in the LHC and HL-LHC and are thus of no concern. The picture changes if the HEL is operated in pulsed mode, in which case noise is introduced on the halo particles (intended) as well as on the beam core (unintended) in the presence of imperfections of the HEL entailing much more stringent tolerances.
@@ -1768,7 +1819,6 @@ the tolerances for all experimentally tried pulsing pattern except for $8^{\math
 We wish to acknowledge Giulia Papotti with her help with the preparations for the 2016 experiments and her general support from the operations side, Roderik Bruce and Gianluca Valentino for there very helpful suggestions in preparing the experiment at the LHC and we would like to thank all participants of the experiment for helping acquire the data presented in this paper. We wish to thank Sergei Nagaitsev for the very useful discussion and profound question to find out why the transverse damper is not damping any resonant excitation. We would like to acknowledge Dmitry Shatilov for his help with the Lifetrac code, and St\'{e}phane Fartoukh, Riccardo De Maria and Rogelio Tomás for their help with generating the appropiate optics model. We are grateful also for the support from the beam instrumentation team, in particular Enrico Bravin and Georges Trad, with the BSRT and are thankful for the collaboration with St\'{e}phania Papadopoulou and Fanouria Antonio for the analysis of the BSRT profiles.
 \end{acknowledgments}
 
-\newpage
 
 \appendix
 \section{Additional plots for 10th turn pulsing during the 2016 experiments}
@@ -1797,40 +1847,39 @@ We wish to acknowledge Giulia Papotti with her help with the preparations for th
 	\caption{\label{app:fig:fma:10} FMA analysis for $10^{\mathrm{th}}$~turn pulsing based on the 2016 injection optics with no machine errors and a tune of (64.28,59.31). The excitation is 120~nrad in the corresponding plane. There is no significant difference in the FMA analysis between pulsing only in H, only in V or in H+V.}
 \end{figure}
 
-\newpage
 
-\section{Additional plots for $7^{\mathrm{th}}$~turn pulsing during 2017 experiments}
-\label{app:sec:7}
-\begin{figure}[h]
-	\begin{minipage}[t]{1.0\linewidth}
-	\centering
-	\includegraphics[width=0.9\linewidth]{2017_scale_amp_7h_lblshort.png}
-	\end{minipage}
-	\begin{minipage}[t]{1.0\linewidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{2017_scale_amp_7v_lblshort.png}
-	\end{minipage}
-	\begin{minipage}[t]{1.0\linewidth}
-		\centering
-		\includegraphics[width=0.9\linewidth]{2017_scale_amp_7hv_lblshort.png}
-	\end{minipage}
-	\caption{\label{fig:7thexploss2017} Comparison of scaling of loss rates with excitation amplitude for $7^{\mathrm{th}}$~turn pulsing only in H (top), only in V (center) and in H+V (bottom) during the 2017 experiment. The excitation amplitude error is 15\% indicated by horizontal error bars. The vertical errorbars represent the pure statistical error based on the averaging over several bunches with the same excitation amplitude.}
-\end{figure}
-\begin{figure}[h]
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		reference bunch,\\ no excitation
-		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2862.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		excited bunch,\\ $7^{\mathrm{th}}$~turn H+V	
-		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2696.png}
-	\end{minipage}
-	\caption{\label{fig:7thexpprof} Vertical beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the $7^{\mathrm{th}}$~turn pulsing in H+V. For both bunches the transverse damper is not active. The distribution changes in the reference bunch (left), here slot 2862, are much less than for the bunch experiencing the maximum excitation (right), here slot 2696.}
-\end{figure}
+% \section{Additional plots for $7^{\mathrm{th}}$~turn pulsing during 2017 experiments}
+% \label{app:sec:7}
+% \begin{figure}[h]
+% 	\begin{minipage}[t]{1.0\linewidth}
+% 	\centering
+% 	\includegraphics[width=0.9\linewidth]{2017_scale_amp_7h_lblshort.png}
+% 	\end{minipage}
+% 	\begin{minipage}[t]{1.0\linewidth}
+% 		\centering
+% 		\includegraphics[width=0.9\linewidth]{2017_scale_amp_7v_lblshort.png}
+% 	\end{minipage}
+% 	\begin{minipage}[t]{1.0\linewidth}
+% 		\centering
+% 		\includegraphics[width=0.9\linewidth]{2017_scale_amp_7hv_lblshort.png}
+% 	\end{minipage}
+% 	\caption{\label{fig:7thexploss2017} Comparison of scaling of loss rates with excitation amplitude for $7^{\mathrm{th}}$~turn pulsing only in H (top), only in V (center) and in H+V (bottom) during the 2017 experiment. The excitation amplitude error is 15\% indicated by horizontal error bars. The vertical errorbars represent the pure statistical error based on the averaging over several bunches with the same excitation amplitude.}
+% \end{figure}
+% \begin{figure}[h]
+% 	\begin{minipage}[t]{0.49\linewidth}
+% 		\centering
+% 		reference bunch,\\ no excitation
+% 		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2862.png}
+% 	\end{minipage}
+% 	\begin{minipage}[t]{0.49\linewidth}
+% 		\centering
+% 		excited bunch,\\ $7^{\mathrm{th}}$~turn H+V	
+% 		\includegraphics[width=1.0\linewidth]{profile_v_7thhv_slot_2696.png}
+% 	\end{minipage}
+% 	\caption{\label{fig:7thexpprof} Vertical beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the $7^{\mathrm{th}}$~turn pulsing in H+V. For both bunches the transverse damper is not active. The distribution changes in the reference bunch (left), here slot 2862, are much less than for the bunch experiencing the maximum excitation (right), here slot 2696.}
+% \end{figure}
 
-\newpage
+% \newpage
 
 \section{Additional plots for $8^{\mathrm{th}}$~turn pulsing during 2017 experiments}
 \label{app:sec:8}
@@ -1863,7 +1912,6 @@ We wish to acknowledge Giulia Papotti with her help with the preparations for th
 	\caption{\label{fig:8thexpprof} Horizontal beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the $8^{\mathrm{th}}$~turn pulsing in H. For both bunches the transverse damper is not active. The distribution changes in the reference bunch (left), here slot 804, are much less than for the bunch experiencing the maximum excitation (right), here slot 632.}
 \end{figure}
 
-\clearpage
 
 \bibliography{resex-bibdesk}
 
