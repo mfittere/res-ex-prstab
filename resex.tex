@@ -46,12 +46,22 @@ longbibliography
 
 \newcommand{\q}[2]{\ensuremath{#1\ \mathrm{#2}}} % quantity with units
 
+% abbreviations
 \newcommand{\seventhtp}{7th-turn pulsing}
 \newcommand{\eighthtp}{8th-turn pulsing}
 \newcommand{\tenthtp}{10th-turn pulsing}
 
 \newcommand{\fma}{frequency-map analysis}
 
+% widths for figures
+\newlength{\halfwidth}
+\setlength{\halfwidth}{0.48\textwidth}
+\newlength{\thirdwidth}
+\setlength{\thirdwidth}{0.33\textwidth}
+\newlength{\bsrtwidth}
+\setlength{\bsrtwidth}{0.4\textwidth}
+\newlength{\fmawidth}
+\setlength{\fmawidth}{0.4\textwidth}
 
 \begin{document}
 
@@ -978,12 +988,12 @@ emittances.
 
 \begin{figure*}
 \begin{tabular}{cc}
-\includegraphics[width=0.49\textwidth]{2016injerra2b2u_pattern_3_5um_intensity.png}
+\includegraphics[width=\halfwidth]{2016injerra2b2u_pattern_3_5um_intensity.png}
   &
-\includegraphics[width=0.49\textwidth]{2016injerra2b2u_pattern_3_5um_sigm.png}
+\includegraphics[width=\halfwidth]{2016injerra2b2u_pattern_3_5um_sigm.png}
   \\
-\includegraphics[width=0.49\textwidth]{2016injerra2b2u_pattern_3_5um_emit1.png} &
-\includegraphics[width=0.49\textwidth]{2016injerra2b2u_pattern_3_5um_emit2.png}
+\includegraphics[width=\halfwidth]{2016injerra2b2u_pattern_3_5um_emit1.png} &
+\includegraphics[width=\halfwidth]{2016injerra2b2u_pattern_3_5um_emit2.png}
   \\
 \end{tabular}
 \caption{Relative intensity (top left), bunch length (top right) and
@@ -1001,12 +1011,12 @@ emittances.
 \begin{figure*}
   \begin{tabular}{cc}
     no excitation & $10^{\mathrm{th}}$, H+V \\
-    \includegraphics[width=0.49\textwidth]{2016injnocolc15o+19_6noerru_dp0_ord10_annotate.png} &
-    \includegraphics[width=0.49\textwidth]{2016injnocolc15o+19_6noerrut10skhv_dp0_ord10.png}
+    \includegraphics[width=\fmawidth]{2016injnocolc15o+19_6noerru_dp0_ord10_annotate.png} &
+    \includegraphics[width=\fmawidth]{2016injnocolc15o+19_6noerrut10skhv_dp0_ord10.png}
     \\
     7th, H & 7th, V \\
-    \includegraphics[width=0.49\textwidth]{2016injnocolc15o+19_6noerrut7skh_dp0_ord7.png} &
-    \includegraphics[width=0.49\textwidth]{2016injnocolc15o+19_6noerrut7skv_dp0_ord7.png} \\
+    \includegraphics[width=\fmawidth]{2016injnocolc15o+19_6noerrut7skh_dp0_ord7.png} &
+    \includegraphics[width=\fmawidth]{2016injnocolc15o+19_6noerrut7skv_dp0_ord7.png} \\
   \end{tabular}
   \caption{Frequency-map analysis in betatron tune space based on the
     2016 injection optics with no machine errors and tunes (64.28,
@@ -1029,12 +1039,12 @@ emittances.
 \begin{figure*}
   \begin{tabular}{cc}
     no excitation & random, H+V \\
-    \includegraphics[width=0.49\textwidth]{2016injerra2b2u_3_5um_hist_y.png} &
-    \includegraphics[width=0.49\textwidth]{2016injerra2b2u_ranhv_3_5um_hist_x.png} \\
+    \includegraphics[width=\halfwidth]{2016injerra2b2u_3_5um_hist_y.png} &
+    \includegraphics[width=\halfwidth]{2016injerra2b2u_ranhv_3_5um_hist_x.png} \\
     7th, H+V & $10^{\mathrm{th}}$, H+V \\
-    \includegraphics[width=0.49\textwidth]{2016injerra2b2u_t7skhv_3_5um_hist_x.png}
+    \includegraphics[width=\halfwidth]{2016injerra2b2u_t7skhv_3_5um_hist_x.png}
                   &
-    \includegraphics[width=0.49\textwidth]{2016injerra2b2u_t10skhv_3_5um_hist_y.png} \\
+    \includegraphics[width=\halfwidth]{2016injerra2b2u_t10skhv_3_5um_hist_y.png} \\
   \end{tabular}
   \caption{Calculated beam distributions as a function of vertical
     position from distribution-tracking simulations based on the 2016
@@ -1144,9 +1154,9 @@ beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
 
 \begin{figure*}
   \begin{tabular}{ccc}
-    \includegraphics[width=0.32\textwidth]{2016_bunch_intensity_v10th_no_damper_avg.png}&
-    \includegraphics[width=0.32\textwidth]{2016_emith_avg_rel_v10th_no_damper.png}&
-    \includegraphics[width=0.32\textwidth]{2016_emitv_avg_rel_v10th_no_damper.png}\\
+    \includegraphics[width=\thirdwidth]{2016_bunch_intensity_v10th_no_damper_avg.png}&
+    \includegraphics[width=\thirdwidth]{2016_emith_avg_rel_v10th_no_damper.png}&
+    \includegraphics[width=\thirdwidth]{2016_emitv_avg_rel_v10th_no_damper.png}\\
   \end{tabular}
   \caption{Summary of the 2016 experiments on $10^{\mathrm{th}}$~turn
     pulsing in the vertical plane: losses (left), horizontal
@@ -1169,8 +1179,8 @@ beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
 \begin{figure*}
   \begin{tabular}{cc}
     Reference bunch, no excitation & Excited bunch, maximum amplitude \\
-    \includegraphics[width=0.48\textwidth]{profile_v_10thv_slot_50.png} &
-    \includegraphics[width=0.48\textwidth]{profile_v_10thv_slot_1300.png}\\
+    \includegraphics[width=\bsrtwidth]{profile_v_10thv_slot_50.png} &
+    \includegraphics[width=\bsrtwidth]{profile_v_10thv_slot_1300.png}\\
     \end{tabular}
     \caption{Vertical beam profiles measured with the Beam Synchrotron
       Radiation Telescope (BSRT) during the 2016 experiments on
@@ -1195,10 +1205,10 @@ beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
 
 \begin{figure*}
   \begin{tabular}{cc}
-    \includegraphics[width=0.49\textwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_intensity.png} &
-    \includegraphics[width=0.49\textwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit2_rel.png} \\
-    \includegraphics[width=0.49\textwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit1.png} &
-    \includegraphics[width=0.49\textwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit2.png} \\
+    \includegraphics[width=\halfwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_intensity.png} &
+    \includegraphics[width=\halfwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit2_rel.png} \\
+    \includegraphics[width=\halfwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit1.png} &
+    \includegraphics[width=\halfwidth]{2016injerra2b2uran1_2e-3_10thV_3_5um_emit2.png} \\
   \end{tabular}	
   \caption{Simulations (with the distribution-tracking method) based
     on the 2016 injection optics with standard lattice errors and
@@ -1216,7 +1226,7 @@ beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=\linewidth]{2016_scale_amp_10v_ran_lblshort_sim_prstab.png}
+  \includegraphics[width=\columnwidth]{2016_scale_amp_10v_ran_lblshort_sim_prstab.png}
   \caption{Comparison between experiments and simulations of loss
     rates vs.\ resonant excitation amplitude for
     \tenthtp\ in the vertical plane. The
@@ -1345,11 +1355,11 @@ could be predicted with similar accuracy.
 \begin{figure*}
   \begin{tabular}{cc}
     no excitation & 7th, H+V \\
-    \includegraphics[width=0.49\textwidth]{2017injnocolc15o+19_6noerru_dp0_ord14_annotate_7th.png} &
-    \includegraphics[width=0.49\textwidth]{2017injnocolc15o+19_6noerrut7skhv_dp0_ord7.png} \\
+    \includegraphics[width=\fmawidth]{2017injnocolc15o+19_6noerru_dp0_ord14_annotate_7th.png} &
+    \includegraphics[width=\fmawidth]{2017injnocolc15o+19_6noerrut7skhv_dp0_ord7.png} \\
     7th, H & 7th, V \\
-    \includegraphics[width=0.49\textwidth]{2017injnocolc15o+19_6noerrut7skh_dp0_ord7.png} &
-    \includegraphics[width=0.49\textwidth]{2017injnocolc15o+19_6noerrut7skv_dp0_ord7.png} \\
+    \includegraphics[width=\fmawidth]{2017injnocolc15o+19_6noerrut7skh_dp0_ord7.png} &
+    \includegraphics[width=\fmawidth]{2017injnocolc15o+19_6noerrut7skv_dp0_ord7.png} \\
   \end{tabular}
   \caption{FMA in betatron tune space based on the 2017 injection
     optics with no machine errors and tunes (62.27, 60.295): without
@@ -1363,15 +1373,15 @@ could be predicted with similar accuracy.
 
 \begin{figure*}
   \begin{tabular}{cc}
-    \includegraphics[width=0.49\textwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_intensity.png} &
-    \includegraphics[width=0.49\textwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_rel_emit2.png} \\
-    \includegraphics[width=0.49\textwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit1.png} &
-    \includegraphics[width=0.49\textwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit2.png} \\
+    \includegraphics[width=\halfwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_intensity.png} &
+    \includegraphics[width=\halfwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_rel_emit2.png} \\
+    \includegraphics[width=\halfwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit1.png} &
+    \includegraphics[width=\halfwidth]{2016+2017injerra2b2uran1_2e-3_7th_3_5um_emit2.png} \\
   \end{tabular}
   \caption{Calculated bunch intensities and emittances from
     distribution tracking based on the 2016 injection optics with
-    standard errors and $(Q_x, Q_y) = (64.28, 59.31)$ and 2017
-    injection optics with standard errors and
+    standard lattice errors and $(Q_x, Q_y) = (64.28, 59.31)$ and 2017
+    injection optics with standard lattice errors and
     $(Q_x, Q_y) = (62.27, 60.295)$: relative intensity (top left);
     horizontal emittance (bottom left); vertical emittance (bottom
     right); the relative vertical emittance is also shown (top
@@ -1387,13 +1397,13 @@ could be predicted with similar accuracy.
 \begin{figure*}
   \begin{tabular}{ccc}
     \multicolumn{3}{c}{2016 experiment, 7th, H}	\\
-    \includegraphics[width=0.32\textwidth]{2016_bunch_intensity_h7th_no_damper_avg.png} &
-    \includegraphics[width=0.32\textwidth]{2016_emith_avg_rel_h7th_no_damper.png} &
-    \includegraphics[width=0.32\textwidth]{2016_emitv_avg_rel_h7th_no_damper.png} \\
+    \includegraphics[width=\thirdwidth]{2016_bunch_intensity_h7th_no_damper_avg.png} &
+    \includegraphics[width=\thirdwidth]{2016_emith_avg_rel_h7th_no_damper.png} &
+    \includegraphics[width=\thirdwidth]{2016_emitv_avg_rel_h7th_no_damper.png} \\
     \multicolumn{3}{c}{2017 experiment, 7th, H+V} \\
-    \includegraphics[width=0.32\textwidth]{2017_bunch_intensity_hv7th_no_damper_avg.png} &
-    \includegraphics[width=0.32\textwidth]{2017_emith_avg_rel_hv7th_no_damper.png} &
-    \includegraphics[width=0.32\textwidth]{2017_emitv_avg_rel_hv7th_no_damper.png} \\
+    \includegraphics[width=\thirdwidth]{2017_bunch_intensity_hv7th_no_damper_avg.png} &
+    \includegraphics[width=\thirdwidth]{2017_emith_avg_rel_hv7th_no_damper.png} &
+    \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_hv7th_no_damper.png} \\
   \end{tabular}
   \caption{Measured losses and emittances during the 2016 and 2017
     experiments: relative losses (left), relative horizontal
@@ -1425,9 +1435,9 @@ could be predicted with similar accuracy.
 
 \begin{figure*}
   \begin{tabular}{ccc}
-    \includegraphics[width=0.32\textwidth]{2017_scale_amp_7h_lblshort.png} &
-    \includegraphics[width=0.32\textwidth]{2017_scale_amp_7v_lblshort.png} &
-    \includegraphics[width=0.32\textwidth]{2017_scale_amp_7hv_lblshort.png} \\
+    \includegraphics[width=\thirdwidth]{2017_scale_amp_7h_lblshort.png} &
+    \includegraphics[width=\thirdwidth]{2017_scale_amp_7v_lblshort.png} &
+    \includegraphics[width=\thirdwidth]{2017_scale_amp_7hv_lblshort.png} \\
   \end{tabular}
   \caption{Comparison of the measured loss rates as a function of
     excitation amplitude during the 2017 experiment for \seventhtp\ in
@@ -1440,13 +1450,13 @@ could be predicted with similar accuracy.
 \begin{figure*}
   \begin{tabular}{cc}
     Reference bunch, no excitation & Excited bunch, 7th, H+V \\
-    \includegraphics[width=0.48\textwidth]{profile_v_7thhv_slot_2862.png} &
-    \includegraphics[width=0.48\textwidth]{profile_v_7thhv_slot_2696.png} \\
+    \includegraphics[width=\bsrtwidth]{profile_v_7thhv_slot_2862.png} &
+    \includegraphics[width=\bsrtwidth]{profile_v_7thhv_slot_2696.png} \\
   \end{tabular}
   \caption{Vertical beam profiles measured with the Beam Synchrotron
     Radiation Telescope (BSRT) during the 2017 experiments. The
     profiles are taken at the end of \seventhtp\ in H+V. For these
-    bunches, the transverse damper was not active. The data is
+    bunches, the transverse damper was not active. The data are
     presented in the same way as in Fig.~\ref{fig:10thexpprof}. The
     profile changes in the bunch affected by the maximum excitation
     (right) are larger than those displayed by the reference bunch
@@ -1563,93 +1573,74 @@ could be observed directly through changes in the synchrotron-light
 \subsection{Pulsing every 8th turn}
 \label{sec:simex8}
 
+
 \begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017injerra2b2uran1_2e-3_8th_3_5um_intensity.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017injerra2b2uran1_2e-3_8th_3_5um_sigm.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017injerra2b2uran1_2e-3_8th_3_5um_emit1.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017injerra2b2uran1_2e-3_8th_3_5um_emit2.png}
-	\end{minipage}	
-	\caption{\label{fig:8thsim} Relative intensity (top left), bunch length (top right), and horizontal (bottom left) and vertical (bottom right) emittance obtained from simulations (distribution tracking) based on the 2017 injection optics with standard errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates an excitation with only a random dipole noise component in H+V of 6~nrad, and the dotted and dashed line the results for \eighthtp\ plus a random dipole noise component in H+V of 6~nrad.}
-      \end{figure*}
-      
+  \begin{tabular}{cc}
+  \includegraphics[width=\halfwidth]{2017injerra2b2uran1_2e-3_8th_3_5um_intensity.png} &
+  \includegraphics[width=\halfwidth]{2017injerra2b2uran1_2e-3_8th_3_5um_sigm.png} \\
+  \includegraphics[width=\halfwidth]{2017injerra2b2uran1_2e-3_8th_3_5um_emit1.png} &
+  \includegraphics[width=\halfwidth]{2017injerra2b2uran1_2e-3_8th_3_5um_emit2.png} \\
+  \end{tabular}
+  \caption{Calculated relative intensities (top left), bunch lengths
+    (top right), horizontal emittances (bottom left), and vertical
+    emittances (bottom right) from distribution-tracking simulations
+    based on the 2017 injection optics with standard lattice errors
+    and tunes $(Q_x, Q_y) = (62.27, 60.295)$. The solid black line is
+    the reference case, including only a random dipole noise component
+    in H+V of 6~nrad. The dotted and dashed lines are the results for
+    \eighthtp, including the same random dipole noise component.}
+  \label{fig:8thsim}
+\end{figure*}
+
+
 \begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		no excitation
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerru_dp0_amp.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		$8^{\mathrm{th}}$ H+V
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerrut8skhv_dp0_amp_annotate.png}
-	\end{minipage}	
-	\caption{\label{fig:8th2017fmaamp} FMA analysis in amplitude space without excitation (left) and for \eighthtp\ (right) based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295). The excitation is 96~nrad in both planes. The $16Q_y$ and \mbox{$8Q_x-4Q_y$} are both excited.}
+  \begin{tabular}{cc}
+    No excitation & 8th, H+V \\
+    \includegraphics[width=\fmawidth]{2017injnocolc15o+19_6noerru_dp0_amp.png} &
+    \includegraphics[width=\fmawidth]{2017injnocolc15o+19_6noerrut8skhv_dp0_amp_annotate.png}
+  \end{tabular}
+  \caption{FMA in transverse amplitude space without excitation (left)
+    and for \eighthtp\ (right) based on the 2017 injection optics with
+    no lattice errors and tunes (62.27, 60.295). The excitation
+    amplitude is 96~nrad in both planes. The $16 Q_y$ and
+    \mbox{$8 Q_x - 4 Q_y$} resonances are excited.}
+  \label{fig:8th2017fmaamp}
 \end{figure*}
       
-
-% \begin{figure}
-% 	\centering
-% 	\includegraphics[width=1.0\linewidth]{2017_scale_amp_8hv_lblshort.png}
-% 	\caption{\label{fig:8thexploss} Comparison of scaling of loss rates with excitation amplitude for \eighthtp\ in H+V measured during the 2017 experiment. The excitation amplitude error is 15\% indicated by the horizontal error bars, the error on the loss rate is the error on the mean obtained through the average over the 6~bunches with the same excitation amplitude.}
-% \end{figure}
       
 \begin{figure*}
   \begin{tabular}{ccc}
-  \includegraphics[width=0.32\textwidth]{2017_scale_amp_8h_lblshort.png} &
-  \includegraphics[width=0.32\textwidth]{2017_scale_amp_8v_lblshort.png} &
-  \includegraphics[width=0.32\textwidth]{2017_scale_amp_8hv_lblshort.png} \\
+  \includegraphics[width=\thirdwidth]{2017_scale_amp_8h_lblshort.png} &
+  \includegraphics[width=\thirdwidth]{2017_scale_amp_8v_lblshort.png} &
+  \includegraphics[width=\thirdwidth]{2017_scale_amp_8hv_lblshort.png} \\
   \end{tabular}
-  \caption{Comparison of scaling of loss rates with excitation
-    amplitude for \eighthtp\ only in H (top), only in V (center) and
-    in H+V (bottom) during the 2017 experiment. The excitation
-    amplitude error is 15\% indicated by horizontal error bars. The
-    vertical errorbars represent the pure statistical error based on
-    the averaging over several bunches with the same excitation
-    amplitude.}
+  \caption{Measured loss rates vs.\ excitation amplitude for
+    \eighthtp\ in H only (left), in V only (center) and in H+V (right)
+    during the 2017 experiment. Uncertainties are statistical. The
+    differences between the three data sets within each excitation
+    mode (black, red, and yellow curves) provide an estimate of the
+    systematic errors.}
   \label{fig:8thexploss2017}
 \end{figure*}
 
-% \begin{figure}
-% 	\begin{minipage}[t]{1.0\linewidth}
-% 		\centering
-% 		\includegraphics[width=0.9\linewidth]{2017_scale_amp_8h_lblshort.png}
-% 	\end{minipage}
-% 	\begin{minipage}[t]{1.0\linewidth}
-% 		\centering
-% 		\includegraphics[width=0.9\linewidth]{2017_scale_amp_8v_lblshort.png}
-% 	\end{minipage}
-% 	\begin{minipage}[t]{1.0\linewidth}
-% 		\centering
-% 		\includegraphics[width=0.9\linewidth]{2017_scale_amp_8hv_lblshort.png}
-% 	\end{minipage}
-% 	\caption{\label{fig:8thexploss2017} Comparison of scaling of loss rates with excitation amplitude for \eighthtp\ only in H (top), only in V (center) and in H+V (bottom) during the 2017 experiment. The excitation amplitude error is 15\% indicated by horizontal error bars. The vertical errorbars represent the pure statistical error based on the averaging over several bunches with the same excitation amplitude.}
-% \end{figure}
 
+\begin{figure*}
+  \begin{tabular}{cc}
+    Reference bunch, no excitation & Excited bunch, 8th, H \\
+    \includegraphics[width=\bsrtwidth]{profile_h_8thh_slot_804.png} &
+    \includegraphics[width=\bsrtwidth]{profile_h_8thh_slot_632.png} \\
+   \end{tabular}
+   \caption{Horizontal beam profiles measured with the Beam
+     Synchrotron Radiation Telescope (BSRT) during the 2017
+     experiments. The profiles are taken at the end of the \eighthtp\
+     in H. For these bunches, the transverse damper was not
+     active. The data are presented in the same way as in
+     Fig.~\ref{fig:10thexpprof}. The profile changes in the bunch
+     affected by the maximum excitation (right) are larger than those
+     displayed by the control bunch (left).}
+   \label{fig:8thexpprof}
+\end{figure*}
 
-\begin{figure}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		reference bunch,\\ no excitation
-		\includegraphics[width=1.0\linewidth]{profile_h_8thh_slot_804.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		excited bunch,\\ $8^{\mathrm{th}}$~turn H
-		\includegraphics[width=1.0\linewidth]{profile_h_8thh_slot_632.png}
-	\end{minipage}
-	\caption{\label{fig:8thexpprof} Horizontal beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the \eighthtp\ in H. For both bunches the transverse damper is not active. The distribution changes in the reference bunch (left), here slot 804, are much less than for the bunch experiencing the maximum excitation (right), here slot 632.}
-\end{figure}
 
 Excitation patterns that have little effect on the beam core and a
 large effect on the halo are good candidates for extending the range
@@ -1729,7 +1720,7 @@ by the resonant excitation.
 		\centering
 		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_emit2.png}
 	\end{minipage}
-	\caption{\label{fig:ransim} Relative intensity (top left), bunch length (top right), and horizontal (bottom left) and vertical (bottom right) emittance obtained from distribution tracking based on the 2017 injection optics with standard errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates the case with no excitation, and the dotted and dashed line the results for a uniform random excitation of 12~nrad and 24~nrad respectively.}
+	\caption{\label{fig:ransim} Relative intensity (top left), bunch length (top right), and horizontal (bottom left) and vertical (bottom right) emittance obtained from distribution tracking based on the 2017 injection optics with standard lattice errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates the case with no excitation, and the dotted and dashed line the results for a uniform random excitation of 12~nrad and 24~nrad respectively.}
       \end{figure*}
 
 \begin{figure*}
