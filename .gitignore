@@ -16,3 +16,6 @@
 
 # PDF output
 resex.pdf
+
+# misc.
+tmp/
