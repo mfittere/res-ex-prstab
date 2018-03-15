@@ -24,3 +24,6 @@ it is not a probability, and A already indicates excitation amplitudes.
 
 - [ ] 7th turn pulsing, figure with comparison: no data for 2016 at 24 nrad or
 for simulations. Useful to add?
+
+- [ ] for random, verify the numbers for emittance growth: 1%/min in simulations,
+5%/min in experiments.
