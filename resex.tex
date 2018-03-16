@@ -1692,104 +1692,103 @@ by the resonant excitation.
 \subsection{Random excitation}
 \label{sec:simexran}
 
+
 \begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		no excitation
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerru_dp0_amp.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		uniform random H+V
-		\includegraphics[width=1.0\linewidth]{2017injnocolc15o+19_6noerruranadthv_1nrad_dp0_amp.png}
-	\end{minipage}	
-	\caption{\label{fig:ran2017fmaamp} FMA analysis in amplitude space without excitation (left) and for a uniform random excitation with 1~nrad amplitude (right) in H+V based on the 2017 injection optics with no machine errors and a tune of (62.27,60.295).}
+  \begin{tabular}{cc}
+    No excitation & Random excitation, H+V \\
+    \includegraphics[width=\fmawidth]{2017injnocolc15o+19_6noerru_dp0_amp.png} &
+    \includegraphics[width=\fmawidth]{2017injnocolc15o+19_6noerruranadthv_1nrad_dp0_amp.png} \\
+  \end{tabular}
+  \caption{FMA in transverse amplitude space without excitation (left)
+    and with a random 1-nrad H+V excitation (right), based on the 2017
+    injection optics with no lattice errors and tunes (62.27,
+    60.295).}
+  \label{fig:ran2017fmaamp}
 \end{figure*}
 
-\begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_intensity.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_sigm.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_emit1.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017injerra2b2u_ranadt_3_5um_emit2.png}
-	\end{minipage}
-	\caption{\label{fig:ransim} Relative intensity (top left), bunch length (top right), and horizontal (bottom left) and vertical (bottom right) emittance obtained from distribution tracking based on the 2017 injection optics with standard lattice errors and $(Q_x,Q_y)=(62.27,60.295)$. The solid line indicates the case with no excitation, and the dotted and dashed line the results for a uniform random excitation of 12~nrad and 24~nrad respectively.}
-      \end{figure*}
 
 \begin{figure*}
-	random excitation V\\
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_bunch_intensity_vran_no_damper_avg.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_emith_avg_rel_vran_no_damper.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_emitv_avg_rel_vran_no_damper.png}
-	\end{minipage}	
-		random excitation H+V\\
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_bunch_intensity_hvran_no_damper_avg.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_emith_avg_rel_hvran_no_damper.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[height=0.75\linewidth]{2017_emitv_avg_rel_hvran_no_damper.png}
-	\end{minipage}	
-	\caption{\label{fig:ranexp} Relative intensity (left) and relative horizontal (center) and vertical (right) emittance for a random excitation only in V (top) and in H+V (bottom). Emittance growth is only caused in the plane of excitation.}
+  \begin{tabular}{cc}
+    \includegraphics[width=\halfwidth]{2017injerra2b2u_ranadt_3_5um_intensity.png} &
+    \includegraphics[width=\halfwidth]{2017injerra2b2u_ranadt_3_5um_sigm.png}\\
+    \includegraphics[width=\halfwidth]{2017injerra2b2u_ranadt_3_5um_emit1.png} &
+    \includegraphics[width=\halfwidth]{2017injerra2b2u_ranadt_3_5um_emit2.png}\\
+  \end{tabular}
+  \caption{Simulations (distribution tracking) based on the 2017
+    injection optics with standard lattice errors and
+    $(Q_x, Q_y) = (62.27, 60.295)$: relative bunch intensity (top
+    left), bunch length (top right), horizontal emittance (bottom
+    left), and vertical emittance (bottom right). The solid black line
+    indicates the reference case with no excitation. The dashed and
+    dotted lines are the results of random excitations (H, V, or H+V)
+    with amplitudes 12~nrad and 24~nrad.}
+  \label{fig:ransim}
 \end{figure*}
 
-\begin{figure*}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		reference bunch,\\ no excitation
-		\includegraphics[width=1.0\linewidth]{profile_v_ranv_slot_1698.png}
-	\end{minipage}
-	\begin{minipage}[t]{0.49\linewidth}
-		\centering
-		excited bunch,\\ random excitation V
-		\includegraphics[width=1.0\linewidth]{profile_v_ranv_slot_1532.png}
-	\end{minipage}
-	\caption{\label{fig:ranexpprof}Vertical beam profiles measured with the Beam Synchrotron Radiation Telescope (BSRT) during the 2017 experiments. The profiles are taken at the end of the random excitation in V. For both bunches the transverse damper is not active. The distribution changes in the reference bunch (left), here slot 1698, are much less than for the bunch experiencing the maximum excitation (right), here slot 2696.}
-      \end{figure*}
 
 \begin{figure*}
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017_scale_amp_ranh_lblshort.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017_scale_amp_ranv_lblshort.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		\includegraphics[width=1.0\linewidth]{2017_scale_amp_ranhv_lblshort.png}
-	\end{minipage}	
-	\caption{\label{fig:ranexplossplane} Comparison of scaling of loss rates with excitation amplitude for a random excitation only in H (top), only in V (center) and in H+V (bottom) measured during the 2017 experiment. The excitation amplitude error is 15\% indicated by the horizontal error bars. The loss rate is considerably reduced for the bunches with transverse damper active and is approximately additive with the excitation plane, meaning that double the loss rate is observed for an excitation in H+V compared to only in H or only in V.}
-      \end{figure*}
+  \begin{tabular}{ccc}
+    \multicolumn{3}{c}{Random excitation, V} \\
+    \includegraphics[width=\thirdwidth]{2017_bunch_intensity_vran_no_damper_avg.png} &
+    \includegraphics[width=\thirdwidth]{2017_emith_avg_rel_vran_no_damper.png} &
+    \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_vran_no_damper.png} \\
+    \multicolumn{3}{c}{Random excitation, H+V} \\
+    \includegraphics[width=\thirdwidth]{2017_bunch_intensity_hvran_no_damper_avg.png} &
+    \includegraphics[width=\thirdwidth]{2017_emith_avg_rel_hvran_no_damper.png} &
+    \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_hvran_no_damper.png}\\
+  \end{tabular}
+  \caption{Measured effects of the random excitation (in V, top row;
+    and H+V, bottom row) during the 2017 experiment: relative
+    intensity losses (left), relative horizontal emittance (center),
+    and relative vertical emittance (right).}
+  \label{fig:ranexp}
+\end{figure*}
+
+
+\begin{figure*}
+  \begin{tabular}{cc}
+    Reference bunch, no excitation & Excited bunch, random excitation, V \\
+    \includegraphics[width=\bsrtwidth]{profile_v_ranv_slot_1698.png} &
+    \includegraphics[width=\bsrtwidth]{profile_v_ranv_slot_1532.png} \\
+  \end{tabular}
+  \caption{Vertical beam profiles measured with the Beam Synchrotron
+    Radiation Telescope (BSRT) during the 2017 experiments. The
+    profiles are taken at the end of the random excitation in V. For
+    these bunches, the transverse damper was not active. The data are
+    presented in the same way as in Fig.~\ref{fig:10thexpprof}. The
+    distribution changes in the bunch experiencing the maximum
+    excitation (right) were larger than those in the reference bunch
+    (left). In both cases, distributions retained a Gaussian shape.}
+  \label{fig:ranexpprof}
+\end{figure*}
+
+
+\begin{figure*}
+  \begin{tabular}{ccc}
+  \includegraphics[width=\thirdwidth]{2017_scale_amp_ranh_lblshort.png} &
+  \includegraphics[width=\thirdwidth]{2017_scale_amp_ranv_lblshort.png} &
+  \includegraphics[width=\thirdwidth]{2017_scale_amp_ranhv_lblshort.png} \\
+  \end{tabular}
+  \caption{Measured loss rates as a function of amplitude for random
+    excitations in H only (left), V only (center), and H+V
+    (right). For each of the three excitation modes, three consecutive
+    data sets were taken (black, red, and yellow), with increasing
+    maximum amplitude. Data were taken simultaneously with no
+    transverse damper on some bunches (filled circles and solid lines)
+    and with the damper active on other bunches (empty circles and
+    dashed lines). The lines represent empirical second-order
+    polynomial fits.}
+  \label{fig:ranexplossplane}
+\end{figure*}
+
 
 \begin{figure}
-	\centering
-	\includegraphics[width=1.0\linewidth]{2017_scale_amp_7th_ranhv_lblshort.png}
-	\caption{\label{fig:ranexploss}  Comparison of scaling of loss rates with excitation amplitude for a random excitation and \seventhtp\ in H+V measured during the 2017 experiment. The excitation amplitude error is 15\% indicated by the horizontal error bars.}
+  \centering
+  \includegraphics[width=\columnwidth]{2017_scale_amp_7th_ranhv_lblshort.png}
+  \caption{Comparison of measured loss rates vs.\ excitation amplitude
+    between random and \seventhtp\ in H+V, obtained during the 2017
+    experiment.}
+  \label{fig:ranexploss}
 \end{figure}
 
 
