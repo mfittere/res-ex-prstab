@@ -1954,45 +1954,145 @@ damping systems. Further studies are obviously needed.
 
 
 
-\section{Summary}
+\section{Discussion and conclusions}
 \label{sec:sum}
 
-This paper intends to give an overview of the effects of the hollow electron lens (HEL) on the proton beam core and the experiments conducted in this context at the LHC in 2016~\cite{resexmd2016} and 2017~\cite{resexmd2017}. For a perfect HEL without any imperfections no effect on the core is to be expected as the field at the center vanishes by construction. Only in the case of imperfections in the guidance and profile of the electron beam, a residual kick on the proton beam core can occur. In this case and assuming HL-LHC parameters (Tables~\ref{tab:hllhc_param}--\ref{tab:hel_param}), the contribution from the electron lens bends with approximately $0.5$~nrad to first order is negligible with respect to the kick expected from the central region of the HEL of approximatley $20$~nrad to first order caused by profile imperfections in the electron beam. In DC operation these kicks, even if nonlinear in reality, are negligible compared to the nonlinearities present in the LHC and HL-LHC and are thus of no concern. The picture changes if the HEL is operated in pulsed mode, in which case noise is introduced on the halo particles (intended) as well as on the beam core (unintended) in the presence of imperfections of the HEL entailing much more stringent tolerances.
+We described the results of numerical simulations and experimental
+studies conducted in~2016 and in~2017 on the effects of random and
+resonant excitations on proton losses, emittances, and beam
+distributions in the Large Hadron Collider.
 
-To study the effect on the beam core in case of the much more dangerous pulsed operation, beam experiments were conducted in 2016 and 2017 at injection. As no hollow electron lens is currently installed in the LHC, the in reality non-linear kick was emulated to first order by a dipole kick with the corresponding excitation pattern. The experimental results in general suggest that for the kick amplitudes as expected from the HEL, considerable effects are to be expected for a random excitation and certain resonant excitations, explicitly 7th- and \tenthtp\ during the conducted experiments. In addition, also one resonant excitation pattern, the $8^{\mathrm{th}}$~turn pulsing, was tested featuring a small effect on the beam core. Assuming that this pattern has a large effect on the beam halo, it would be an optimal candidate for a feasible HEL excitation pattern.
+These studies were motivated in part by the need to assess the effects
+of a hollow electron lens (HEL), which is being proposed for active
+halo control in HL-LHC. Hollow electron beam collimation was
+demonstrated in the Tevatron in continuous
+mode~\cite{hel_tevatron_stancari}, i.e.\ with the same electron beam
+current acting on a given bunch every turn. In this case, the unwanted
+residual kicks, which arise from profile asymmetries, injection and
+extraction bends, solenoid field misalignments, etc. have a negligible
+effect on the circulating beam. An electron lens that is pulsed
+resonantly can have much stronger effects, and this fact was used in
+the Tevatron for abort-gap
+cleaning~\cite{hel_tevatron_abortgap_zhang}. The resonant-pulsing
+capability (having different currents every turn for a given set of
+bunches) will be incorporated in the HL-LHC hollow electron lens to
+enhance its range of achievable removal rates. However, due to time
+constraints, only a very limited set of experimental tests with
+resonant kicks could be done in the Tevatron. More studies are
+currently being planned using the electron lenses in the Relativistic
+Heavy Ion Collider (RHIC) at Brookhaven National
+Laboratory~\cite{Fischer:PRL:2015}.
 
-The resonant excitation in general features a rich nonlinear dynamics leading to a diversity in beam distribution and diffusion changes as can be seen for example from the very diverse effects of the different $k^{\mathrm{th}}$~turn pulsing patterns observed in simulations and experiments. The origin of this diversity is due to the fact that only certain frequencies and thus resonances are excited. Typical for the resonant excitation is also the fast adjustment of the beam distribution to a new equilibrium state which could be for the first time measured in the experiments and predicted in the simulations presented in this paper. The random excitation on the other hand excites all beam frequencies equally, leading to the highest increase in halo removal rates for the HEL \cite{hel_halo_hllhc_fitterer} but also the strongest effects on the core, mainly in terms of strong emittance growth as predicted in simulations, experiments and also a multitude of earlier publications on the subject of random noise. From the experiments the tolerances summarized in Table~\ref{tab:tolexp} could be obtained, where for each excitation pattern and plane the smallest kick amplitude is listed for which an increase in emittance or losses was observed.
-\begin{table}
-	\caption{\label{tab:tolexp}%
-		Minimum kick amplitudes $\Delta z'$ for which either an increase in emittance or losses was observed during the LHC experiments. The tolerances are given for the case of the transverse damper not active. The same tolerances are obtained for the case with the damper active in case of all resonant excitation. In case of a random excitation the tolerance can be increased by roughly a factor~2.
-	}
-	\begin{ruledtabular}
-		\begin{tabular}{lccc}
-		pulsing pattern & exp. year & plane & $\Delta z' \ [\mathrm{nrad}]$  \\
-			\colrule
-			random & 2017 & H or V & 2.4 \\
-			 & & H+V & 1.2 \\\hline
-			7th~turn & 2016 & H & 2.4 \\
-			 & 2017 & H & 2.4 \\
-			 & 2017 & V & 1.2 \\
-			 & 2017 & H+V & 1.2 \\\hline
-			$8^{\mathrm{th}}$~turn & 2017 & H & 14.4 \\
-			& 2017 & V & $>96$ \\
-			& 2017 & H+V & 12 \\\hline
-			$10^{\mathrm{th}}$~turn & 2016 & V & 9.6 \\
-		\end{tabular}
-	\end{ruledtabular}
-\end{table}
-Tolerances in case of a random excitation are extremely stringent. For a resonant excitation the effect depends strongly on the order $k$ of the $k^{\mathrm{th}}$~turn pulsing. For a future HEL, the pattern could therefore be tuned to the machine and beam configuration in order to yield a strong effect on the halo particles and small effect on the beam core. Compared to the estimated kick amplitude of the HEL on the beam core of
-\begin{equation}
-\Delta x', \Delta y' = 20 \ \mathrm{nrad}
-\end{equation}
-the tolerances for all experimentally tried pulsing pattern except for \eighthtp\ in V lie below this value. As a next step, the experiment should be conducted at collision energy where the HEL is most needed. At collision energy the inherent noise level of the LHC is smaller which could lead to more relaxed tolerances than the ones obtained at injection energy.
+The effects of resonant excitations depend on several factors,
+including the machine lattice and the distribution of the beam in
+phase space and in betatron tunes. For this reason, we decided to
+study resonant transverse kicks on proton beams directly in the
+LHC. We relied on the flexibility of the LHC transverse feedback and
+damping system (ADT) to emulate the nonlinear residual kicks of a
+hollow electron lens with transverse dipole kicks, using various
+excitation patterns. We focused on the effects on the beam core,
+namely losses, emittances and beam distributions, as these determine
+the magnitude of the residual fields that can be tolerated. Obviously,
+the choice of pulsing patterns to be used in operations depends also
+on their effects on the beam halo. These effects are outside the scope
+of the present work (and they are challenging to measure directly).
 
+The dipolar component of the residual kick from the electron lens is
+approximately 0.5~nrad from the injection/extraction bends and about
+20~nrad from profile imperfections in the main overlap region. These
+estimates are based on current HL-LHC parameters and on electron-beam
+measurements on a test stand. These values can be reduced by improving
+cathode emission, solenoid-field uniformity, and transport of the
+intense magnetized electron beams.
+
+The most effective pulsing patterns were identified by numerical
+tracking simulations and by frequency-map analysis. These calculations
+provided insights on the rich nonlinear dynamics of resonant
+excitations. Kicking the beam every 7th turn and every 10th turn were
+chosen as examples of strong excitations, whereas \eighthtp\ had very
+weak consequences.
+
+These patterns were tested in experiments and compared with random
+excitations. Bunch filling schemes were devised so that reference
+bunches and different excitation amplitudes could be measured at the
+same time, including the presence or absence of transverse
+feedback. The influence of collective effects was minimized by
+reducing the bunch charge. Because these were the first LHC
+experiments on resonant excitations, and to reduce turn-around time,
+all studies were conducted at injection energy.
+
+The experiments confirmed the relative strength of the pulsing
+modes. For instance, random and \seventhtp\ generated losses at the
+level of a few percent per hour at 12~nrad, whereas the same level of
+losses was obtained at 96~nrad for \tenthtp; even at 96~nrad, losses
+from \eighthtp\ did not exceed 0.6\%/h. A similar hierarchy was
+observed with respect to emittance growth. In many cases, simulations
+underestimated losses and emittance growth. One important unknown
+factor was the magnitude of machine noise and its sources, which had
+to be extrapolated from collision to injection energy. The comparison
+between \seventhtp\ in 2016 and 2017 emphasized the sensitivity of
+horizontal and vertical excitations to working point and tune
+footprint.
+
+A clear distinction between resonant and random excitations was their
+effect on beam distributions. Random noise caused smooth emittance
+growth and widening Gaussian distributions. Resonant excitations
+generated a fast adjustment of the beam distribution to a new,
+non-Gaussian form, followed by a phase of steady evolution. This
+behavior was predicted in simulations and was clearly observed in
+measured synchrotron-radiation profiles. Another difference between
+the two types of excitation was the repeatability of the strength of
+the random excitation vs.\ the dependence of \kthtp\ on the order in
+which the excitations were implemented --- later applications being
+weaker. This confirmed the hypothesis, emphasized by frequency-map
+analysis, that random kicks excite most of the beam, whereas resonant
+pulsing drives specific subsets of particles in tune or amplitude
+space. Finally, the transverse damping system strongly mitigated
+losses and emittance growth generated by random excitations, but had
+negligible effect on resonant pulsing patterns.
+
+For active halo control in HL-LHC, resonant pulsing of the electron
+lenses, or the addition of a random noise component to continuous
+operation, may significantly extend the achievable range of halo
+removal rates. However, further work is needed to identify, both in
+simulations and experimentally, candidate excitation patterns that are
+effective for halo removal and that preserve the beam core (such as
+\eighthtp\ in these studies). Because of the complex dynamics,
+tolerances on residual kicks vary widely, from a few nanoradians for
+the most powerful (such as random at full strength or \seventhtp) to
+about a hundred nanoradians for the more benign (such as
+\eighthtp). The magnitude of the acceptable kicks depends on the
+excitation pattern, on machine lattice, and on the type of application
+(fast scraping before collisions vs.\ long-term tail suppression
+during the course of a physics fill, for instance). Of course,
+sensitivity to the experimental conditions may make resonant patterns
+less attractive than a small random noise component added to a
+constant kick.
+
+These studies are the first systematic investigation of the effects of
+resonant excitations on the proton beam in the LHC.  For practical
+reasons, the studies were done at injection energy. Because of the
+different lattices, working point, noise sources, etc. results at
+collision energy may be different and should be investigated.
 
 
 \begin{acknowledgments}
-We wish to acknowledge Giulia Papotti with her help with the preparations for the 2016 experiments and her general support from the operations side, Roderik Bruce and Gianluca Valentino for there very helpful suggestions in preparing the experiment at the LHC and we would like to thank all participants of the experiment for helping acquire the data presented in this paper. We wish to thank Sergei Nagaitsev for the very useful discussion and profound question to find out why the transverse damper is not damping any resonant excitation. We would like to acknowledge Dmitry Shatilov for his help with the Lifetrac code, and St\'{e}phane Fartoukh, Riccardo De Maria and Rogelio Tom\'as for their help with generating the appropiate optics model. We are grateful also for the support from the beam instrumentation team, in particular Enrico Bravin and Georges Trad, with the BSRT and are thankful for the collaboration with St\'{e}phania Papadopoulou and Fanouria Antonio for the analysis of the BSRT profiles.
+  We wish to acknowledge Giulia Papotti with her help with the
+  preparations for the 2016 experiments and her general support from
+  the operations side, Roderik Bruce and Gianluca Valentino for there
+  very helpful suggestions in preparing the experiment at the LHC and
+  we would like to thank all participants of the experiment for
+  helping acquire the data presented in this paper. We wish to thank
+  Sergei Nagaitsev for the very useful discussion and profound
+  question to find out why the transverse damper is not damping any
+  resonant excitation. We would like to acknowledge Dmitry Shatilov
+  for his help with the Lifetrac code, and St\'{e}phane Fartoukh,
+  Riccardo De Maria and Rogelio Tom\'as for their help with generating
+  the appropiate optics model. We are grateful also for the support
+  from the beam instrumentation team, in particular Enrico Bravin and
+  Georges Trad, with the BSRT and are thankful for the collaboration
+  with St\'{e}phania Papadopoulou and Fanouria Antonio for the
+  analysis of the BSRT profiles.
 \end{acknowledgments}
 
 
