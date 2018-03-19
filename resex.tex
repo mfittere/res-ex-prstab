@@ -1890,41 +1890,32 @@ Section~\ref{sec:damp}.
 \label{sec:damp}
 
 \begin{figure*}
-	\centering
-	damper not active\\
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-	random excitation V, 2017\\
-		\includegraphics[height=0.75\linewidth]{2017_emitv_avg_rel_vran_no_damper.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		7th~turn V, 2017 exp.\\
-		\includegraphics[height=0.75\linewidth]{2017_emitv_avg_rel_v7th_no_damper_no_text.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		$10^{\mathrm{th}}$~turn V, 2016 exp.\\
-		\includegraphics[height=0.75\linewidth]{2016_emitv_avg_rel_v10th_no_damper_no_text.png}
-	\end{minipage}	
-	damper active\\
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		random excitation V, 2017 exp.\\
-		\includegraphics[height=0.75\linewidth]{2017_emitv_avg_rel_vran_with_damper.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		7th~turn V, 2017 exp.\\
-		\includegraphics[height=0.75\linewidth]{2017_emitv_avg_rel_v7th_with_damper_no_text.png}
-	\end{minipage}	
-	\begin{minipage}[t]{0.32\linewidth}
-		\centering
-		$10^{\mathrm{th}}$~turn V, 2016 exp.\\
-		\includegraphics[height=0.75\linewidth]{2016_emitv_avg_rel_v10th_with_damper_no_text.png}
-	\end{minipage}	
-	\caption{\label{fig:damp} Relative intensity for bunches with transverse damper not active (top) and transverse damper active (bottom) for a random excitation only in V (left) and for 7th- (center) and \tenthtp\ only in V (right).}
+  \begin{tabular}{ccc}
+    \hline
+    \multicolumn{3}{c}{Transverse damper off} \\ \hline
+    Random excitation, V (2017) & \seventhtp, V (2017) & \tenthtp, V
+                                                         (2016) \\
+    \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_vran_no_damper.png}&
+    \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_v7th_no_damper_no_text.png} &
+    \includegraphics[width=\thirdwidth]{2016_emitv_avg_rel_v10th_no_damper_no_text.png}\\
+    \hline
+    \multicolumn{3}{c}{Transverse damper active} \\ \hline
+    Random excitation, V (2017) & \seventhtp, V (2017) & \tenthtp, V
+                                                         (2016) \\
+    \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_vran_with_damper.png} &
+    \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_v7th_with_damper_no_text.png} &
+    \includegraphics[width=\thirdwidth]{2016_emitv_avg_rel_v10th_with_damper_no_text.png} \\
+    \end{tabular}
+    \caption{Comparison of measured vertical emittances for bunches
+      with transverse damper off (top row) and with transverse damper
+      on (bottom row), during random V excitations (left), \seventhtp\
+      in V (center) and \tenthtp\ in V (right). (Because of a change
+      in experimental setup, for the bunches represented by the yellow
+      line in the bottom right plot, the excitation was zero instead
+      of the maximum value.)}
+    \label{fig:damp}
 \end{figure*}
+
 
 During \kthtp\ experiments, the action of the transverse feedback and
 damping system (ADT) did not significantly change any of the
