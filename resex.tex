@@ -45,6 +45,7 @@ longbibliography
 \DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58} 
 
 \newcommand{\q}[2]{\ensuremath{#1\ \mathrm{#2}}} % quantity with units
+\newcommand{\code}[1]{\textsc{#1}} % computer code
 
 % abbreviations
 \newcommand{\kthtp}{$k$th-turn pulsing}
@@ -65,6 +66,8 @@ longbibliography
 \newlength{\fmawidth}
 \setlength{\fmawidth}{0.4\textwidth}
 
+
+
 \begin{document}
 
 \title{Experimental and numerical studies of the effects of resonant
@@ -72,15 +75,17 @@ longbibliography
   applications to the design of a pulsed hollow electron lens for
   active halo control}
 
-\thanks{Fermilab is operated by Fermi Research Alliance, LLC under
-	Contract No.~DE-AC02-07CH11359 with the United States Department of
-	Energy. This work was partially supported by the US DOE LHC
-	Accelerator Research Program (LARP) and by the European FP7 HiLumi
-	LHC Design Study, Grant Agreement 284404.}
+\thanks{This manuscript has been authored by Fermi Research Alliance,
+  LLC under Contract No.~DE-AC02-07CH11359 with the U.S.\ Department
+  of Energy (DOE), Office of Science, Office of High Energy
+  Physics. This work was partially supported by the U.S.\ DOE LHC
+  Accelerator Research Program (LARP), by the European FP7 HiLumi LHC
+  Design Study, Grant Agreement 284404, and by the High Luminosity LHC
+  (HL-LHC) Project.}
 
 \author{Miriam Fitterer}
- \email{mfittere@fnal.gov}
 \author{Giulio Stancari}
+\email[Corresponding author: ]{stancari@fnal.gov}
 \author{Alexander Valishev}
 \affiliation{Fermi National Accelerator Laboratory, Batavia, Illinois, USA}
 
@@ -903,8 +908,8 @@ excitation pattern.
                               0$\footnote{Orbit
                               errors are disabled due to
                               different implementation of the
-                              $a_1, b_1$ coefficients in Lifetrac and
-                              MAD-X. $b_2$ errors are adjusted to
+                              $a_1, b_1$ coefficients in \code{Lifetrac} and
+                              \code{MAD-X}. $b_2$ errors are adjusted to
                               yield an average
                               peak $\beta$-beat of 15\% over 60~seeds, as
                               observed in optics measurements
@@ -932,10 +937,10 @@ different types of simulations were performed:
   intensity of resonances~\cite{fmalaskar}.
 \end{itemize}
 %
-For both simulation types, the tracking code Lifetrac~\cite{lifetrac}
-was used. The simulation parameters are summarized in
-Table~\ref{tab:sim_param}. Further details are given in
-Refs.~\cite{md_sim_hel_res_ex_fitterer, resexmd2017}.
+For both simulation types, the tracking code
+\code{Lifetrac}~\cite{lifetrac} was used. The simulation parameters
+are summarized in Table~\ref{tab:sim_param}. Further details are given
+in Refs.~\cite{md_sim_hel_res_ex_fitterer, resexmd2017}.
 
 Quantitative predictions of loss rates and emittance growth are in
 general challenging, as both observables are influenced by several
@@ -2077,22 +2082,28 @@ collision energy may be different and should be investigated.
 
 
 \begin{acknowledgments}
-  We wish to acknowledge Giulia Papotti with her help with the
-  preparations for the 2016 experiments and her general support from
-  the operations side, Roderik Bruce and Gianluca Valentino for there
-  very helpful suggestions in preparing the experiment at the LHC and
-  we would like to thank all participants of the experiment for
-  helping acquire the data presented in this paper. We wish to thank
-  Sergei Nagaitsev for the very useful discussion and profound
-  question to find out why the transverse damper is not damping any
-  resonant excitation. We would like to acknowledge Dmitry Shatilov
-  for his help with the Lifetrac code, and St\'{e}phane Fartoukh,
-  Riccardo De Maria and Rogelio Tom\'as for their help with generating
-  the appropiate optics model. We are grateful also for the support
-  from the beam instrumentation team, in particular Enrico Bravin and
-  Georges Trad, with the BSRT and are thankful for the collaboration
-  with St\'{e}phania Papadopoulou and Fanouria Antonio for the
-  analysis of the BSRT profiles.
+  There are several people we would like to acknowledge for their
+  support, insights, participation in studies, and assistance in data
+  collection. In particular, Giulia Pa\-potti offered essential
+  support for machine operations and helped prepare the 2016
+  experiments. Roderik Bruce and Gianluca Va\-len\-ti\-no made
+  important suggestions on the design of the experiments. Dmitry
+  Sha\-ti\-lov shared his deep understanding of numerical tracking
+  simulations with the \code{Lifetrac} code. St\'{e}\-phane
+  Far\-toukh, Ric\-car\-do De Maria and Ro\-ge\-lio Tom\'{a}s offered
+  invaluable assistance in generating the appropiate accelerator
+  lattice models. We wish to thank Sergei Na\-gai\-tsev for the
+  insightful discussions on the interaction between the transverse
+  damping system and resonant excitations. We are grateful to
+  En\-ri\-co Bra\-vin, Georges Trad, and the whole beam
+  instrumentation team for their crucial support on
+  synchrotron-radiation diagnostics. We thank Ste\-fania
+  Pa\-pa\-do\-pou\-lou and Fa\-nou\-ria An\-to\-niou for the fruitful
+  collaboration on the analysis of the synchrotron-radiation profiles.
+
+  This work was made possible by the High Luminosity LHC (HL-LHC)
+  Project, the HiLumi LHC Design Study, and by the United States
+  Department of Energy LHC Accelerator Research Program (LARP).
 \end{acknowledgments}
 
 
