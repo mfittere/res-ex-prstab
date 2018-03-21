@@ -29,3 +29,8 @@ for simulations. Useful to add?
 5%/min in experiments) and for simulated losses (0.1%/h).
 
 - [ ] report number in Ph.D. thesis?
+
+- [ ] reintroduce references on noise?
+
+- [X] better reference (openly accessible) than Chamonix for LHC performance
+in 2016 -> Jorg at IPAC17
