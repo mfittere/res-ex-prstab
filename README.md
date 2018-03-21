@@ -27,3 +27,5 @@ for simulations. Useful to add?
 
 - [ ] for random, verify the numbers for emittance growth (1%/min in simulations,
 5%/min in experiments) and for simulated losses (0.1%/h).
+
+- [ ] report number in Ph.D. thesis?

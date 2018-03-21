@@ -1,49 +1,22 @@
-\documentclass[%
-%preprint,
-reprint,
-%superscriptaddress,
-%groupedaddress,
-%unsortedaddress,
-%runinaddress,
-%frontmatterverbose, 
-%showpacs,preprintnumbers,
-%nofootinbib,
-%nobibnotes,
-%bibnotes,
- amsmath,amssymb,
- aps,
-%pra,
-%prb,
-%rmp,
-prstab,
-%prstper,
-floatfix,
-%endfloats,
-longbibliography
+\documentclass[
+prstab,reprint
+%,draft
+%,preprint,tightenlines
+,linenumbers
+,longbibliography
+,preprintnumbers
+,showpacs
+,showkeys
+,byrevtex
+,amsfonts,amssymb,amsmath
+,floatfix
+%,endfloats
 ]{revtex4-1}
 
-\usepackage{graphicx}% Include figure files
-\usepackage{dcolumn}% Align table columns on decimal point
-\usepackage{bm}% bold math
-\usepackage{hyperref}% add hypertext capabilities
-%\usepackage[mathlines]{lineno}% Enable numbering of text and display math
-%\linenumbers\relax % Commence numbering lines
-\usepackage{color}
-%\usepackage{siunitx}
-\usepackage{url}
-
-%\usepackage[showframe,%Uncomment any one of the following lines to test 
-%%scale=0.7, marginratio={1:1, 2:3}, ignoreall,% default settings
-%%text={7in,10in},centering,
-%%margin=1.5in,
-%%total={6.5in,8.75in}, top=1.2in, left=0.9in, includefoot,
-%%height=10in,a5paper,hmargin={3cm,0.8in},
-%]{geometry}
-
-\DeclareFontFamily{U}{wncy}{}
-\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
-\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
-\DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58} 
+\usepackage{bm}
+\usepackage{dcolumn}
+\usepackage{graphicx}
+\usepackage{hyperref}
 
 \newcommand{\q}[2]{\ensuremath{#1\ \mathrm{#2}}} % quantity with units
 \newcommand{\code}[1]{\textsc{#1}} % computer code
@@ -56,6 +29,12 @@ longbibliography
 
 \newcommand{\Fma}{Frequency-map analysis}
 \newcommand{\fma}{frequency-map analysis}
+
+% symbol for Dirac comb
+\DeclareFontFamily{U}{wncy}{}
+\DeclareFontShape{U}{wncy}{m}{n}{<->wncyr10}{}
+\DeclareSymbolFont{mcy}{U}{wncy}{m}{n}
+\DeclareMathSymbol{\Sh}{\mathord}{mcy}{"58} 
 
 % widths for figures
 \newlength{\halfwidth}
@@ -88,7 +67,7 @@ longbibliography
 
 \author{Miriam Fitterer}
 \author{Giulio Stancari}
-\email[Corresponding author: ]{stancari@fnal.gov}
+\email[Corresponding author. E-mail: ]{stancari@fnal.gov}
 \author{Alexander Valishev}
 \affiliation{Fermi National Accelerator Laboratory, Batavia, Illinois, USA}
 
