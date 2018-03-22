@@ -468,65 +468,74 @@
 }
 
 @book{hlcdr,
-  Address =	 {Geneva},
-  Author =	 {G., Apollinari and I., B{\'e}jar Alonso and O.,
-                  Br{\"u}ning and P., Fessia and M., Lamont and L.,
-                  Rossi and L., Tavian},
-  Date-Modified ={2018-02-18 23:33:35 +0000},
+  editor =	 {Apollinari, G. and B{\'{e}}jar Alonso, I. and
+                  Br{\"{u}}ning, O. and Fessia, P. and Lamont, M. and
+                  Rossi, L. and Tavian, L.},
+  Title =	 {High-Luminosity {L}arge {H}adron {C}ollider
+                  ({HL-LHC}): Technical Design Report V.~0.1},
   Publisher =	 {CERN},
-  Series =	 {CERN Yellow Reports: Monographs},
-  Title =	 {{High-Luminosity Large Hadron Collider (HL-LHC):
-                  Technical Design Report V. 0.1}},
+  Address =	 {Geneva, Switzerland},
+  Series =	 {Yellow Reports: Monographs},
   Year =	 2017,
-  Bdsk-Url-1 =	 {https://cds.cern.ch/record/2284929}
+  number =	 {CERN-2017-007-M},
+  isbn =	 {9789290834700, 9789290834717},
+  doi =		 {10.23731/CYRM-2017-004},
+  Url =		 {https://cds.cern.ch/record/2284929}
 }
 
-@online{hlv13,
-	Date-Modified = {2018-02-18 23:33:35 +0000},
-	Note = {LHC optics web},
-	Title = {HL-LHC optics V1.3},
-	Bdsk-Url-1 = {http://abpdata.web.cern.ch/abpdata/lhc_optics_web/www/hllhc13/round15/index.html}}
+@misc{hlv13,
+  Title =	 {{LHC} Optics Web: {HLLHCV1.3} --- Collision Round
+                  15~cm Optics},
+  howpublished = {\url{http://abpdata.web.cern.ch/abpdata/lhc_optics_web/www/hllhc13/round15/index.html} [Online; accessed 22-Mar-2018]},
+  url =          {http://abpdata.web.cern.ch/abpdata/lhc_optics_web/www/hllhc13/round15/index.html}
+}
 
 @techreport{bsrtprofinj,
-  Author =	 {Fitterer, Miriam and Stancari, Giulio},
-  Institution =	 {{Fermilab}},
-  Keywords =	 {lhc,bsrt},
-  Month =	 {July},
+  Author =	 {Fitterer, M. and Stancari, G.},
+  Title =	 {Analysis of {BSRT} Profiles in the {LHC} at
+                  Injection},
+  Institution =	 {Fermilab},
+  Month =	 jul,
   Number =	 {FERMILAB-TM-2657-AD-APC},
-  Title =	 {Analysis of BSRT profiles in the LHC at injection},
   Year =	 2017
 }
 
-@article{resexmd2016,
-  Author =	 {Fitterer, Miriam and Stancari, Giulio and Valishev,
-                  Alexander and Bruce, Roderik and Papadopoulou,
-                  Parthena Stefania and Papotti, Giulia and
-                  Pellegrini, Dario and Redaelli, Stefano and Trad,
-                  Georges and Valuch, Daniel and Valentino, Gianluca
-                  and Wagner, Joschka and Xu, Chen},
-  Date-Modified ={2018-02-18 23:33:35 +0000},
-  Month =	 {May},
-  Reportnumber = {CERN-ACC-NOTE-2017-0037},
-  Title =	 {Effect of a resonant excitation on the evolution of
-                  the beam emittance and halo population},
+@techreport{resexmd2016,
+  Author =	 {Fitterer, M. and Stancari, G. and Valishev, A. and
+                  Bruce, R. and Papadopoulou, P. S. and Papotti,
+                  G. and Pellegrini, D. and Redaelli, S. and Trad,
+                  G. and Valuch, D. and Valentino, G. and Wagner,
+                  J. and Xu, C.},
+  Title =	 {Effect of a Resonant Excitation on the Evolution of
+                  the Beam Emittance and Halo Population},
+  institution =	 {CERN},
   Year =	 2016,
-  Bdsk-Url-1 =	 {https://cds.cern.ch/record/2264616}
+  Month =	 may,
+  number =	 {CERN-ACC-NOTE-2017-0037},
+  Url =		 {https://cds.cern.ch/record/2264616}
 }
 
-@article{lifetrac,
-  Author =	 {Shatilov, Dmitry and Alexahin, Yuri and Lebedev,
-                  Valeri and Valishev, Alexander},
-  Booktitle =	 {Particle accelerator. Proceedings, Conference,
-                  {PAC'05},Knoxville, USA, May 16-20, 2005},
-  Date-Modified ={2018-02-18 23:33:35 +0000},
-  Journal =	 {Conf. Proc. {PAC'05}},
-  Keywords =	 {lifetrac},
-  Number =	 {FERMILAB-CONF-05-246-AD, PAC-2005-TPAT084},
-  Title =	 {{Lifetrac} code for the weak-strong simulation of
-                  the beam-beam effects in {Tevatron}},
+@inproceedings{lifetrac,
+  Author =	 {Shatilov, D. N. and Alexahin, Y. and Lebedev, V. and
+                  Valishev, A.},
+  Title =	 {\code{lifetrac} Code for the Weak-Strong Simulation
+                  of the Beam-Beam Effects in {Tevatron}},
+  pages =	 4138,
+  Number =	 {FERMILAB-CONF-05-246-AD},
   Year =	 2005,
-  Bdsk-Url-1 =
-                  {http://inspirehep.net/record/687566/files/fermilab-conf-05-246.pdf}
+  Url =          {http://accelconf.web.cern.ch/AccelConf/p05/PAPERS/TPAT084.PDF},
+  crossref = {pac2005}
+}
+
+@string{pac2005proc = "Proceedings of the 2005 Particle Accelerator Conference ({PAC05})"}
+@proceedings{pac2005,
+  title =	 pac2005proc,
+  booktitle =	 pac2005proc,
+  editor =	 {Horak, C.},
+  publisher =	 {IEEE},
+  year =	 2005,
+  isbn =	 {0-7803-8860-7},
+  url =		 {http://accelconf.web.cern.ch/accelconf/p05}
 }
 
 @article{fmalaskar,
