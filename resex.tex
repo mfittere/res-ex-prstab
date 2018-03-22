@@ -1,5 +1,6 @@
 \documentclass[
-prstab,reprint
+prstab
+,reprint
 %,draft
 %,preprint,tightenlines
 ,linenumbers
@@ -14,7 +15,12 @@ prstab,reprint
 \usepackage{bm}
 \usepackage{dcolumn}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue,
+            filecolor=blue, urlcolor=blue]{hyperref}
+
+\usepackage{mathptmx}
+\linespread{1.1}            
+\usepackage[T1]{fontenc}
 
 \newcommand{\q}[2]{\ensuremath{#1\ \mathrm{#2}}} % quantity with units
 \newcommand{\code}[1]{\textsc{#1}} % computer code
@@ -686,10 +692,8 @@ the effects on the circulating beam.
                   for MOD circuit (standard 2016 settings)} \\ \hline
       working point $(Q_x, Q_y)$ & (64.28, 59.31) & (62.27, 60.295) \\
       chromaticity $(Q'_x, Q'_y)$ & \multicolumn{2}{c}{(+15, +15)}\\ \hline
-      pulsing patterns  & 7th~turn H
-                                  &7th~turn H, V, H+V \\
-                & $10^{\mathrm{th}}$~turn V & $8^{\mathrm{th}}$~turn
-                                              H, V, H+V \\
+      pulsing patterns  & 7th~turn H & 7th~turn H, V, H+V \\
+                & 10th~turn V & 8th~turn H, V, H+V \\
                 & &  random  H, V, H+V\\
     \end{tabular}
   \end{ruledtabular}
@@ -723,8 +727,7 @@ the effects on the circulating beam.
   \caption{Example of bunch-by-bunch beam centroid motion for Beam~1
     in the horizontal (B1H, left) and vertical (B1V, right) planes,
     detected by the real-time transverse activity monitor during the
-    2017 experiment, when the beam was excited every
-    $8^\mathrm{th}$~turn.}
+    2017 experiment, when the beam was excited every 8th~turn.}
   \label{fig:fill_meas} 
 \end{figure*}
 
@@ -755,11 +758,10 @@ The choice of excitation patterns for the experiments was guided by
 losses and emittance growths calculated in numerical tracking
 simulations, described below. It was chosen to study experimentally
 the two pulsing patterns with the largest calculated effects on the
-beam (7th- and $10^{\mathrm{th}}$-turn pulsing), one pattern with no
-effect ($8^{\mathrm{th}}$-turn pulsing), and the random excitation. In
-order to quantify the reproducibility of the results under different
-machine configurations, one pulsing pattern (\seventhtp) was tried
-first in~2016 and then repeated in~2017.
+beam (7th- and \tenthtp), one pattern with no effect (\eighthtp), and
+the random excitation. In order to quantify the reproducibility of the
+results under different machine configurations, one pulsing pattern
+(\seventhtp) was tried first in~2016 and then repeated in~2017.
 
 
 \subsection{Excitations with the transverse damper and bunch filling schemes}
@@ -857,9 +859,8 @@ Figure~\ref{fig:fill_meas} shows an example of the oscillation
 amplitude of each bunch centroid in both horizontal and vertical
 planes, captured by the LHC real-time transverse activity monitor
 during the 2017 experiments, when the beam was excited every
-$8^{\mathrm{th}}$~turn. The measured activity shows the typical
-amplitude of bunch centroid excursions and reflects the expected
-excitation pattern.
+8th~turn. The measured activity shows the typical amplitude of bunch
+centroid excursions and reflects the expected excitation pattern.
 
 
 
@@ -967,10 +968,9 @@ them with the results of numerical simulations.  In
 Section~\ref{sec:pattern}, we show which pulsing patterns are
 predicted to be the most efficient in the LHC.  Next, we present
 results for each of the specific excitation patterns that could be
-tested experimentally, namely pulsing every $10^{\mathrm{th}}$~turn
-(Section~\ref{sec:simex10}), 7th~turn
-(Section~\ref{sec:simex7}), $8^{\mathrm{th}}$~turn
-(Section~\ref{sec:simex8}), and the random excitation
+tested experimentally, namely pulsing every 10th~turn
+(Section~\ref{sec:simex10}), 7th~turn (Section~\ref{sec:simex7}),
+8th~turn (Section~\ref{sec:simex8}), and the random excitation
 (Section~\ref{sec:simexran}).  In Section~\ref{sec:damp}, we describe
 how the transverse damping system influenced the effects of the
 external excitation sources on losses, beam distributions, and
@@ -1004,7 +1004,7 @@ emittances.
 
 \begin{figure*}
   \begin{tabular}{cc}
-    no excitation & $10^{\mathrm{th}}$, H+V \\
+    No excitation & 10th, H+V \\
     \includegraphics[width=\fmawidth]{2016injnocolc15o+19_6noerru_dp0_ord10_annotate.png} &
     \includegraphics[width=\fmawidth]{2016injnocolc15o+19_6noerrut10skhv_dp0_ord10.png}
     \\
@@ -1014,18 +1014,18 @@ emittances.
   \end{tabular}
   \caption{Frequency-map analysis in betatron tune space based on the
     2016 injection optics with no machine errors and tunes (64.28,
-    59.31): without excitation (top left); $10^{\mathrm{th}}$~turn
-    pulsing in both horizontal and vertical planes (top left);
-    \seventhtp\ in the horizontal (bottom left) and vertical (bottom
-    right) planes. The excitation amplitude is 120~nrad in the
-    corresponding plane. The colors (blue to red) represent the tune
-    jitter of tracked particles starting at each given location in
-    tune space~\cite{fmalaskar}. The absence of a strong excitation of
-    any resonance in case of vertical \seventhtp\ and the strong
+    59.31): without excitation (top left); \tenthtp\ in both
+    horizontal and vertical planes (top left); \seventhtp\ in the
+    horizontal (bottom left) and vertical (bottom right) planes. The
+    excitation amplitude is 120~nrad in the corresponding plane. The
+    colors (blue to red) represent the tune jitter of tracked
+    particles starting at each given location in tune
+    space~\cite{fmalaskar}. The absence of a strong excitation of any
+    resonance in case of vertical \seventhtp\ and the strong
     excitation in case of horizontal pulsing confirms the excitation
-    of the $7 Q_x$ resonance. For $10^{\mathrm{th}}$~turn pulsing,
-    there is in contrast no significant difference between H, V, or
-    H+V (Fig.~\ref{fig:fma:10}).}
+    of the $7 Q_x$ resonance. For \tenthtp, there is in contrast no
+    significant difference between H, V, or H+V
+    (Fig.~\ref{fig:fma:10}).}
   \label{fig:patternfma}
 \end{figure*}
 
@@ -1087,14 +1087,13 @@ distribution-tracking simulations.
 As an example, the simulation results for the 2016 experiment are
 shown in Fig.~\ref{fig:patternsim}.  A clear dependence of both losses
 and emittances on the pattern can be seen.  The largest losses are
-predicted for $3^{\mathrm{rd}}$, 7th and
-$10^{\mathrm{th}}$~turn pulsing, and for a uniform random
+predicted for 3rd-, 7th- and \tenthtp, and for a uniform random
 excitation. Because the bunch length decreases with the number of lost
 particles, losses are attributed to off-momentum particles hitting the
 transverse aperture. Significant emittance growth is visible only for
-7th- and \tenthtp\ and for the
-random excitation. Compared to any resonant excitation, the random
-excitation shows by far the strongest effect.
+7th- and \tenthtp\ and for the random excitation. Compared to any
+resonant excitation, the random excitation shows by far the strongest
+effect.
 
 The effects of 7th- and \tenthtp\ are also observed in the absence of
 machine lattice errors. In this case, the only sources of nonlinearity
@@ -1103,14 +1102,14 @@ suggesting that these nonlinearities are responsible for the
 pronounced beam sensitivity. The driven resonances are revealed by the
 frequency-map analysis, shown in Fig.~\ref{fig:patternfma}. The
 $7 Q_x$ resonance is excited by the \seventhtp, and the $10 Q_x$ and
-$10 Q_y$ resonances by the $10^{\mathrm{th}}$~turn pulsing. As
-octupoles can only drive even resonances, the sources of the $7 Q_x$
-resonances are the sextupoles, while the octupoles generate the tune
-footprint. The other pulsing patterns do not exhibit any increase in
-losses or emittance growth without magnetic errors. Their effect can
-be thus attributed to an interaction of the excitation with the
-lattice errors, implying also a sensitivity to the chosen random seed
-in simulations and to the specific lattice in experiments.
+$10 Q_y$ resonances by the \tenthtp. As octupoles can only drive even
+resonances, the sources of the $7 Q_x$ resonances are the sextupoles,
+while the octupoles generate the tune footprint. The other pulsing
+patterns do not exhibit any increase in losses or emittance growth
+without magnetic errors. Their effect can be thus attributed to an
+interaction of the excitation with the lattice errors, implying also a
+sensitivity to the chosen random seed in simulations and to the
+specific lattice in experiments.
 
 In Fig.~\ref{fig:patternsim}, one can see that, in the cases of 7th-
 and \tenthtp, the emittances start from an increased initial value and
@@ -1159,7 +1158,7 @@ studied in a separate experiment at the LHC for the case of colliding
 beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
 
 
-\subsection{Pulsing every $10^{\mathrm{th}}$ turn}
+\subsection{Pulsing every 10th turn}
 \label{sec:simex10}
 
 
@@ -1169,12 +1168,12 @@ beams~\cite{md1433_noise_top_energy, md_noise_bbLHC}.
     \includegraphics[width=\thirdwidth]{2016_emith_avg_rel_v10th_no_damper.png}&
     \includegraphics[width=\thirdwidth]{2016_emitv_avg_rel_v10th_no_damper.png}\\
   \end{tabular}
-  \caption{Summary of the 2016 experiments on $10^{\mathrm{th}}$~turn
-    pulsing in the vertical plane: losses (left), horizontal
-    emittances (middle) and vertical emittances (right), relative to
-    their initial values. The transverse damping system was not active
-    in this case. The 3 excitation periods are labeled in black
-    according to the value of the maximum excitation amplitude
+  \caption{Summary of the 2016 experiments on \tenthtp\ in the
+    vertical plane: losses (left), horizontal emittances (middle) and
+    vertical emittances (right), relative to their initial values. The
+    transverse damping system was not active in this case. The 3
+    excitation periods are labeled in black according to the value of
+    the maximum excitation amplitude
     $A_{\mathrm{max}} = 5 \, \Delta A$: no excitation, 48~nrad or
     96~nrad. The 4~bunches experiencing the same excitation amplitude
     $n \, \Delta A$ ($n = 0, \ldots, 5$) are grouped by color. The
@@ -1514,9 +1513,9 @@ right plots). Although much weaker, an increase in tune diffusion is
 also observed around the $7Q_x + 7Q_y$ line when pulsing in the
 vertical plane or in both planes (diagonal yellow-green line in
 Fig.~\ref{fig:7th2017fma}, top right and bottom right plots). This
-suggests an excitation of the $14^{\mathrm{th}}$-order resonance. The
-reason why this phenomenon is much less pronounced for horizontal
-excitations is not understood.
+suggests an excitation of the 14th-order resonance. The reason why
+this phenomenon is much less pronounced for horizontal excitations is
+not understood.
 
 The simulated losses and emittances for both 2016 and 2017 conditions
 are shown in Fig.~\ref{fig:7thsim}. The experimental results are
