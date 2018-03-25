@@ -6,12 +6,13 @@ prstab
 ,linenumbers
 ,longbibliography
 ,preprintnumbers
-,showpacs
+%,showpacs
 ,showkeys
 ,amsfonts,amssymb,amsmath
 ,floatfix
 ]{revtex4-1}
 
+\usepackage[american]{babel}
 \usepackage{bm}
 \usepackage{dcolumn}
 \usepackage{graphicx}
@@ -26,6 +27,7 @@ prstab
 \newcommand{\code}[1]{\textsc{#1}} % computer code
 
 % abbreviations
+\newcommand{\kth}{$k$th}
 \newcommand{\kthtp}{$k$th-turn pulsing}
 \newcommand{\seventhtp}{7th-turn pulsing}
 \newcommand{\eighthtp}{8th-turn pulsing}
@@ -111,13 +113,13 @@ prstab
   proposals for further studies.
 \end{abstract}
 
-% PACS 2008:
-% 29.20.db Storage rings and colliders
+%\pacs{}
 
-\pacs{29.20.D-}% PACS, the Physics and Astrtheonomy
-                             % Classification Scheme.
-%\keywords{Suggested keywords}%Use showkeys class option if keyword
-                              %display desired
+\keywords{High-energy accelerators and colliders; Nonlinear beam
+  dynamics; Beam resonances; Beam control; Collimation}
+
+\preprint{FERMILAB-PUB-18-084-AD-APC}
+
 \maketitle
 
 %\tableofcontents
@@ -182,9 +184,9 @@ overpopulated compared to a Gaussian distribution. This results in a
 considerable amount of energy being stored in the beam tails. In
 particular, in the case of the LHC, about 5\% of the beam population
 is stored in the tails (i.e., above 3.5$\sigma$, where $\sigma$ is the
-Gaussian rms core beam size), compared to 0.22\% in an ideal Gaussian
-distribution, leading to 19~MJ of stored energy for nominal LHC
-parameters and 34~MJ in the case of
+Gaussian root-mean-square beam size), compared to 0.22\% in an ideal
+Gaussian distribution, leading to 19~MJ of stored energy for nominal
+LHC parameters and 34~MJ in the case of
 HL-LHC~\cite{helreview_valentino}. This leads to the conclusion that a
 mechanism is needed to deplete the beam tails in a controlled
 manner. Further information on the needs for halo control in LHC can
@@ -440,7 +442,7 @@ patterns are defined as follows:
   experiments, discussed below, were usually conducted with $a = 1$.
 
 \item \textbf{resonant excitation:} The electron beam is switched on
-  only every $k$-th turn. The excitation can be represented
+  only every \kth\ turn. The excitation can be represented
   by the following expression:
   \begin{eqnarray}
     \label{intro:eqn:1}
@@ -453,7 +455,7 @@ patterns are defined as follows:
     f(t) = \Sh_{kT}(t) = \frac{1}{kT}\sum_{n=-\infty}^{+\infty}e^{2\pi i f_nt},
   \end{equation}
   with $f_n = n \cdot f_{\rm rev} / k$ and where $\Sh_{kT}$ is the
-  Dirac comb. In general, $k$-th~turn pulsing drives $k$-th order
+  Dirac comb. In general, \kthtp\ drives \kth-order
   resonances~\cite{md_sim_hel_res_ex_fitterer}. This type of pulsing
   pattern was used in the Tevatron during regular collider operations
   for abort-gap cleaning~\cite{hel_tevatron_abortgap_zhang}.
@@ -1913,15 +1915,13 @@ Section~\ref{sec:damp}.
 
 \begin{figure*}
   \begin{tabular}{ccc}
-    \hline
-    \multicolumn{3}{c}{Transverse damper off} \\ \hline
+    \multicolumn{3}{c}{\emph{Transverse damper off}} \\
     Random excitation, V (2017) & \seventhtp, V (2017) & \tenthtp, V
                                                          (2016) \\
     \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_vran_no_damper.png}&
     \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_v7th_no_damper_no_text.png} &
     \includegraphics[width=\thirdwidth]{2016_emitv_avg_rel_v10th_no_damper_no_text.png}\\
-    \hline
-    \multicolumn{3}{c}{Transverse damper active} \\ \hline
+    \multicolumn{3}{c}{\emph{Transverse damper active}} \\
     Random excitation, V (2017) & \seventhtp, V (2017) & \tenthtp, V
                                                          (2016) \\
     \includegraphics[width=\thirdwidth]{2017_emitv_avg_rel_vran_with_damper.png} &
@@ -1988,7 +1988,7 @@ These studies were motivated in part by the need to assess the effects
 of a hollow electron lens (HEL), which is being proposed for active
 halo control in HL-LHC. Hollow electron beam collimation was
 demonstrated in the Tevatron in continuous
-mode~\cite{hel_tevatron_stancari}, i.e.\ with the same electron beam
+mode~\cite{hel_tevatron_stancari}, i.e., with the same electron beam
 current acting on a given bunch every turn. In this case, the unwanted
 residual kicks, which arise from profile asymmetries, injection and
 extraction bends, solenoid field misalignments, etc. have a negligible
