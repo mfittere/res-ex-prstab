@@ -21,7 +21,6 @@ $(BASE).pdf: $(SOURCES)
 # cleanup
 clean:
 	rm -f $(BASE).aux
-	rm -f $(BASE).bbl
 	rm -f $(BASE)Notes.bib
 	rm -f $(BASE).blg
 	rm -f $(BASE).log
