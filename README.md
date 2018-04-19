@@ -9,11 +9,15 @@ Main files:
 
 * `resex.bib` is the BibTeX bibliography.
 
-`resex_SR2018-01-31_MF2018-02-06.pdf` contains comments and responses on the
+* `resex_SR2018-01-31_MF2018-02-06.pdf` contains comments and responses on the
 first circulated draft.
 
-`resex_2018-03-26_v2_circulated.pdf` is revised version 2, circulated to
+* `resex_2018-03-26_v2_circulated.pdf` is revised version 2, circulated to
 co-authors.
+
+* `resex_2018-03-26_v2_circulated_commented.pdf` contains Miriam's comments and
+Giulio's replies.
+
 
 To-do
 -----
@@ -29,7 +33,7 @@ To-do
 - [ ] "probability A" on the vertical axis of beam distributions is confusing:
 it is not a probability, and A already indicates excitation amplitudes.
 
-- [ ] for random, verify the numbers for emittance growth (1%/min in simulations,
+- [X] for random, verify the numbers for emittance growth (1%/min in simulations,
 5%/min in experiments) and for simulated losses (0.1%/h).
 
 - [X] report number in Ph.D. thesis? No.
@@ -40,3 +44,5 @@ it is not a probability, and A already indicates excitation amplitudes.
 in 2016 -> Jorg at IPAC17
 
 - [ ] TM-2657 is not available online
+
+- [ ] check consistency of tenses in experimental observations
