@@ -27,9 +27,18 @@
 
 \newcommand{\q}[2]{\ensuremath{#1\ \mathrm{#2}}} % quantity with units
 \newcommand{\code}[1]{\textsc{#1}} % computer code
-\newcommand{\comm}[1]{\emph{#1}} % editorial or referee comment
 \newcommand{\note}[1]{\emph{\textcolor{red}{#1}}} % note, to-do
 
+% environment for editorial or referee comments
+\newenvironment{co}{\em}{}
+\newcommand{\bco}{\begin{co}}
+\newcommand{\eco}{\end{co}}
+
+% environment for responses
+\newenvironment{re}{\color{NavyBlue}}{}
+\newcommand{\bre}{\begin{re}}
+\newcommand{\ere}{\end{re}}
+   
 % abbreviations
 \newcommand{\kth}{$k$th}
 \newcommand{\kthtp}{$k$th-turn pulsing}
@@ -63,53 +72,80 @@ Giulio Stancari\\
 
 \section*{Editorial comments}
 
-{\em We [\ldots] suggest that Reference [5] should be updated to a journal
-  article:
+\bco
+We [\ldots] suggest that Reference [5] should be updated to a
+journal article:
 
-  [5] M. Benedikt, F. Zimmermann, ``Towards future circular
-  colliders,'' Journal of the Korean Physical Society (2016)
+[5] M. Benedikt, F. Zimmermann, ``Towards future circular colliders,''
+Journal of the Korean Physical Society (2016)
 
-  and perhaps in addition to include the recent IPAC paper
+and perhaps in addition to include the recent IPAC paper
   
-  [5b] M. Benedikt and F. Zimmermann, ``FCC: Colliders at the Energy
-  Frontier,'' Proc. IPAC2018, Vancouver.
-}
+[5b] M. Benedikt and F. Zimmermann, ``FCC: Colliders at the Energy
+Frontier,'' Proc. IPAC2018, Vancouver.
+\eco
 
+\bre
+The references were updated.
+\ere
 
 \section*{Problems with manuscript}
 
-{\em In reviewing the figures of your paper, we note that the
+
+\bco In reviewing the figures of your paper, we note that the
   following changes would be needed in order for your figures to
   conform to the style of the Physical Review.  Please check all
   figures for the following problems and make appropriate changes in
-  the text of the paper itself wherever needed for consistency.
+  the text of the paper itself wherever needed for consistency.\eco
 
 \begin{description}
-  
+
+\bco
 \item[Figure(s) 3, 13, 21, 25, 29] The abbreviation ``a.u.'' is used
   to indicate atomic units only; arbitrary units are abbreviated
   ``arb.  units''; ``A.U.'' is for astronomical units; ``amu'' is for
   atomic mass units.  Please amend your figures and manuscript text
   accordingly.
-  
+\eco
+
+\note{(Miriam.)}
+
+\bco
 \item[Figure(s) 4] The size and font of the letters and numbers
   appearing in figures should be uniform (or close to it).  Please
   make the letters and numbers more consistent.
+\eco
 
+\bre Done.\ere
+
+\bco
 \item[Figure(s) 4, 11] Please change E1, E2, etc., to power of 10
   notation (i.e., 10 with appropriate superscript).  We do not print
   computer notation.
+\eco
 
+\bre Done for Fig.~4. \ere \note{Miriam, could you please take care of Fig.~11?}
+
+\bco
 \item[Figure(s) 9, 10, 16, 23, 26] Please modify quantities so that
   superscripts and subscripts are set as they would appear in
   text. Subscripts should be printed below the line. Also, we do not
   print computer notation. For example, set powers as superscript
   numbers; do not use \verb!^2!, \verb!**2!, etc., for squares of
   quantities. Please adjust the text of the paper accordingly.
-  
+\eco
+
+\note{This comment is a bit extreme. Miriam, could you emphasize the
+  difference between text and subscripts?}
+
+\bco
 \item[Figure(s) 9, 10, 16, 23, 26] The lettering in the axis labels
   and/or numbering size should be increased.
-  
+\eco
+
+\note{Miriam.}
+
+\bco
 \item[Figure(s) 13, 21, 25, 29] Please rearrange power of 10 in axis
   label for clarity: Either (i)~place the power of 10 as a factor,
   without parentheses, in front of the axis label quantity, changing
@@ -119,31 +155,45 @@ Giulio Stancari\\
   \url{http://journals.aps.org/authors/axis-labels-and-scales-on-graphs-h18}
   for a pictorial representation of the preferred forms for axis
   labels.
-  
+\eco
+
+\note{Miriam.}
+
+\bco
 \item[Figure(s) 23, 26] Please insert post-decimal zeros (1.0, not 1.)
   or delete the decimal point.
+\eco
+
+\note{Miriam.}
 
 \end{description}
-}
 
-
-{\em
+\bco
 TITLE:
 
 This journal does print title footnotes.  Move informatio into your
 acknowledgments section.
+\eco
 
+\bre Done.\ere
+
+\bco
 The following problems were noted in your manuscript.
 
 \begin{itemize}
 \item Please check the changes made to the title of your manuscript.
   We propose a modified and somewhat shorter title.
 \end{itemize}
-}
+\eco
+
+\bre We slightly shortened the title. However, the authors feel that
+``active halo control'' is an important concept that should be
+emphasized in the title. \ere
+
 
 \section*{Report of Referee A}
 
-{\em
+\bco
 The paper describes quite extensive simulation and experimental work 
 in estimating the effects of either resonant or random dipole 
 excitations on the LHC proton beam at injection. Quantities studied 
@@ -212,12 +262,12 @@ not find a specific one on resonant excitation, as the authors have
 pointed out
 
 \end{itemize}
-}
+\eco
 
 
 \section*{Report of Referee B}
 
-{\em
+\bco
 
   In this article various types of beam excitations are numerically
   and experimentally investigated, which act on proton losses, beam
@@ -251,6 +301,6 @@ pointed out
   of excitation schemes displayed in individual plots should be
   reduced to a level that the content of the various plots is clearly
   recognizable.
-}
+\eco
 
 \end{document}
