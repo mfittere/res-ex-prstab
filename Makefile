@@ -12,11 +12,14 @@ BIB = bibtex
 
 .PHONY: all clean
 
-all: $(BASE).pdf
+all: $(BASE).pdf response.pdf
 
-# generate PDF
+# generate PDFs
 $(BASE).pdf: $(SOURCES)
 	$(TEX) $(BASE); $(BIB) $(BASE); $(TEX) $(BASE); $(TEX) $(BASE)
+
+response.pdf: response.tex Makefile
+	$(TEX) $<
 
 # cleanup
 clean:
