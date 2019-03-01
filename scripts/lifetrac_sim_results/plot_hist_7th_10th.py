@@ -3,17 +3,18 @@ import os
 from matplotlib.pyplot import *
 
 # directory with simulation results
-basedir = "/home/mfittere/work/MDs/mdelens/simulations/lifetrac"
+#basedir = "/home/mfittere/work/MDs/mdelens/simulations/lifetrac"
+basedir = "/home/fitterma/work/Fermilab/work/MDs/mdelens/simulations/lifetrac"
 # plot directory for paper
 plt_dir = "plots"
 
-# use weighted Gaussian (p1e4t1e2s100weight) or not (p1e4t1e2s100)
+## use weighted Gaussian (p1e4t1e2s100weight) or not (p1e4t1e2s100)
 weighted = False
 # pulsing pattern H+V
-sk = 't7sk'
-ylimresdiff = [-7,7]
-#sk='t10sk'
-#ylimresdiff = [-3.1,3.1]
+#sk = 't7sk'
+#ylimresdiff = [-7,7]
+sk='t10sk'
+ylimresdiff = [-3.1,3.1]
 #sk='ran'
 #ylimresdiff = [-3.1,3.1]
 
@@ -43,6 +44,7 @@ for p in 'xyz':
 ## normal Gaussian
 #  opt = '2016injnocolc15o+19_6erra2b2u/1/eps3.5/p1e4t1e2s100'
 #close('all')
+#print(os.path.join(basedir,opt))
 #t=LifeDeskDB.getdata(ltr_dir=os.path.join(basedir,opt),plt_dir=plt_dir)
 #t.get_hist()
 #t.plot_hist_xyz(title='no excitation',ylimhist=[1.e-4,1.1],ylimresdiff=ylimresdiff,ylimresrat=[0.1,10])
